@@ -158,7 +158,7 @@ const contactFormHanddler = () => {}
                                 class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
                                 href="https://arthursegato.itch.io/"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" class="hidden h-4 w-4 fill-zinc-800 dark:text-slate-300 md:inline-block" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="hidden h-4 w-4 fill-zinc-800 dark:fill-slate-300 md:inline-block" viewBox="0 0 16 16">
                                     <path
                                         d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z"
                                     />
@@ -172,7 +172,7 @@ const contactFormHanddler = () => {}
                                 class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
                                 href="https://mastodon.social/@arthursegato"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" class="hidden h-4 w-4 fill-zinc-800 dark:text-slate-300 md:inline-block" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="hidden h-4 w-4 fill-zinc-800 dark:fill-slate-300 md:inline-block" viewBox="0 0 16 16">
                                     <path
                                         d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"
                                     />
@@ -183,7 +183,7 @@ const contactFormHanddler = () => {}
                                 class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
                                 href="https://mastodon.social/@arthursegato"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" class="hidden h-4 w-4 fill-zinc-800 dark:text-slate-300 md:inline-block" viewBox="0 0 16 16">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="hidden h-4 w-4 fill-zinc-800 dark:fill-slate-300 md:inline-block" viewBox="0 0 16 16">
                                     <path
                                         d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
                                     />
@@ -398,11 +398,11 @@ const contactFormHanddler = () => {}
                 <button
                     type="submit"
                     :disabled="!contactFormValidation.pass.value"
-                    class="group flex h-8 w-full cursor-not-allowed items-center justify-center rounded-md border border-[#181A1B] transition-all duration-200 ease-in-out enabled:cursor-pointer enabled:hover:border-black enabled:hover:bg-stone-200/30 disabled:border-[#181A1B]/50 dark:border-stone-100 dark:disabled:fill-stone-100/50"
+                    class="group flex h-8 w-full cursor-not-allowed items-center justify-center rounded-md border border-[#181A1B] transition-all duration-200 ease-in-out enabled:cursor-pointer enabled:hover:border-black enabled:hover:bg-stone-200/30 disabled:border-[#181A1B]/50 dark:border-stone-100 dark:enabled:hover:border-white dark:enabled:hover:bg-stone-950/30 dark:disabled:fill-stone-100/50"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4 fill-[#181A1B] group-hover:fill-black group-disabled:fill-[#181A1B]/50 dark:fill-stone-100 dark:group-disabled:fill-stone-100/50"
+                        class="h-4 w-4 fill-[#181A1B] group-hover:fill-black group-disabled:fill-[#181A1B]/50 dark:fill-stone-100 dark:group-hover:fill-white dark:group-disabled:fill-stone-100/50"
                         viewBox="0 0 16 16"
                     >
                         <path

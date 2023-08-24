@@ -77,7 +77,6 @@ const contactFormHanddler = () => {}
 </script>
 
 <template>
-    <span class="fixed top-0 h-2 w-screen bg-red-500 sm:bg-orange-500 md:bg-yellow-500 lg:bg-green-500 xl:bg-blue-500 2xl:bg-purple-500"></span>
     <main class="box-border min-h-screen w-full scroll-smooth bg-stone-100 font-['Inter'] text-[#181A1B] dark:bg-[#181A1B] dark:text-stone-100">
         <section id="hero" class="flex min-h-screen w-full items-center justify-center p-7">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="w-40 fill-[#181A1B] dark:fill-stone-100 md:w-56 2xl:w-64">
@@ -388,17 +387,16 @@ const contactFormHanddler = () => {}
                         <textarea
                             id="message"
                             name="message"
-                            placeholder="Type here everything you want@"
+                            placeholder="Type everything you want here..."
                             v-model="contactForm.message"
-                            cols="50"
-                            class="w-full resize-y rounded-md border border-[#181A1B] bg-transparent p-3 text-sm outline-none dark:border-stone-100"
+                            class="h-52 w-full resize-y rounded-md border border-[#181A1B] bg-transparent p-3 text-sm outline-none dark:border-stone-100"
                         ></textarea>
                     </div>
                 </div>
                 <button
                     type="submit"
                     :disabled="!contactFormValidation.pass.value"
-                    class="group flex h-8 w-full cursor-not-allowed items-center justify-center rounded-md border border-[#181A1B] transition-all duration-200 ease-in-out enabled:cursor-pointer enabled:hover:border-black enabled:hover:bg-stone-200/30 disabled:border-[#181A1B]/50 dark:border-stone-100 dark:enabled:hover:border-white dark:enabled:hover:bg-stone-950/30 dark:disabled:fill-stone-100/50"
+                    class="group flex h-12 w-full cursor-not-allowed items-center justify-center rounded-md border border-[#181A1B] transition-all duration-200 ease-in-out enabled:cursor-pointer enabled:hover:border-black enabled:hover:bg-stone-200/30 disabled:border-[#181A1B]/50 dark:border-stone-100 dark:enabled:hover:border-white dark:enabled:hover:bg-stone-950/30 dark:disabled:fill-stone-100/50"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

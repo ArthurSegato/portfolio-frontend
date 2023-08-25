@@ -1,11 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      apiBase: ''
+    }
+  },
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   modules: [
     "nuxt-purgecss",
     "@nuxtjs/google-fonts",
-    "@vueuse/nuxt"
+    "@vueuse/nuxt",
   ],
   googleFonts: {
     families: {

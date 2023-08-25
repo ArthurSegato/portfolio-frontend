@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useFetch } from '@vueuse/core'
+
+const runtimeConfig = useRuntimeConfig()
+
+const fetchProjectsList = useFetch(`${runtimeConfig.public.apiBase}/projects/`).get().json()
+</script>
 
 <template>
     <span class="fixed top-0 h-2 w-screen bg-red-500 sm:bg-orange-500 md:bg-yellow-500 lg:bg-green-500 xl:bg-blue-500 2xl:bg-purple-500"></span>

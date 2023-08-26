@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "@vueuse/integrations": "^10.3.0",
-        "async-validator": "^4.2.5"
+        "async-validator": "^4.2.5",
+        "maska": "^2.1.10"
     }
 }

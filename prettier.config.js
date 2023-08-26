@@ -3,6 +3,6 @@ module.exports = {
     semi: false,
     tabWidth: 4,
     htmlWhitespaceSensitivity: 'ignore',
-    printWidth: 100,
+    printWidth: 2000,
     plugins: [require('prettier-plugin-tailwindcss')],
 }

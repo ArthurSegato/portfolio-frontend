@@ -11,6 +11,9 @@ dependencies:
   async-validator:
     specifier: ^4.2.5
     version: 4.2.5
+  maska:
+    specifier: ^2.1.10
+    version: 2.1.10
 
 devDependencies:
   '@nuxt/devtools':
@@ -4290,6 +4293,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /maska@2.1.10:
+    resolution: {integrity: sha512-oQLLUCJ4qG1YFHSGQB9P6G0LKSmAwHFFBFhmkJ9pcSUXXDZew5NNTBbPACiixqFBaU7M7LydPlrL0DmI1p+ufQ==}
+    dev: false
 
   /mdn-data@2.0.28:
     resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==}

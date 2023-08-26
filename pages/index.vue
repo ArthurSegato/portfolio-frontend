@@ -6,6 +6,7 @@ import { useFetch } from '@vueuse/core'
 import { useColorMode, promiseTimeout } from '@vueuse/core'
 
 /* Easter Egg */
+console.clear()
 console.log(
     `%cOh, greetings! It appears you've wandered into a place not meant for you. However, now that you're here, allow me to impart a few words of wisdom.
 
@@ -59,11 +60,12 @@ const contactButton = reactive({
 })
 
 const contactForm = reactive({
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
+    name: undefined,
+    phone: undefined,
+    email: undefined,
+    message: undefined,
 })
+
 const contactRules: Rules = {
     name: {
         type: 'string',
@@ -103,9 +105,10 @@ const { isFetching, onFetchResponse, execute, onFetchError, onFetchFinally } = u
 onFetchResponse(() => {
     contactButton.isVisible = true
     contactButton.isSuccess = true
-    Object.keys(contactForm).forEach((field) => {
-        field = ''
-    })
+    contactForm.name = undefined
+    contactForm.email = undefined
+    contactForm.phone = undefined
+    contactForm.message = undefined
 })
 
 onFetchError(() => {
@@ -124,7 +127,7 @@ onFetchFinally(async () => {
     <main
         class="box-border min-h-screen w-full scroll-smooth bg-stone-100 font-['Inter'] text-[#181A1B] dark:bg-[#181A1B] dark:text-stone-100"
     >
-        <section id="hero" class="flex min-h-screen w-full items-center justify-center p-7">
+        <section id="hero" class="flex h-screen w-full items-center justify-center p-7">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 500 500"
@@ -344,10 +347,12 @@ onFetchFinally(async () => {
                         <label for="phone" class="text-sm">Phone</label>
                         <div class="flex">
                             <input
-                                type="phone"
+                                type="tel"
                                 id="phone"
                                 name="phone"
-                                placeholder="+01 23 456789"
+                                v-maska
+                                data-maska="+## (##) #####-####"
+                                placeholder="+12 (34) 56789-1234"
                                 v-model="contactForm.phone"
                                 class="h-8 w-full rounded-l-md border-y border-l border-[#181A1B] bg-transparent px-3 text-sm outline-none dark:border-stone-100"
                             />
@@ -422,12 +427,12 @@ onFetchFinally(async () => {
                         />
                     </svg>
                     <span
-                        class="h-4 w-4 animate-spin rounded-full border border-b-0 border-[#181A1B]"
+                        class="h-4 w-4 animate-spin rounded-full border border-b-0 border-[#181A1B] dark:border-stone-100"
                         v-else
                     ></span>
                 </button>
                 <div
-                    class="absolute flex h-full w-full flex-col items-center justify-center rounded-md border border-[#181A1B] bg-stone-100 opacity-0 transition-opacity duration-200 ease-in-out dark:border-stone-100"
+                    class="absolute flex h-full w-full flex-col items-center justify-center rounded-md border border-[#181A1B] bg-stone-100 opacity-0 transition-opacity duration-200 ease-in-out dark:border-stone-100 dark:bg-[#181A1B]"
                     :class="{
                         'z-10': contactButton.isVisible,
                         '-z-10': !contactButton.isVisible,

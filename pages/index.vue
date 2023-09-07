@@ -121,7 +121,7 @@ onFetchFinally(async () => {
 </script>
 
 <template>
-    <main class="box-border w-full scroll-smooth bg-stone-100 font-['Inter'] text-[#181A1B] selection:bg-[#181A1B] selection:text-stone-100 dark:bg-[#181A1B] dark:text-stone-100 dark:selection:bg-stone-100 dark:selection:text-[#181A1B]">
+    <main class="box-border w-full bg-stone-100 font-['Inter'] text-[#181A1B] selection:bg-[#181A1B] selection:text-stone-100 dark:bg-[#181A1B] dark:text-stone-100 dark:selection:bg-stone-100 dark:selection:text-[#181A1B]">
         <section id="hero" class="flex h-screen w-full items-center justify-center p-7">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="w-40 fill-[#181A1B] dark:fill-stone-100 md:w-56 2xl:w-64">
                 <path d="m375 250-54.425-108.85c-27.758 21.655-38.29 68.188-50.07 116.423L312.5 355l32.512 75.43c23.048-30.69 49.123-68.965 68.093-104.218L375 250ZM142.432 360.485c26.908 0 44.475-13.067 57.163-33.542l17.785-41.261c20.37-64.467 27.485-152.625 81.257-188.41L250 0 125 250l-40.785 81.57c14.91 19.655 35.507 28.915 58.217 28.915ZM433.715 367.43c-22.285 37.565-48.822 75.383-71.007 104.053L375 500h125l-66.285-132.57ZM143.727 407.788c-30.392 0-58.902-10.756-80.945-33.356L0 500h125l40.497-93.953c-6.765 1.14-14.005 1.741-21.77 1.741Z" />
@@ -181,12 +181,12 @@ onFetchFinally(async () => {
                                 </svg>
                                 <p class="text-sm text-zinc-800 dark:text-slate-300 md:hidden">Mastodon</p>
                             </a>
-                            <a class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800" href="#contact">
+                            <NuxtLink :to="{ hash: '#contact' }" class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="hidden h-4 w-4 fill-zinc-800 dark:fill-slate-300 md:inline-block" viewBox="0 0 16 16">
                                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                                 </svg>
                                 <p class="text-sm text-zinc-800 dark:text-slate-300 md:hidden">Contact</p>
-                            </a>
+                            </NuxtLink>
                         </div>
                     </div>
                 </div>
@@ -195,12 +195,27 @@ onFetchFinally(async () => {
         <section id="projects" class="flex min-h-screen w-full items-center justify-center p-7">
             <div class="flex w-full flex-col flex-wrap content-evenly justify-evenly gap-4 md:flex-row xl:w-4/5 2xl:w-3/4">
                 <Card v-for="project in fetchProjectsList.data.value" :project="project" />
-                <div class="h-[250px] w-[350px] animate-pulse rounded-md bg-slate-300" v-if="fetchProjectsList.isFetching.value"></div>
-                <div class="h-[250px] w-[350px] animate-pulse rounded-md bg-slate-300" v-if="fetchProjectsList.isFetching.value"></div>
-                <div class="h-[250px] w-[350px] animate-pulse rounded-md bg-slate-300" v-if="fetchProjectsList.isFetching.value"></div>
-                <div class="h-[250px] w-[350px] animate-pulse rounded-md bg-slate-300" v-if="fetchProjectsList.isFetching.value"></div>
-                <div class="h-[250px] w-[350px] animate-pulse rounded-md bg-slate-300" v-if="fetchProjectsList.isFetching.value"></div>
-                <div class="h-[250px] w-[350px] animate-pulse rounded-md bg-slate-300" v-if="fetchProjectsList.isFetching.value"></div>
+                <div class="group flex flex-col items-center" v-if="fetchProjectsList.isFetching.value">
+                    <div class="h-[250px] w-[350px] animate-pulse overflow-hidden rounded-bl-[20px] rounded-br-md rounded-tl-md rounded-tr-[20px] bg-slate-200 transition-all duration-[.25s] ease-in-out group-hover:rounded-bl-[40px] group-hover:rounded-tr-[40px] dark:bg-zinc-800 sm:w-[350px]"></div>
+                    <div class="z-10 -mt-12 w-[320px] translate-y-6 rounded-bl-[20px] rounded-br-md rounded-tl-md rounded-tr-[20px] bg-stone-100 p-4 opacity-0 shadow-md transition-all duration-[.25s] ease-in-out group-hover:translate-y-0 group-hover:opacity-100 dark:bg-[#181A1B]">
+                        <h2 class="animate-pulse text-lg font-semibold blur-sm">Project Title</h2>
+                        <p class="animate-pulse text-sm leading-normal blur-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt officiis tempora minima dignissimos voluptatibus eligendi, libero quis mollitia voluptatum doloribus.</p>
+                    </div>
+                </div>
+                <div class="group flex flex-col items-center" v-if="fetchProjectsList.isFetching.value">
+                    <div class="h-[250px] w-[350px] animate-pulse overflow-hidden rounded-bl-[20px] rounded-br-md rounded-tl-md rounded-tr-[20px] bg-slate-200 transition-all duration-[.25s] ease-in-out group-hover:rounded-bl-[40px] group-hover:rounded-tr-[40px] dark:bg-zinc-800 sm:w-[350px]"></div>
+                    <div class="z-10 -mt-12 w-[320px] translate-y-6 rounded-bl-[20px] rounded-br-md rounded-tl-md rounded-tr-[20px] bg-stone-100 p-4 opacity-0 shadow-md transition-all duration-[.25s] ease-in-out group-hover:translate-y-0 group-hover:opacity-100 dark:bg-[#181A1B]">
+                        <h2 class="animate-pulse text-lg font-semibold blur-sm">Project Title</h2>
+                        <p class="animate-pulse text-sm leading-normal blur-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt officiis tempora minima dignissimos voluptatibus eligendi, libero quis mollitia voluptatum doloribus.</p>
+                    </div>
+                </div>
+                <div class="group flex flex-col items-center" v-if="fetchProjectsList.isFetching.value">
+                    <div class="h-[250px] w-[350px] animate-pulse overflow-hidden rounded-bl-[20px] rounded-br-md rounded-tl-md rounded-tr-[20px] bg-slate-200 transition-all duration-[.25s] ease-in-out group-hover:rounded-bl-[40px] group-hover:rounded-tr-[40px] dark:bg-zinc-800 sm:w-[350px]"></div>
+                    <div class="z-10 -mt-12 w-[320px] translate-y-6 rounded-bl-[20px] rounded-br-md rounded-tl-md rounded-tr-[20px] bg-stone-100 p-4 opacity-0 shadow-md transition-all duration-[.25s] ease-in-out group-hover:translate-y-0 group-hover:opacity-100 dark:bg-[#181A1B]">
+                        <h2 class="animate-pulse text-lg font-semibold blur-sm">Project Title</h2>
+                        <p class="animate-pulse text-sm leading-normal blur-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt officiis tempora minima dignissimos voluptatibus eligendi, libero quis mollitia voluptatum doloribus.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="contact" class="flex min-h-screen w-full items-center justify-center p-7">

@@ -11,13 +11,13 @@
     "devDependencies": {
         "@nuxt/devtools": "latest",
         "@nuxtjs/google-fonts": "^3.0.2",
-        "@types/node": "^18.17.14",
+        "@types/node": "^18.17.15",
         "@vueuse/core": "^10.4.1",
         "@vueuse/nuxt": "^10.4.1",
         "autoprefixer": "^10.4.15",
         "init": "^0.1.2",
         "npx": "^10.2.2",
-        "nuxt": "^3.7.1",
+        "nuxt": "^3.7.2",
         "nuxt-purgecss": "^2.0.0",
         "postcss": "^8.4.29",
         "prettier": "~2.8.8",
@@ -27,6 +27,7 @@
     "dependencies": {
         "@vueuse/integrations": "^10.4.1",
         "async-validator": "^4.2.5",
-        "maska": "^2.1.10"
+        "maska": "^2.1.10",
+        "unlazy": "^0.10.1"
     }
 }

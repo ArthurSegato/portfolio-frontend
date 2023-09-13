@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { useFetch, useColorMode } from '@vueuse/core'
+import { lazyLoad } from 'unlazy'
+
+lazyLoad()
 
 const route = useRoute()
 
@@ -14,7 +17,7 @@ const { data, isFinished } = useFetch(`${runtimeConfig.public.apiBase}/projects/
     <span class="fixed top-0 z-20 h-2 w-screen bg-red-500 transition-colors duration-200 ease-in-out sm:bg-orange-500 md:bg-yellow-500 lg:bg-green-500 xl:bg-blue-500 2xl:bg-purple-500"></span>
     <section class="box-border w-full bg-stone-100 font-['Inter'] text-[#181A1B] selection:bg-[#181A1B] selection:text-stone-100 dark:bg-[#181A1B] dark:text-stone-100 dark:selection:bg-stone-100 dark:selection:text-[#181A1B]">
         <header class="relative flex h-screen w-full items-center justify-center">
-            <img class="absolute top-0 h-full w-full select-none object-cover object-center" v-if="isFinished && data.cover.mimetype === 'image/avif'" :src="data.cover.url" />
+            <img loading="lazy" class="absolute top-0 h-full w-full select-none object-cover object-center" v-if="isFinished && data.cover.mimetype === 'image/avif'" :src="data.cover.url" />
             <video autoplay muted loop class="absolute top-0 h-full w-full select-none object-cover object-center" v-if="isFinished && data.cover.mimetype === 'video/mp4'">
                 <source :src="data.cover.url" :type="data.cover.mimetype" />
             </video>

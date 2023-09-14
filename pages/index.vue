@@ -7,12 +7,31 @@ import { useColorMode, promiseTimeout } from '@vueuse/core'
 
 /* Easter Egg */
 console.clear()
-console.log(
-    `%cOh, greetings! It appears you've wandered into a place not meant for you. However, now that you're here, allow me to impart a few words of wisdom.
+console.log(`Oh, greetings! It appears you've wandered into a place not meant for you. However, now that you're here, allow me to impart a few words of wisdom.
 
-Do you observe that input field in the "about" segment? How about attempting to weave a bit of magic upon it?`,
-    'font-style: italic; color: blue'
-)
+Do you observe that small terminal in the "about me" segment? How about attempting to weave a bit of magic upon it?
+                    ____ 
+                  .'* *.'
+               __/_*_*(_
+              / _______ \\
+             _\\_)/___\\(_/_ 
+            / _((\\- -/))_ \\
+            \\ \\())(-)(()/ /
+             ' \\(((()))/ '
+            / ' \\)).))/ ' \\
+           / _ \\ - | - /_  \\
+          (   ( .;''';. .'  )
+          _\\"__ /    )\\ __"/_
+            \\/  \\   ' /  \\/
+             .'  '...' ' )
+              / /  |  \\ \\
+             / .   .   . \\
+            /   .     .   \\
+           /   /   |   \\   \\
+         .'   /    b    '.  '.
+     _.-'    /     Bb     '-. '-._ 
+ _.-'       |      BBb       '-.  '-. 
+(________mrf\\____.dBBBb.________)____)`)
 
 /* Normal Functions */
 const theme = useColorMode()
@@ -20,6 +39,10 @@ const theme = useColorMode()
 const runtimeConfig = useRuntimeConfig()
 
 const fetchProjectsList = useFetch(`${runtimeConfig.public.apiBase}/projects`).get().json()
+
+const page = reactive({
+    blur: false,
+})
 
 /* About Form */
 const aboutForm = reactive({ command: '' })
@@ -37,7 +60,7 @@ const aboutFormValidation = useAsyncValidator(aboutForm, aboutRules, {
     },
 })
 
-const aboutFormHanddler = () => {
+const aboutFormHanddler = async () => {
     switch (aboutForm.command.toLowerCase()) {
         case 'nox':
             theme.value = 'dark'
@@ -46,8 +69,23 @@ const aboutFormHanddler = () => {
             theme.value = 'light'
             break
         case 'alohomora':
+            window.open('https://youtu.be/dQw4w9WgXcQ?feature=shared')
+            break
+        case 'erecto':
+            aboutForm.command = 'heh ( ͡° ͜ʖ ͡°)'
+            await promiseTimeout(1000)
+            break
+        case 'illegibilus':
+            page.blur = true
+            await promiseTimeout(1500)
+            page.blur = false
             break
         default:
+            const prefix = 'expecto patronum'
+            if (aboutForm.command.startsWith(prefix)) {
+                const message = aboutForm.command.substring(prefix.length)
+                if (message.length > 0) useFetch(`${runtimeConfig.public.apiBase}/easteregg`).post({ message }).json()
+            }
             break
     }
     aboutForm.command = ''
@@ -121,15 +159,16 @@ onFetchFinally(async () => {
 </script>
 
 <template>
-    <main class="box-border w-full bg-stone-100 font-['Inter'] text-[#181A1B] selection:bg-[#181A1B] selection:text-stone-100 dark:bg-[#181A1B] dark:text-stone-100 dark:selection:bg-stone-100 dark:selection:text-[#181A1B]">
+    <span class="fixed top-0 z-20 h-2 w-screen bg-red-500 transition-all duration-200 ease-in-out sm:bg-orange-500 md:bg-yellow-500 lg:bg-green-500 xl:bg-blue-500 2xl:bg-purple-500"></span>
+    <main :class="{ 'blur-3xl': page.blur }" class="box-border w-full overflow-hidden bg-stone-100 font-['Inter'] text-[#181A1B] selection:bg-[#181A1B] selection:text-stone-100 dark:bg-[#181A1B] dark:text-stone-100 dark:selection:bg-stone-100 dark:selection:text-[#181A1B]">
         <section id="hero" class="flex h-screen w-full items-center justify-center p-7">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="w-40 fill-[#181A1B] dark:fill-stone-100 md:w-56 2xl:w-64">
+            <svg v-motion-fade xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="w-40 fill-[#181A1B] dark:fill-stone-100 md:w-56 2xl:w-64">
                 <path d="m375 250-54.425-108.85c-27.758 21.655-38.29 68.188-50.07 116.423L312.5 355l32.512 75.43c23.048-30.69 49.123-68.965 68.093-104.218L375 250ZM142.432 360.485c26.908 0 44.475-13.067 57.163-33.542l17.785-41.261c20.37-64.467 27.485-152.625 81.257-188.41L250 0 125 250l-40.785 81.57c14.91 19.655 35.507 28.915 58.217 28.915ZM433.715 367.43c-22.285 37.565-48.822 75.383-71.007 104.053L375 500h125l-66.285-132.57ZM143.727 407.788c-30.392 0-58.902-10.756-80.945-33.356L0 500h125l40.497-93.953c-6.765 1.14-14.005 1.741-21.77 1.741Z" />
             </svg>
         </section>
-        <section id="about" class="flex min-h-screen w-full items-center justify-center p-7">
+        <section id="about" class="flex w-full items-center justify-center p-7 md:p-14 lg:py-28">
             <div class="flex w-full flex-col gap-10 md:flex-row md:items-center md:gap-12 lg:w-5/6 lg:gap-24 xl:w-3/5">
-                <div class="flex w-full flex-col gap-6">
+                <div v-motion-slide-visible-once-left class="flex w-full flex-col gap-6">
                     <h1 class="text-5xl font-black leading-normal">🤟 Hello!</h1>
                     <article class="flex flex-col gap-2 text-sm leading-normal">
                         <p>
@@ -141,7 +180,7 @@ onFetchFinally(async () => {
                         <p>Apart of technology I like to urban explore, learn about different cultures, languages and talk with people from all over the world, I love big and silly dogs, practice sports and take naps in cozy places, I'm a fan of F1, co-op games and only know how to cook sweets.</p>
                     </article>
                     <form @submit.prevent="aboutFormHanddler" autocomplete="off" class="w-full">
-                        <label for="command" class="text-sm">Terminal</label>
+                        <label for="command" class="text-sm">lil Terminal</label>
                         <div class="flex">
                             <input type="text" id="command" name="command" placeholder="You can type some commands here..." v-model="aboutForm.command" class="h-8 w-full rounded-l-md border-y border-l border-[#181A1B] bg-transparent px-3 text-sm outline-none dark:border-stone-100" />
                             <button type="submit" :disabled="!aboutFormValidation.pass.value" class="group cursor-not-allowed rounded-r-md border-y border-r border-[#181A1B] px-3 enabled:cursor-pointer dark:border-stone-100">
@@ -152,10 +191,10 @@ onFetchFinally(async () => {
                         </div>
                     </form>
                 </div>
-                <div class="flex flex-col gap-6">
+                <div v-motion-slide-visible-once-right class="flex flex-col gap-6">
                     <div class="flex items-center gap-4 md:flex-col">
                         <picture>
-                            <img class="w-28 rounded-full border-2 border-neutral-800/30 dark:border-slate-200/30 md:w-36 lg:w-44 2xl:w-56" src="https://avatars.githubusercontent.com/u/19919287?v=4" alt="" />
+                            <img class="w-28 select-none rounded-full border-2 border-neutral-800/30 dark:border-slate-200/30 md:w-36 lg:w-44 2xl:w-56" src="https://avatars.githubusercontent.com/u/19919287?v=4" alt="" />
                         </picture>
                         <ul>
                             <li class="text-2xl font-semibold text-neutral-800 dark:text-slate-200">Arthur Segato Paulo</li>
@@ -192,7 +231,7 @@ onFetchFinally(async () => {
                 </div>
             </div>
         </section>
-        <section id="projects" class="flex min-h-screen w-full items-center justify-center p-7">
+        <section id="projects" class="flex w-full items-center justify-center p-7 md:p-14 lg:py-28">
             <div class="flex w-full flex-col flex-wrap content-evenly justify-evenly gap-4 md:flex-row xl:w-4/5 2xl:w-3/4">
                 <Card v-for="project in fetchProjectsList.data.value" :project="project" />
                 <div class="group flex flex-col items-center" v-if="fetchProjectsList.isFetching.value">
@@ -218,8 +257,8 @@ onFetchFinally(async () => {
                 </div>
             </div>
         </section>
-        <section id="contact" class="flex min-h-screen w-full items-center justify-center p-7">
-            <form @submit.prevent="execute()" autocomplete="off" class="relative flex w-full flex-col gap-2 sm:w-5/6 lg:w-2/3 xl:w-1/2 2xl:w-2/5">
+        <section id="contact" class="flex w-full items-center justify-center p-7 md:p-14 lg:py-28">
+            <form @submit.prevent="execute()" v-motion-slide-visible-once-bottom autocomplete="off" class="relative flex w-full flex-col gap-2 sm:w-5/6 lg:w-2/3 xl:w-1/2 2xl:w-2/5">
                 <div class="flex flex-col gap-2 sm:flex-row">
                     <div class="w-full">
                         <label for="name" class="w-full text-sm">Name</label>

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     },
     devtools: { enabled: true },
     css: ['~/assets/css/main.css'],
-    modules: ['nuxt-purgecss', '@nuxtjs/google-fonts', '@vueuse/nuxt'],
+    modules: ['nuxt-purgecss', '@nuxtjs/google-fonts', '@vueuse/nuxt', '@vueuse/motion/nuxt'],
     googleFonts: {
         families: {
             Inter: [100, 300, 400, 600, 700, 900],

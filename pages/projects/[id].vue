@@ -1,8 +1,5 @@
 <script setup lang="ts">
 import { useFetch, useColorMode } from '@vueuse/core'
-import { lazyLoad } from 'unlazy'
-
-lazyLoad()
 
 const route = useRoute()
 
@@ -14,22 +11,22 @@ const { data, isFinished } = useFetch(`${runtimeConfig.public.apiBase}/projects/
 </script>
 
 <template>
-    <span class="fixed top-0 z-20 h-2 w-screen bg-red-500 transition-colors duration-200 ease-in-out sm:bg-orange-500 md:bg-yellow-500 lg:bg-green-500 xl:bg-blue-500 2xl:bg-purple-500"></span>
-    <section class="box-border w-full bg-stone-100 font-['Inter'] text-[#181A1B] selection:bg-[#181A1B] selection:text-stone-100 dark:bg-[#181A1B] dark:text-stone-100 dark:selection:bg-stone-100 dark:selection:text-[#181A1B]">
+    <section class="box-border w-full overflow-hidden bg-stone-100 font-['Inter'] text-[#181A1B] selection:bg-[#181A1B] selection:text-stone-100 dark:bg-[#181A1B] dark:text-stone-100 dark:selection:bg-stone-100 dark:selection:text-[#181A1B]">
         <header class="relative flex h-screen w-full items-center justify-center">
-            <img loading="lazy" class="absolute top-0 h-full w-full select-none object-cover object-center" v-if="isFinished && data.cover.mimetype === 'image/avif'" :src="data.cover.url" />
+            <span class="absolute top-0 z-10 h-full w-full bg-black opacity-80"></span>
+            <img class="absolute top-0 h-full w-full select-none object-cover object-center" v-if="isFinished && data.cover.mimetype === 'image/avif'" :src="data.cover.url" />
             <video autoplay muted loop class="absolute top-0 h-full w-full select-none object-cover object-center" v-if="isFinished && data.cover.mimetype === 'video/mp4'">
                 <source :src="data.cover.url" :type="data.cover.mimetype" />
             </video>
-            <h1 class="z-10 text-4xl font-thin text-stone-100 md:text-6xl xl:text-8xl" v-if="isFinished">{{ data.name }}</h1>
-            <span class="z-10 animate-pulse text-4xl font-thin text-stone-100 blur-lg md:text-6xl xl:text-8xl" v-else>Loading...</span>
-            <NuxtLink to="/" class="group absolute left-8 top-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-11 w-11 fill-stone-100 transition-all duration-200 ease-in-out group-hover:fill-stone-300 md:h-7 md:w-7" viewBox="0 0 16 16">
+            <h1 class="z-20 text-4xl font-thin text-stone-100 transition-all duration-200 ease-in-out md:text-6xl xl:text-8xl" v-if="isFinished">{{ data.name }}</h1>
+            <span class="z-20 animate-pulse text-4xl font-thin text-stone-100 blur-lg md:text-6xl xl:text-8xl" v-else>Loading...</span>
+            <NuxtLink to="/" class="group absolute left-4 top-4 z-20 h-9 w-9 transition-all duration-200 ease-in-out md:left-8 md:top-4 md:h-7 md:w-7">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full fill-stone-100 group-hover:fill-stone-300" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
                 </svg>
             </NuxtLink>
-            <NuxtLink :to="{ hash: '#info' }" class="absolute bottom-10 h-11 w-11 animate-bounce md:h-7 md:w-7">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full fill-stone-100" viewBox="0 0 16 16">
+            <NuxtLink :to="{ hash: '#info' }" class="absolute bottom-10 z-20 h-11 w-11 animate-bounce md:h-7 md:w-7">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full fill-stone-100 group-hover:fill-stone-300" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                 </svg>
             </NuxtLink>
@@ -172,8 +169,8 @@ const { data, isFinished } = useFetch(`${runtimeConfig.public.apiBase}/projects/
                 </li>
             </ul>
             <ul class="flex w-full flex-col flex-wrap items-center justify-center gap-7 md:flex-row md:justify-evenly">
-                <li v-if="isFinished" v-for="asset in data.assets">
-                    <img class="aspect-video w-full rounded-lg lg:w-80" :src="asset.url" :alt="asset.alt" v-if="asset.mimetype === 'image/avif'" />
+                <li v-if="isFinished" v-for="asset in data.assets" v-motion-pop-visible-once>
+                    <img class="aspect-video w-full rounded-lg object-cover object-center lg:w-80" :src="asset.url" :alt="asset.alt" v-if="asset.mimetype === 'image/avif'" />
                     <video autoplay muted loop class="aspect-video w-full rounded-lg lg:w-80" v-else>
                         <source :src="asset.url" :type="asset.mimetype" />
                     </video>

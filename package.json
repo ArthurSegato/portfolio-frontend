@@ -3,7 +3,7 @@
     "private": true,
     "scripts": {
         "build": "nuxt build",
-        "dev": "nuxt dev",
+        "dev": "nuxt dev --host",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare"
@@ -26,8 +26,8 @@
     },
     "dependencies": {
         "@vueuse/integrations": "^10.4.1",
+        "@vueuse/motion": "^2.0.0",
         "async-validator": "^4.2.5",
-        "maska": "^2.1.10",
-        "unlazy": "^0.10.1"
+        "maska": "^2.1.10"
     }
 }

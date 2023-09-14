@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-    <NuxtLink :to="`/projects/${project.id}`" class="group flex flex-col items-center">
+    <NuxtLink :to="`/projects/${project.id}`" v-motion-pop-visible-once class="group flex select-none flex-col items-center">
         <div class="h-[250px] w-[350px] overflow-hidden rounded-bl-[20px] rounded-br-md rounded-tl-md rounded-tr-[20px] transition-all duration-[.25s] ease-in-out group-hover:rounded-bl-[40px] group-hover:rounded-tr-[40px] sm:w-[350px]">
             <img class="h-full w-full object-cover object-center transition-all duration-[.25s] ease-in-out group-hover:scale-110" :src="project.card.url" v-if="project.card.mimetype === 'image/avif'" />
             <video width="250" height="350" autoplay muted loop class="h-full w-full object-cover object-center transition-all duration-[.25s] ease-in-out group-hover:scale-110" v-else>

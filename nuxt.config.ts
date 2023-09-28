@@ -5,7 +5,7 @@ export default defineNuxtConfig({
             apiBase: '',
         },
     },
-    devtools: { enabled: true },
+    devtools: { enabled: false },
     modules: [
         'nuxt-purgecss',
         '@nuxtjs/google-fonts',
@@ -21,11 +21,21 @@ export default defineNuxtConfig({
         display: 'fallback',
         download: true,
     },
-    postcss: {
-        plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-        },
+    purgecss: {
+        enabled: true,
+        safelist: [
+            "font-['Inter']", 
+            "text-[#181A1B]",
+            "selection:bg-[#181A1B]",
+            "dark:bg-[#181A1B]",
+            "dark:selection:text-[#181A1B]",
+            "h-[250px]",
+            "w-[350px]",
+            "rounded-bl-[20px]",
+            "rounded-tr-[20px]",
+            "duration-[.25s]",
+            "w-[320px]"
+        ]
     },
     site: {
         url: 'https://arthursegato.dev',

@@ -6,8 +6,14 @@ export default defineNuxtConfig({
         },
     },
     devtools: { enabled: true },
-    css: ['~/assets/css/main.css'],
-    modules: ['nuxt-purgecss', '@nuxtjs/google-fonts', '@vueuse/nuxt', '@vueuse/motion/nuxt', 'nuxt-simple-sitemap'],
+    modules: [
+        'nuxt-purgecss',
+        '@nuxtjs/google-fonts',
+        '@vueuse/nuxt',
+        '@vueuse/motion/nuxt',
+        'nuxt-simple-sitemap',
+        "@nuxtjs/tailwindcss"
+    ],
     googleFonts: {
         families: {
             Inter: [100, 300, 400, 600, 700, 900],

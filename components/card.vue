@@ -16,7 +16,7 @@ const props = defineProps<{ project: object }>()
                 class="h-full w-full object-cover object-center transition-all duration-[.25s] ease-in-out group-hover:scale-110"
                 v-if="project.card === null"
             >
-                <source src="404.mp4" type="video/mp4" />
+                <source src="/videos/404.mp4" type="video/mp4" />
             </video>
             <img
                 class="h-full w-full object-cover object-center transition-all duration-[.25s] ease-in-out group-hover:scale-110"

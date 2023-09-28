@@ -26,7 +26,7 @@ const { pending, data: project } = await useFetch(`${runtimeConfig.public.apiBas
                     {{ project.name }}
                 </h1>
                 <video autoplay muted loop class="absolute top-0 h-full w-full select-none object-cover object-center" v-if="project.cover === null">
-                    <source src="/404.mp4" type="video/mp4" />
+                    <source src="/videos/404.mp4" type="video/mp4" />
                 </video>
                 <img class="absolute top-0 h-full w-full select-none object-cover object-center" v-else-if="project.cover.mimetype === 'image/avif'" :src="project.cover.url" />
                 <video autoplay muted loop class="absolute top-0 h-full w-full select-none object-cover object-center" v-else>

@@ -236,7 +236,7 @@ const handleContact = async () => {
                             <input type="text" id="command" name="command" placeholder="You can type some commands here..."
                                 v-model="aboutForm.command"
                                 class="h-8 w-full rounded-l-md border-y border-l border-[#181A1B] bg-transparent px-3 text-sm outline-none dark:border-stone-100" />
-                            <button type="submit" :disabled="!aboutFormValidation.pass.value"
+                            <button type="submit" :disabled="!aboutFormValidation.pass.value" aria-label="submit"
                                 class="group cursor-not-allowed rounded-r-md border-y border-r border-[#181A1B] px-3 enabled:cursor-pointer dark:border-stone-100">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="h-4 w-4 fill-[#181A1B] group-disabled:fill-[#181A1B]/50 dark:fill-stone-100 dark:group-disabled:fill-stone-100/50"
@@ -253,7 +253,7 @@ const handleContact = async () => {
                         <picture>
                             <img loading="lazy" decoding="async"
                                 class="w-28 select-none rounded-full border-2 border-neutral-800/30 dark:border-slate-200/30 md:w-36 lg:w-44 2xl:w-56"
-                                src="/images/arthur-segato.avif"
+                                src="/images/arthur-segato.avif" title="Portrait of Arthur Segato"
                                 alt="Arthur segato, man, long brown hair, outsite at night" />
                         </picture>
                         <ul>
@@ -264,12 +264,12 @@ const handleContact = async () => {
                     </div>
                     <div class="flex flex-col gap-2">
                         <a class="flex h-8 w-full items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
-                            href="https://github.com/ArthurSegato">
+                            href="https://github.com/ArthurSegato" aria-label="Follow on github">
                             <p class="text-sm text-zinc-800 dark:text-slate-300">Follow</p>
                         </a>
                         <div class="flex flex-col gap-2 md:flex-row">
                             <a class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
-                                href="https://arthursegato.itch.io/">
+                                href="https://arthursegato.itch.io/" aria-label="Visit Itch.io profile">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="hidden h-4 w-4 fill-zinc-800 dark:fill-slate-300 md:inline-block"
                                     viewBox="0 0 16 16">
@@ -281,7 +281,7 @@ const handleContact = async () => {
                                 <p class="text-sm text-zinc-800 dark:text-slate-300 md:hidden">Itch.io</p>
                             </a>
                             <a class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
-                                href="https://mastodon.social/@arthursegato" rel="me">
+                                href="https://mastodon.social/@arthursegato" rel="me" aria-label="Visit mastodon profile">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="hidden h-4 w-4 fill-zinc-800 dark:fill-slate-300 md:inline-block"
                                     viewBox="0 0 16 16">
@@ -290,7 +290,7 @@ const handleContact = async () => {
                                 </svg>
                                 <p class="text-sm text-zinc-800 dark:text-slate-300 md:hidden">Mastodon</p>
                             </a>
-                            <NuxtLink :to="{ hash: '#contact' }"
+                            <NuxtLink :to="{ hash: '#contact' }" aria-label="Move to contact form"
                                 class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="hidden h-4 w-4 fill-zinc-800 dark:fill-slate-300 md:inline-block"
@@ -410,7 +410,7 @@ const handleContact = async () => {
                             class="h-52 w-full resize-y rounded-md border border-[#181A1B] bg-transparent p-3 text-sm outline-none dark:border-stone-100"></textarea>
                     </div>
                 </div>
-                <button type="submit" :disabled="!contactFormValidation.pass.value"
+                <button type="submit" :disabled="!contactFormValidation.pass.value" aria-label="submit contact form"
                     class="group flex h-12 w-full cursor-not-allowed items-center justify-center rounded-md border border-[#181A1B] transition-all duration-200 ease-in-out enabled:cursor-pointer enabled:hover:border-black enabled:hover:bg-stone-200/30 disabled:border-stone-200/50 dark:border-stone-100 dark:enabled:hover:border-white dark:enabled:hover:bg-stone-950/30 dark:disabled:fill-stone-100/50">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         class="h-4 w-4 fill-[#181A1B] group-hover:fill-black group-disabled:fill-[#181A1B]/50 dark:fill-stone-100 dark:group-hover:fill-white dark:group-disabled:fill-stone-100/50"

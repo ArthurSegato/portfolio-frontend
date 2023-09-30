@@ -65,6 +65,7 @@ export default defineNuxtConfig({
     "nuxt-simple-robots",
     "@nuxtjs/tailwindcss",
     "nuxt-link-checker",
+    "nuxt-security",
   ],
   googleFonts: {
     families: {

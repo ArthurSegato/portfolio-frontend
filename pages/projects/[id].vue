@@ -20,10 +20,10 @@ useHead({
 
 useSeoMeta({
     title: `Arthur Segato | ${project.name}`,
-    description: `${project.description}`,
+    description: `${project.long_description}`,
     keywords: 'arthur,segato,arthursegato,arthur segato,segatto,arthursegatto,arthur segatto, developer, game developer, web developer,computer science,steam,games,Game Development, Video Games, Game Design, Game Programming, Game Engines, Game Mechanics, Game Art, Level Design, Game Monetization, Game Testing, Virtual Reality (VR) Gaming, Augmented Reality (AR) Gaming, Indie Game Development, Mobile Game Development, Console Game Development, PC Game Development, Game Marketing, Esports, Game Audio, Game Storytelling, Character Design, Game Production, Game Publishing, Game Analytics, Game Community Management, Game Monetization Strategies, Game Development Tools, Game Industry Trends, Game Industry Conferences, Game Quality Assurance (QA),Web Development, Front-end Development, Back-end Development, Full-stack Development, Web Design, HTML, CSS, JavaScript, Responsive Web Design, User Experience (UX), User Interface (UI), Web Frameworks, API Integration, Cross-browser Compatibility, Web Performance Optimization, Content Management Systems (CMS), E-commerce Development, Mobile Web Development, Progressive Web Apps (PWAs), Web Security, Web Accessibility, Version Control (e.g., Git), Web Hosting, SEO (Search Engine Optimization), Web Analytics, Web Prototyping, Web Testing, Web Deployment, Web Standards, JavaScript Libraries (e.g., jQuery), Front-end Frameworks, Vue.js, Back-end Technologies Node.js',
     ogTitle: `Arthur Segato | ${project.name}`,
-    ogDescription: `${project.description}`,
+    ogDescription: `${project.long_description}`,
     ogType: 'website',
     ogUrl: `https://arthursegato.dev/projects/${route.params.id}`,
     ogSiteName: 'Arthur Segato',
@@ -36,7 +36,7 @@ useSeoMeta({
         type: 'image/gif'
     },
     twitterTitle: `Arthur Segato | ${project.name}`,
-    twitterDescription: `${project.description}`,
+    twitterDescription: `${project.long_description}`,
     twitterCard: 'summary_large_image',
     twitterImage: {
         url: 'https://arthursegato.dev/videos/twitter-card.gif',

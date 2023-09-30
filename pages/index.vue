@@ -231,7 +231,7 @@ const handleContact = async () => {
                         </p>
                     </article>
                     <form @submit.prevent="aboutFormHandler" autocomplete="off" class="w-full">
-                        <label for="command" class="text-sm">lil Terminal</label>
+                        <label for="command" class="text-sm">Simple Terminal</label>
                         <div class="flex">
                             <input type="text" id="command" name="command" placeholder="You can type some commands here..."
                                 v-model="aboutForm.command"
@@ -251,9 +251,10 @@ const handleContact = async () => {
                 <div v-motion-slide-visible-once-right class="flex flex-col gap-6">
                     <div class="flex items-center gap-4 md:flex-col">
                         <picture>
-                            <img loading="lazy"
+                            <img loading="lazy" decoding="async"
                                 class="w-28 select-none rounded-full border-2 border-neutral-800/30 dark:border-slate-200/30 md:w-36 lg:w-44 2xl:w-56"
-                                src="/images/arthur-segato.avif" alt="" />
+                                src="/images/arthur-segato.avif"
+                                alt="Arthur segato, man, long brown hair, outsite at night" />
                         </picture>
                         <ul>
                             <li class="text-2xl font-semibold text-neutral-800 dark:text-slate-200">Arthur Segato Paulo</li>

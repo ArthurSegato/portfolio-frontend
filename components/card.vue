@@ -13,7 +13,8 @@ const { project } = defineProps(['project'])
                 <source src="/videos/card.mp4" type="video/mp4" />
             </video>
             <img class="h-full w-full object-cover object-center transition-all duration-[.25s] ease-in-out group-hover:scale-110"
-                :src="project.card.url" v-else-if="project.card.mimetype === 'image/avif'" loading="lazy" />
+                :src="project.card.url" v-else-if="project.card.mimetype === 'image/avif'" loading="lazy"
+                decoding="async" />
             <video width="250" height="350" autoplay muted loop
                 class="h-full w-full object-cover object-center transition-all duration-[.25s] ease-in-out group-hover:scale-110"
                 v-else>

@@ -7,7 +7,7 @@ const route = useRoute()
 
 const runtimeConfig = useRuntimeConfig()
 
-const { pending, data: project } = await useFetch(`${runtimeConfig.public.apiBase}projects/${route.params.id}`)
+const { data: project } = await useFetch(`${runtimeConfig.public.apiBase}projects/${route.params.id}`)
 
 useHead({
     meta: [
@@ -55,11 +55,7 @@ useSeoMeta({
 </script>
 
 <template>
-    <section v-if="pending" class="w-full h-screen flex bg-stone-100 dark:bg-[#181A1B] justify-center items-center">
-        <span
-            class="animate-spin w-24 h-24 md:w-48 md:h-48 border border-[#181A1B] dark:border-stone-100 border-b-transparent dark:border-b-transparent rounded-full"></span>
-    </section>
-    <section v-else
+    <section
         class="box-border w-full overflow-hidden bg-stone-100 font-['Inter'] text-[#181A1B] selection:bg-[#181A1B] selection:text-stone-100 dark:bg-[#181A1B] dark:text-stone-100 dark:selection:bg-stone-100 dark:selection:text-[#181A1B]">
         <header id="hero" class="relative flex h-screen w-full items-center justify-center">
             <h1

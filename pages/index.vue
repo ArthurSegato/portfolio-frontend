@@ -253,7 +253,7 @@ const handleContact = async () => {
                         <picture>
                             <img loading="lazy"
                                 class="w-28 select-none rounded-full border-2 border-neutral-800/30 dark:border-slate-200/30 md:w-36 lg:w-44 2xl:w-56"
-                                src="https://avatars.githubusercontent.com/u/19919287?v=4" alt="" />
+                                src="/images/arthur-segato.avif" alt="" />
                         </picture>
                         <ul>
                             <li class="text-2xl font-semibold text-neutral-800 dark:text-slate-200">Arthur Segato Paulo</li>

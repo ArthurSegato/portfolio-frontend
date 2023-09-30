@@ -7,21 +7,26 @@ const route = useRoute()
 
 const runtimeConfig = useRuntimeConfig()
 
-const { data: project } = await useFetch(`${runtimeConfig.public.apiBase}projects/${route.params.id}`)
+const { pending, data: project } = await useFetch(`${runtimeConfig.public.apiBase}projects/${route.params.id}`, {
+    lazy: true
+})
 </script>
 
 <template>
-    <section
+    <section v-if="pending" class="w-full h-screen flex bg-stone-100 dark:bg-[#181A1B] justify-center items-center">
+        <span
+            class="animate-spin w-24 h-24 md:w-48 md:h-48 border border-[#181A1B] dark:border-stone-100 border-b-transparent dark:border-b-transparent rounded-full"></span>
+    </section>
+    <section v-else
         class="box-border w-full overflow-hidden bg-stone-100 font-['Inter'] text-[#181A1B] selection:bg-[#181A1B] selection:text-stone-100 dark:bg-[#181A1B] dark:text-stone-100 dark:selection:bg-stone-100 dark:selection:text-[#181A1B]">
         <header id="hero" class="relative flex h-screen w-full items-center justify-center">
-            <span class="absolute top-0 z-10 h-full w-full bg-black opacity-80"></span>
             <h1
                 class="z-20 text-4xl font-thin text-stone-100 transition-all duration-200 ease-in-out md:text-6xl xl:text-8xl">
                 {{ project.name }}
             </h1>
             <video autoplay muted loop class="absolute top-0 h-full w-full select-none object-cover object-center"
                 v-if="project.cover === null">
-                <source src="/videos/404.mp4" type="video/mp4" />
+                <source src="/videos/cover.mp4" type="video/mp4" />
             </video>
             <img class="absolute top-0 h-full w-full select-none object-cover object-center"
                 v-else-if="project.cover.mimetype === 'image/avif'" :src="project.cover.url" />

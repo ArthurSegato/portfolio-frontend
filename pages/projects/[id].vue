@@ -7,9 +7,7 @@ const route = useRoute()
 
 const runtimeConfig = useRuntimeConfig()
 
-const { pending, data: project } = await useFetch(`${runtimeConfig.public.apiBase}projects/${route.params.id}`, {
-    lazy: true
-})
+const { pending, data: project } = await useFetch(`${runtimeConfig.public.apiBase}projects/${route.params.id}`)
 
 useHead({
     meta: [

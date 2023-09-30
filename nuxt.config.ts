@@ -55,7 +55,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     "nuxt-purgecss",
     "@nuxtjs/google-fonts",
@@ -72,7 +72,7 @@ export default defineNuxtConfig({
     download: true,
   },
   purgecss: {
-    enabled: false,
+    enabled: true,
     safelist: [
       "font-['Inter']",
       "text-[#181A1B]",

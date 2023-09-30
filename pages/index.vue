@@ -4,86 +4,47 @@ import { useAsyncValidator } from '@vueuse/integrations/useAsyncValidator'
 import { useColorMode, promiseTimeout } from '@vueuse/core'
 
 useHead({
-    title: 'Arthur Segato | Developer',
     meta: [
         {
-            name: 'description',
-            content: `Hey, I'm arthur segato, a computer scientist developing websites and games, if you're interested, visit my website to find out more about me`,
-        },
-        {
-            name: 'keywords',
-            content:
-                'arthur,segato,arthursegato,arthur segato,segatto,arthursegatto,arthur segatto, developer, game developer, web developer,computer science,steam,games,Game Development, Video Games, Game Design, Game Programming, Game Engines, Game Mechanics, Game Art, Level Design, Game Monetization, Game Testing, Virtual Reality (VR) Gaming, Augmented Reality (AR) Gaming, Indie Game Development, Mobile Game Development, Console Game Development, PC Game Development, Game Marketing, Esports, Game Audio, Game Storytelling, Character Design, Game Production, Game Publishing, Game Analytics, Game Community Management, Game Monetization Strategies, Game Development Tools, Game Industry Trends, Game Industry Conferences, Game Quality Assurance (QA),Web Development, Front-end Development, Back-end Development, Full-stack Development, Web Design, HTML, CSS, JavaScript, Responsive Web Design, User Experience (UX), User Interface (UI), Web Frameworks, API Integration, Cross-browser Compatibility, Web Performance Optimization, Content Management Systems (CMS), E-commerce Development, Mobile Web Development, Progressive Web Apps (PWAs), Web Security, Web Accessibility, Version Control (e.g., Git), Web Hosting, SEO (Search Engine Optimization), Web Analytics, Web Prototyping, Web Testing, Web Deployment, Web Standards, JavaScript Libraries (e.g., jQuery), Front-end Frameworks, Vue.js, Back-end Technologies Node.js',
-        },
-        {
             name: 'thumbnail',
-            content: 'https://arthursegato.dev/images/google-card.avif',
-        },
-        {
-            name: 'og:title',
-            content: 'Arthur Segato | Developer',
-        },
-        {
-            property: 'og:type',
-            content: 'website',
-        },
-        {
-            property: 'og:description',
-            content: `Hey, I'm arthur segato, a computer scientist developing websites and games, if you're interested, visit my website to find out more about me`,
-        },
-        {
-            property: 'og:image:width',
-            content: '1240',
-        },
-        {
-            property: 'og:image:height',
-            content: '650',
-        },
-        {
-            property: 'og:image',
-            content: 'https://arthursegato.dev/images/facebook-card.jpg',
-        },
-        {
-            property: 'og:url',
-            content: 'https://arthursegato.dev',
-        },
-        {
-            property: 'og:site:name',
-            content: 'Arthur Segato | Developer',
-        },
-        {
-            name: 'twitter:title',
-            content: 'Arthur Segato | Developer',
-        },
-        {
-            name: 'twitter:card',
-            content: 'summary_large_image',
-        },
-        {
-            name: 'twitter:description',
-            content: `Hey, I'm arthur segato, a computer scientist developing websites and games, if you're interested, visit my website to find out more about me`,
-        },
-        {
-            name: 'twitter:image',
-            content: 'https://arthursegato.dev/videos/twitter-card.gif',
-        },
-        {
-            name: 'twitter:image:alt',
-            content: '',
-        },
-        {
-            name: 'twitter:url',
-            content: 'https://arthursegato.dev',
-        },
-        {
-            name: 'twitter:site',
-            content: 'https://arthursegato.dev',
+            content: 'https://arthursegato.dev/images/google-card.jpg'
         }
-    ],
+    ]
 })
 
 useSeoMeta({
-
+    title: 'Arthur Segato | Developer',
+    description: "Hey, I'm a developer, web by profession games by hobby, but I do other things too, if I interest you, why not take a look?",
+    keywords: 'arthur,segato,arthursegato,arthur segato,segatto,arthursegatto,arthur segatto, developer, game developer, web developer,computer science,steam,games,Game Development, Video Games, Game Design, Game Programming, Game Engines, Game Mechanics, Game Art, Level Design, Game Monetization, Game Testing, Virtual Reality (VR) Gaming, Augmented Reality (AR) Gaming, Indie Game Development, Mobile Game Development, Console Game Development, PC Game Development, Game Marketing, Esports, Game Audio, Game Storytelling, Character Design, Game Production, Game Publishing, Game Analytics, Game Community Management, Game Monetization Strategies, Game Development Tools, Game Industry Trends, Game Industry Conferences, Game Quality Assurance (QA),Web Development, Front-end Development, Back-end Development, Full-stack Development, Web Design, HTML, CSS, JavaScript, Responsive Web Design, User Experience (UX), User Interface (UI), Web Frameworks, API Integration, Cross-browser Compatibility, Web Performance Optimization, Content Management Systems (CMS), E-commerce Development, Mobile Web Development, Progressive Web Apps (PWAs), Web Security, Web Accessibility, Version Control (e.g., Git), Web Hosting, SEO (Search Engine Optimization), Web Analytics, Web Prototyping, Web Testing, Web Deployment, Web Standards, JavaScript Libraries (e.g., jQuery), Front-end Frameworks, Vue.js, Back-end Technologies Node.js',
+    ogTitle: 'Arthur Segato | Developer',
+    ogDescription: "Hey, I'm a developer, web by profession games by hobby, but I do other things too, if I interest you, why not take a look?",
+    ogType: 'website',
+    ogUrl: 'https://arthursegato.dev',
+    ogSiteName: 'Arthur Segato',
+    ogImage: {
+        url: 'https://arthursegato.dev/gifs/facebook-card.gif',
+        secureUrl: 'https://arthursegato.dev/gifs/facebook-card.gif',
+        alt: 'Arthur Segato Logo, composed of a letter A cut horizontally by a letter S, with a moving coloured background.',
+        width: '1240',
+        height: '650',
+        type: 'image/gif'
+    },
+    twitterTitle: 'Arthur Segato | Developer',
+    twitterDescription: "Hey, I'm a developer, web by profession games by hobby, but I do other things too, if I interest you, why not take a look?",
+    twitterCard: 'summary_large_image',
+    twitterImage: {
+        url: 'https://arthursegato.dev/videos/twitter-card.gif',
+        type: 'image/gif',
+        alt: 'Arthur Segato Logo, composed of a letter A cut horizontally by a letter S, with a moving coloured background.',
+        width: '900',
+        height: '470'
+    },
+    twitterSite: 'https://arthursegato.dev',
+    author: 'Arthur Segato',
+    colorScheme: 'dark light',
+    viewport: {
+        userScalable: 'yes'
+    }
 })
 
 /* Easter Egg */

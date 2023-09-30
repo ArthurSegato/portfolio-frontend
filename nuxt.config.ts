@@ -16,10 +16,23 @@ export default defineNuxtConfig({
           href: "https://arthursegato.com",
         },
         {
+          href: "favicon.ico",
+          rel: "icon",
+          sizes: "32x32",
+        },
+        {
           type: "image/svg+xml",
           href: "icon.svg",
           rel: "icon",
           sizes: "any",
+        },
+        {
+          href: "apple-touch-icon.png",
+          rel: "apple-touch-icon",
+        },
+        {
+          href: "manifest.webmanifest",
+          rel: "manifest",
         },
       ],
       meta: [

@@ -62,7 +62,9 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@vueuse/motion/nuxt",
     "nuxt-simple-sitemap",
+    "nuxt-simple-robots",
     "@nuxtjs/tailwindcss",
+    "nuxt-link-checker",
   ],
   googleFonts: {
     families: {

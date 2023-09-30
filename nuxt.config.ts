@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "canonical",
-          href: "https://arthursegato.com",
+          href: "https://arthursegato.dev",
         },
         {
           href: "favicon.ico",

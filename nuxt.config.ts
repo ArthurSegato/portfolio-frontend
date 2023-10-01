@@ -66,7 +66,40 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "nuxt-link-checker",
     "nuxt-security",
+    "@vite-pwa/nuxt",
   ],
+  pwa: {
+    manifest: {
+      name: "Arthur Segato | Developer",
+      short_name: "Arthur Segato",
+      description:
+        "Hey, I'm a computer scientist developing stuff for the web, and games in my spare time, but I create other things too, so if that interests you, why not take a look at my website?",
+      lang: "en-US",
+      start_url: "https://arthursegato.dev/",
+      icons: [
+        {
+          src: "/icon-192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          src: "/icon-512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
+      theme_color: "#181A1B",
+      background_color: "#f5f5f4",
+      display: "standalone",
+    },
+    workbox: {
+      navigateFallback: "/",
+    },
+    devOptions: {
+      enabled: true,
+      type: "module",
+    },
+  },
   googleFonts: {
     families: {
       Inter: [100, 300, 400, 600, 700, 900],

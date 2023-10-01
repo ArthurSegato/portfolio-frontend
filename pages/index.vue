@@ -42,9 +42,6 @@ useSeoMeta({
     twitterSite: 'https://arthursegato.dev',
     author: 'Arthur Segato',
     colorScheme: 'dark light',
-    viewport: {
-        userScalable: 'yes'
-    }
 })
 
 /* Easter Egg */

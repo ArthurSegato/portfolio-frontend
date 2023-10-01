@@ -48,9 +48,6 @@ useSeoMeta({
     twitterSite: `https://arthursegato.dev/projects/${route.params.id}`,
     author: 'Arthur Segato',
     colorScheme: 'dark light',
-    viewport: {
-        userScalable: 'yes'
-    }
 })
 </script>
 

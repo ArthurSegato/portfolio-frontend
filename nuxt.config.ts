@@ -87,6 +87,12 @@ export default defineNuxtConfig({
           sizes: "512x512",
           type: "image/png",
         },
+        {
+          src: "/icon-maskable.png",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "maskable",
+        },
       ],
       theme_color: "#181A1B",
       background_color: "#f5f5f4",

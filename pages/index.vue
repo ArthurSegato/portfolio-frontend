@@ -14,10 +14,10 @@ useHead({
 
 useSeoMeta({
     title: 'Arthur Segato | Developer',
-    description: "Hey, I'm a developer, web by profession games by hobby, but I do other things too, if I interest you, why not take a look?",
+    description: "Hey, I'm a computer scientist developing stuff for the web, and games in my spare time, but I create other things too, so if that interests you, why not take a look at my website?",
     keywords: 'arthur,segato,arthursegato,arthur segato,segatto,arthursegatto,arthur segatto, developer, game developer, web developer,computer science,steam,games,Game Development, Video Games, Game Design, Game Programming, Game Engines, Game Mechanics, Game Art, Level Design, Game Monetization, Game Testing, Virtual Reality (VR) Gaming, Augmented Reality (AR) Gaming, Indie Game Development, Mobile Game Development, Console Game Development, PC Game Development, Game Marketing, Esports, Game Audio, Game Storytelling, Character Design, Game Production, Game Publishing, Game Analytics, Game Community Management, Game Monetization Strategies, Game Development Tools, Game Industry Trends, Game Industry Conferences, Game Quality Assurance (QA),Web Development, Front-end Development, Back-end Development, Full-stack Development, Web Design, HTML, CSS, JavaScript, Responsive Web Design, User Experience (UX), User Interface (UI), Web Frameworks, API Integration, Cross-browser Compatibility, Web Performance Optimization, Content Management Systems (CMS), E-commerce Development, Mobile Web Development, Progressive Web Apps (PWAs), Web Security, Web Accessibility, Version Control (e.g., Git), Web Hosting, SEO (Search Engine Optimization), Web Analytics, Web Prototyping, Web Testing, Web Deployment, Web Standards, JavaScript Libraries (e.g., jQuery), Front-end Frameworks, Vue.js, Back-end Technologies Node.js',
     ogTitle: 'Arthur Segato | Developer',
-    ogDescription: "Hey, I'm a developer, web by profession games by hobby, but I do other things too, if I interest you, why not take a look?",
+    ogDescription: "Hey, I'm a computer scientist developing stuff for the web, and games in my spare time, but I create other things too, so if that interests you, why not take a look at my website?",
     ogType: 'website',
     ogUrl: 'https://arthursegato.dev',
     ogSiteName: 'Arthur Segato',
@@ -30,7 +30,7 @@ useSeoMeta({
         type: 'image/gif'
     },
     twitterTitle: 'Arthur Segato | Developer',
-    twitterDescription: "Hey, I'm a developer, web by profession games by hobby, but I do other things too, if I interest you, why not take a look?",
+    twitterDescription: "Hey, I'm a computer scientist developing stuff for the web, and games in my spare time, but I create other things too, so if that interests you, why not take a look at my website?",
     twitterCard: 'summary_large_image',
     twitterImage: {
         url: 'https://arthursegato.dev/videos/twitter-card.gif',
@@ -51,7 +51,7 @@ useSeoMeta({
 console.clear()
 console.log(`Oh, greetings! It appears you've wandered into a place not meant for you. However, now that you're here, allow me to impart a few words of wisdom.
 
-Do you observe that small terminal in the "about me" segment? How about attempting to weave a bit of magic upon it?
+Do you observe that simple terminal in the "about me" segment? How about attempting to weave a bit of magic upon it?
                     ____
                   .'* *.'
                __/_*_*(_
@@ -79,10 +79,6 @@ Do you observe that small terminal in the "about me" segment? How about attempti
 const theme = useColorMode()
 
 const runtimeConfig = useRuntimeConfig()
-
-const page = reactive({
-    blur: false,
-})
 
 const { pending, data: projectsList } = await useFetch(`${runtimeConfig.public.apiBase}projects`, {
     lazy: true,
@@ -118,11 +114,6 @@ const aboutFormHandler = async () => {
         case 'erecto':
             aboutForm.command = 'heh ( ͡° ͜ʖ ͡°)'
             await promiseTimeout(1000)
-            break
-        case 'illegibilus':
-            page.blur = true
-            await promiseTimeout(1500)
-            page.blur = false
             break
         default:
             const prefix = 'expecto patronum'
@@ -202,7 +193,7 @@ const handleContact = async () => {
 </script>
 
 <template>
-    <main :class="{ 'blur-3xl': page.blur }"
+    <main
         class="box-border w-full overflow-hidden bg-stone-100 font-['Inter'] text-[#181A1B] selection:bg-[#181A1B] selection:text-stone-100 dark:bg-[#181A1B] dark:text-stone-100 dark:selection:bg-stone-100 dark:selection:text-[#181A1B]">
         <section id="hero" class="flex h-screen w-full items-center justify-center p-7">
             <svg v-motion-fade xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
@@ -224,7 +215,7 @@ const handleContact = async () => {
                         <p>Computer Scientist graduated, with experience in game development, ui/ux, full-stack development,
                             and a love for virtual reality, cybersecurity and open source!</p>
                         <p>
-                            Apart of technology I like to urban explore, learn about different cultures, languages and talk
+                            Apart of technology I like to urbex, learn about different cultures, languages and interact
                             with people from all over the world, I love big and silly dogs, practice
                             sports and take naps in cozy places, I'm a fan of F1, co-op games and only know how to cook
                             sweets.
@@ -262,13 +253,13 @@ const handleContact = async () => {
                             <li class="text-base text-neutral-800 dark:text-slate-200">just like github, right?</li>
                         </ul>
                     </div>
-                    <div class="flex flex-col gap-2">
-                        <a class="flex h-8 w-full items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
+                    <div class="flex flex-col gap-4 md:gap-2">
+                        <a class="flex h-12 md:h-8 w-full items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
                             href="https://github.com/ArthurSegato" aria-label="Follow on github">
                             <p class="text-sm text-zinc-800 dark:text-slate-300">Follow</p>
                         </a>
-                        <div class="flex flex-col gap-2 md:flex-row">
-                            <a class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
+                        <div class="flex flex-col gap-4 md:gap-2 md:flex-row">
+                            <a class="flex h-12 md:h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
                                 href="https://arthursegato.itch.io/" aria-label="Visit Itch.io profile">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="hidden h-4 w-4 fill-zinc-800 dark:fill-slate-300 md:inline-block"
@@ -280,7 +271,7 @@ const handleContact = async () => {
                                 </svg>
                                 <p class="text-sm text-zinc-800 dark:text-slate-300 md:hidden">Itch.io</p>
                             </a>
-                            <a class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
+                            <a class="flex h-12 md:h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800"
                                 href="https://mastodon.social/@arthursegato" rel="me" aria-label="Visit mastodon profile">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="hidden h-4 w-4 fill-zinc-800 dark:fill-slate-300 md:inline-block"
@@ -291,7 +282,7 @@ const handleContact = async () => {
                                 <p class="text-sm text-zinc-800 dark:text-slate-300 md:hidden">Mastodon</p>
                             </a>
                             <NuxtLink :to="{ hash: '#contact' }" aria-label="Move to contact form"
-                                class="flex h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800">
+                                class="flex h-12 md:h-8 w-full min-w-[90px] items-center justify-center gap-2 rounded-md border border-neutral-800/20 bg-slate-50 px-4 duration-300 ease-in-out hover:bg-gray-100 active:bg-gray-200 dark:border-blue-50/20 dark:bg-zinc-800 dark:hover:bg-neutral-700 dark:active:bg-gray-800">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="hidden h-4 w-4 fill-zinc-800 dark:fill-slate-300 md:inline-block"
                                     viewBox="0 0 16 16">

@@ -75,7 +75,7 @@ export default defineNuxtConfig({
       description:
         "Hey, I'm a computer scientist developing stuff for the web, and games in my spare time, but I create other things too, so if that interests you, why not take a look at my website?",
       lang: "en-US",
-      start_url: "https://arthursegato.dev/",
+      start_url: "https://arthursegato.dev",
       icons: [
         {
           src: "/icon-192.png",

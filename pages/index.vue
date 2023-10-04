@@ -117,7 +117,7 @@ const aboutFormHandler = async () => {
             if (aboutForm.command.startsWith(prefix)) {
                 const message = aboutForm.command.substring(prefix.length)
                 if (message.length > 0)
-                    await useFetch(`${runtimeConfig.public.apiBase}easteregg`, {
+                    await $fetch(`${runtimeConfig.public.apiBase}easteregg`, {
                         method: 'POST',
                         body: {
                             message,
@@ -169,7 +169,7 @@ const contactFormValidation = useAsyncValidator(contactForm, contactRules, {
     },
 })
 const handleContact = async () => {
-    await useFetch(`${runtimeConfig.public.apiBase}contact`, {
+    await $fetch(`${runtimeConfig.public.apiBase}contact`, {
         method: 'POST',
         body: contactForm,
     }).then((response) => {

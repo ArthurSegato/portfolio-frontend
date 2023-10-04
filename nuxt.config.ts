@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   runtimeConfig: {
+    contactWebhook: "",
+    easterEggWebhook: "",
     public: {
       apiBase: "",
     },
@@ -97,9 +99,6 @@ export default defineNuxtConfig({
       theme_color: "#181A1B",
       background_color: "#f5f5f4",
       display: "standalone",
-    },
-    workbox: {
-      navigateFallback: "/",
     },
     devOptions: {
       enabled: true,

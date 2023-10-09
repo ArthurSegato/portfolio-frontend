@@ -2,6 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@8.8.0",
   "scripts": {
     "build": "NITRO_PRESET=vercel-edge nuxt build",
     "dev": "nuxt dev --host",

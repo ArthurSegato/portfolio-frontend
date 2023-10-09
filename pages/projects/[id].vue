@@ -5,15 +5,13 @@ const theme = useColorMode()
 
 const route = useRoute()
 
-const runtimeConfig = useRuntimeConfig()
-
-const project = await $fetch(`${runtimeConfig.public.apiBase}projects/${route.params.id}`)
+const project = await $fetch(`/api/projects/${route.params.id}`)
 
 useHead({
     meta: [
         {
             name: 'thumbnail',
-            content: 'https://arthursegato.dev/images/google-card.jpg'
+            content: `${project.meta_images ? project.meta_images.googleUrl : 'https://arthursegato.dev/images/google-card.jpg'}`
         }
     ]
 })
@@ -21,33 +19,21 @@ useHead({
 useSeoMeta({
     title: `Arthur Segato | ${project.name}`,
     description: `${project.long_description}`,
-    keywords: 'arthur,segato,arthursegato,arthur segato,segatto,arthursegatto,arthur segatto, developer, game developer, web developer,computer science,steam,games,Game Development, Video Games, Game Design, Game Programming, Game Engines, Game Mechanics, Game Art, Level Design, Game Monetization, Game Testing, Virtual Reality (VR) Gaming, Augmented Reality (AR) Gaming, Indie Game Development, Mobile Game Development, Console Game Development, PC Game Development, Game Marketing, Esports, Game Audio, Game Storytelling, Character Design, Game Production, Game Publishing, Game Analytics, Game Community Management, Game Monetization Strategies, Game Development Tools, Game Industry Trends, Game Industry Conferences, Game Quality Assurance (QA),Web Development, Front-end Development, Back-end Development, Full-stack Development, Web Design, HTML, CSS, JavaScript, Responsive Web Design, User Experience (UX), User Interface (UI), Web Frameworks, API Integration, Cross-browser Compatibility, Web Performance Optimization, Content Management Systems (CMS), E-commerce Development, Mobile Web Development, Progressive Web Apps (PWAs), Web Security, Web Accessibility, Version Control (e.g., Git), Web Hosting, SEO (Search Engine Optimization), Web Analytics, Web Prototyping, Web Testing, Web Deployment, Web Standards, JavaScript Libraries (e.g., jQuery), Front-end Frameworks, Vue.js, Back-end Technologies Node.js',
     ogTitle: `Arthur Segato | ${project.name}`,
     ogDescription: `${project.long_description}`,
-    ogType: 'website',
     ogUrl: `https://arthursegato.dev/projects/${route.params.id}`,
-    ogSiteName: 'Arthur Segato',
     ogImage: {
-        url: 'https://arthursegato.dev/gifs/facebook-card.gif',
-        secureUrl: 'https://arthursegato.dev/gifs/facebook-card.gif',
-        alt: 'Arthur Segato Logo, composed of a letter A cut horizontally by a letter S, with a moving coloured background.',
-        width: '1240',
-        height: '650',
-        type: 'image/gif'
+        url: `${project.meta_images ? project.meta_images.facebookUrl : 'https://arthursegato.dev/gifs/facebook-card.gif'}`,
+        secureUrl: `${project.meta_images ? project.meta_images.facebookUrl : 'https://arthursegato.dev/gifs/facebook-card.gif'}`,
+        alt: `${project.meta_images ? project.meta_images.facebookAlt : 'Arthur Segato Logo, composed of a letter A cut horizontally by a letter S, with a moving coloured background.'}`,
     },
     twitterTitle: `Arthur Segato | ${project.name}`,
     twitterDescription: `${project.long_description}`,
-    twitterCard: 'summary_large_image',
     twitterImage: {
-        url: 'https://arthursegato.dev/videos/twitter-card.gif',
-        type: 'image/gif',
-        alt: 'Arthur Segato Logo, composed of a letter A cut horizontally by a letter S, with a moving coloured background.',
-        width: '900',
-        height: '470'
+        url: `${project.meta_images ? project.meta_images.twitterUrl : 'https://arthursegato.dev/videos/twitter-card.gif'}`,
+        alt: `${project.meta_images ? project.meta_images.twitterAlt : 'Arthur Segato Logo, composed of a letter A cut horizontally by a letter S, with a moving coloured background.'}`,
     },
     twitterSite: `https://arthursegato.dev/projects/${route.params.id}`,
-    author: 'Arthur Segato',
-    colorScheme: 'dark light',
 })
 </script>
 
@@ -63,10 +49,9 @@ useSeoMeta({
                 v-if="project.cover === null">
                 <source src="/videos/cover.mp4" type="video/mp4" />
             </video>
-            <img class="absolute top-0 h-full w-full select-none object-cover object-center"
-                v-else-if="project.cover.mimetype === 'image/avif'" :src="project.cover.url" />
-            <video autoplay muted loop class="absolute top-0 h-full w-full select-none object-cover object-center" v-else>
-                <source :src="project.cover.url" :type="project.cover.mimetype" />
+            <video autoplay muted loop :poster="project.cover.poster"
+                class="absolute top-0 h-full w-full select-none object-cover object-center" v-else>
+                <source :src="project.cover.url" type="video/mp4" />
             </video>
             <NuxtLink to="/"
                 class="group absolute left-4 top-4 z-20 h-9 w-9 transition-all duration-200 ease-in-out md:left-8 md:top-4 md:h-7 md:w-7">

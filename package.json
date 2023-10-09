@@ -1,34 +1,37 @@
 {
-    "name": "nuxt-app",
-    "private": true,
-    "scripts": {
-        "build": "nuxt build",
-        "dev": "nuxt dev --host",
-        "generate": "nuxt generate",
-        "preview": "nuxt preview",
-        "postinstall": "nuxt prepare"
-    },
-    "devDependencies": {
-        "@nuxt/devtools": "latest",
-        "@nuxtjs/google-fonts": "^3.0.2",
-        "@nuxtjs/tailwindcss": "^6.8.0",
-        "@types/node": "^18.18.0",
-        "@vite-pwa/nuxt": "^0.1.1",
-        "@vueuse/core": "^10.4.1",
-        "@vueuse/nuxt": "^10.4.1",
-        "init": "^0.1.2",
-        "nuxt": "^3.7.4",
-        "nuxt-link-checker": "^2.1.8",
-        "nuxt-purgecss": "^2.0.0",
-        "nuxt-security": "^0.14.4",
-        "nuxt-simple-robots": "^3.1.5",
-        "nuxt-simple-sitemap": "^3.3.4"
-    },
-    "dependencies": {
-        "@vercel/analytics": "^1.0.2",
-        "@vueuse/integrations": "^10.4.1",
-        "@vueuse/motion": "^2.0.0",
-        "async-validator": "^4.2.5",
-        "maska": "^2.1.10"
-    }
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "NITRO_PRESET=vercel-edge nuxt build",
+    "dev": "nuxt dev --host",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@vite-pwa/nuxt": "^0.1.1",
+    "@vueuse/core": "^10.5.0",
+    "@vueuse/nuxt": "^10.5.0",
+    "autoprefixer": "^10.4.16",
+    "nuxt": "^3.7.4",
+    "nuxt-link-checker": "^2.1.9",
+    "nuxt-simple-robots": "^3.1.6",
+    "nuxt-simple-sitemap": "^3.4.0",
+    "postcss": "^8.4.31",
+    "prisma": "5.4.1",
+    "tailwindcss": "^3.3.3",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxt/image": "1.0.0-rc.3",
+    "@nuxtjs/google-fonts": "^3.0.2",
+    "@prisma/client": "5.4.1",
+    "@vercel/analytics": "^1.1.0",
+    "@vercel/postgres": "^0.5.0",
+    "@vueuse/motion": "^2.0.0",
+    "maska": "^2.1.10"
+  }
 }

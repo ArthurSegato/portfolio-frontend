@@ -114,6 +114,7 @@ export default defineNuxtConfig({
     "nuxt-simple-robots",
     "nuxt-simple-sitemap",
     "nuxt-link-checker",
+    "@vite-pwa/nuxt",
   ],
   image: {
     format: ["avif"],

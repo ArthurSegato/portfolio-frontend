@@ -30,7 +30,7 @@ useSeoMeta({
     twitterTitle: `Arthur Segato | ${project.name}`,
     twitterDescription: `${project.long_description}`,
     twitterImage: {
-        url: `${project.meta_images ? project.meta_images.twitterUrl : 'https://arthursegato.dev/videos/twitter-card.gif'}`,
+        url: `${project.meta_images ? project.meta_images.twitterUrl : 'https://arthursegato.dev/gifs/twitter-card.gif'}`,
         alt: `${project.meta_images ? project.meta_images.twitterAlt : 'Arthur Segato Logo, composed of a letter A cut horizontally by a letter S, with a moving coloured background.'}`,
     },
     twitterSite: `https://arthursegato.dev/projects/${route.params.id}`,

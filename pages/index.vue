@@ -22,7 +22,7 @@ useSeoMeta({
     twitterTitle: 'Arthur Segato | Developer',
     twitterDescription: "Hey, I'm a computer scientist developing stuff for the web, and games in my spare time, but I create other things too, so if that interests you, why not take a look at my website?",
     twitterImage: {
-        url: 'https://arthursegato.dev/videos/twitter-card.gif',
+        url: 'https://arthursegato.dev/gifs/twitter-card.gif',
         alt: 'Arthur Segato Logo, composed of a letter A cut horizontally by a letter S, with a moving coloured background.',
     },
     twitterSite: 'https://arthursegato.dev',

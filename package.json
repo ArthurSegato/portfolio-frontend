@@ -2,13 +2,12 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@8.8.0",
   "scripts": {
     "build": "NITRO_PRESET=vercel-edge nuxt build",
     "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare & prisma generate"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -29,7 +28,7 @@
   "dependencies": {
     "@nuxt/image": "1.0.0-rc.3",
     "@nuxtjs/google-fonts": "^3.0.2",
-    "@prisma/client": "5.4.1",
+    "@prisma/client": "^5.4.1",
     "@vercel/analytics": "^1.1.0",
     "@vercel/postgres": "^0.5.0",
     "@vueuse/motion": "^2.0.0",

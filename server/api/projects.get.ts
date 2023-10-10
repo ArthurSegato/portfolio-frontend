@@ -1,14 +1,7 @@
-import { PrismaClient } from "@prisma/client";
+import { sql } from "@vercel/postgres";
 
 export default defineEventHandler(async (event) => {
-  const prisma = new PrismaClient();
-
-  return await prisma.project.findMany({
-    select: {
-      id: true,
-      name: true,
-      description: true,
-      card: true,
-    },
-  });
+  const { rows } =
+    await sql`SELECT id, name, description, card FROM "Project";`;
+  return rows;
 });

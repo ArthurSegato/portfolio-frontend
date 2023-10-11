@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     eastereggWebhook: "",
     contactWebhook: "",
-    githubApikey: "",
-    youtubeApikey: "",
+    githubApiKey: "",
+    youtubeApiKey: "",
   },
   app: {
     head: {

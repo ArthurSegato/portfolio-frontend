@@ -4,111 +4,166 @@ export default defineEventHandler(async (event) => {
   const projectId = getRouterParam(event, "id");
   const runtimeConfig = useRuntimeConfig();
 
-  const { rows } =
-    await sql`SELECT "Project"."name", "longDescription", category, visits, downloads, revenue, "techStack", size, "sizeUnit", embeds,
-    ARRAY["Link"."name", "Link"."url"] as Links
-    FROM "Project"
-    LEFT JOIN "Link"
-    ON "Project"."id" = "Link"."projectId";`;
+  const { rows } = await sql`SELECT
+  "Project"."name",
+  "Project"."longDescription" AS "long_description",
+  "Project"."category" :: text,
+  "Project"."visits",
+  "Project"."downloads",
+  "Project"."revenue",
+  "Project"."techStack" AS "tech_stack",
+  "Project"."size",
+  "Project"."sizeUnit" :: text AS "size_unit",
+  "Project"."embeds",
+  "Cover"."url" AS "cover_url",
+  "MetaImages"."facebookUrl",
+  "MetaImages"."facebookAlt",
+  "MetaImages"."twitterUrl",
+  "MetaImages"."twitterAlt",
+  "MetaImages"."googleUrl",
+  (
+      SELECT
+          JSONB_AGG(
+              JSONB_BUILD_OBJECT(
+                  'name',
+                  "Link"."name",
+                  'url',
+                  "Link"."url"
+              )
+          )
+      FROM
+          "Link"
+      WHERE
+          "Project"."id" = ${projectId}
+  ) AS "links",
+  (
+      SELECT
+          jsonb_agg(
+              jsonb_build_object(
+                  'mimetype',
+                  "Asset"."mimetype",
+                  'url',
+                  "Asset"."url",
+                  'alt',
+                  "Asset"."alt",
+                  'title',
+                  "Asset"."title",
+                  'poster',
+                  "Asset"."poster"
+              )
+          )
+      FROM
+          "Asset"
+      WHERE
+          "Project"."id" = ${projectId}
+  ) AS "assets"
+FROM
+  "Project"
+  LEFT JOIN "Cover" ON "Project"."id" = "Cover"."projectId"
+  LEFT JOIN "MetaImages" ON "Project"."id" = "MetaImages"."projectId"
+WHERE
+  "Project"."id" = ${projectId};
 
-  return rows;
+;`;
 
-  // const githubUrlRegex =
-  //   /^https:\/\/github\.com\/[A-Za-z0-9_-]+\/[A-Za-z0-9_-]+$/;
-  // const youtubeUrlRegex =
-  //   /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/|v\/|youtu\.be\/|user\/\S+\/|user\/\S+\/videos\?v=)([a-zA-Z0-9_-]{11})/;
-  // const github = {
-  //   stars: null,
-  //   created_at: null,
-  //   updated_at: null,
-  //   size: rows.size,
-  //   size_unit: rows.sizeUnit,
-  //   licenses: null,
-  // };
-  // const youtube = {
-  //   views: null,
-  //   likes: null,
-  //   comments: null,
-  // };
+  const githubUrlRegex =
+    /^https:\/\/github\.com\/[A-Za-z0-9_-]+\/[A-Za-z0-9_-]+$/;
+  const youtubeUrlRegex =
+    /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/|v\/|youtu\.be\/|user\/\S+\/|user\/\S+\/videos\?v=)([a-zA-Z0-9_-]{11})/;
 
-  // for (let i = 0; i < rows.links.length; i++) {
-  //   if (githubUrlRegex.test(rows.links[i].url)) {
-  //     await fetch(
-  //       `https://api.github.com/repos/ArthurSegato/${
-  //         rows.links[i].url.match(/\/([^/]+)$/)[1]
-  //       }`,
-  //       {
-  //         method: "GET",
-  //         headers: {
-  //           Authorization: `Bearer ${runtimeConfig.githubApikey} `,
-  //         },
-  //       }
-  //     )
-  //       .then((response) => {
-  //         if (response.ok) return response.json();
-  //       })
-  //       .then((data) => {
-  //         github.stars += data.stargazers_count;
+  const github = {
+    stars: null,
+    created_at: null,
+    updated_at: null,
+    size: rows[0].size,
+    size_unit: rows[0].sizeUnit,
+    licenses: null,
+  };
+  const youtube = {
+    views: null,
+    likes: null,
+    comments: null,
+  };
 
-  //         if (data.license !== null) {
-  //           if (github.licenses === null) {
-  //             github.licenses = [
-  //               {
-  //                 name: data.license.spdx_id,
-  //                 url: `https://choosealicense.com/licenses/${data.license.key}`,
-  //               },
-  //             ];
-  //           } else {
-  //             github.licenses.push({
-  //               name: data.license.spdx_id,
-  //               url: `https://choosealicense.com/licenses/${data.license.key}`,
-  //             });
-  //           }
-  //         }
+  for (let i = 0; i < rows[0].links.length; i++) {
+    if (githubUrlRegex.test(rows[0].links[i].url)) {
+      await fetch(
+        `https://api.github.com/repos/ArthurSegato/${
+          rows[0].links[i].url.match(/\/([^/]+)$/)[1]
+        }`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${runtimeConfig.githubApiKey} `,
+          },
+        }
+      )
+        .then((response) => {
+          if (response.ok) return response.json();
+        })
+        .then((data) => {
+          github.stars += data.stargazers_count;
 
-  //         if (github.created_at === null || github.created_at < data.created_at)
-  //           github.created_at = data.created_at.split("T")[0];
+          if (data.license !== null) {
+            if (github.licenses === null) {
+              github.licenses = [
+                {
+                  name: data.license.spdx_id,
+                  url: `https://choosealicense.com/licenses/${data.license.key}`,
+                },
+              ];
+            } else {
+              github.licenses.push({
+                name: data.license.spdx_id,
+                url: `https://choosealicense.com/licenses/${data.license.key}`,
+              });
+            }
+          }
 
-  //         if (github.updated_at === null || github.created_at > data.created_at)
-  //           github.updated_at = data.updated_at.split("T")[0];
-  //       });
-  //   }
-  //   if (youtubeUrlRegex.test(rows.links[i].url)) {
-  //     await fetch(
-  //       `https://www.googleapis.com/youtube/v3/videos?key=${
-  //         runtimeConfig.youtubeApikey
-  //       }&id=${rows.links[i].url.match(youtubeUrlRegex)[1]}&part=statistics`,
-  //       {
-  //         method: "GET",
-  //       }
-  //     )
-  //       .then((response) => {
-  //         if (response.ok) return response.json();
-  //       })
-  //       .then((data) => {
-  //         if (data.items.length > 0) {
-  //           youtube.views += parseInt(data.items[0].statistics.viewCount);
-  //           youtube.likes += parseInt(data.items[0].statistics.likeCount);
-  //           youtube.comments += parseInt(data.items[0].statistics.commentCount);
-  //         }
-  //       });
-  //   }
-  // }
+          if (github.created_at === null || github.created_at < data.created_at)
+            github.created_at = data.created_at.split("T")[0];
 
-  // return {
-  //   name: rows.name,
-  //   long_description: rows.longDescription,
-  //   category: rows.category,
-  //   visits: rows.visits,
-  //   downloads: rows.downloads,
-  //   revenue: rows.revenue,
-  //   youtube: youtube,
-  //   github: github,
-  //   tech_stack: rows.techStack,
-  //   links: rows.links,
-  //   cover: rows.cover,
-  //   meta_images: rows.metaImages,
-  //   assets: rows.assets,
-  //   embeds: rows.embeds,
-  // };
+          if (github.updated_at === null || github.created_at > data.created_at)
+            github.updated_at = data.updated_at.split("T")[0];
+        });
+    }
+
+    if (youtubeUrlRegex.test(rows[0].links[i].url)) {
+      await fetch(
+        `https://www.googleapis.com/youtube/v3/videos?key=${
+          runtimeConfig.youtubeApiKey
+        }&id=${rows[0].links[i].url.match(youtubeUrlRegex)[1]}&part=statistics`,
+        {
+          method: "GET",
+        }
+      )
+        .then((response) => {
+          if (response.ok) return response.json();
+        })
+        .then((data) => {
+          if (data.items.length > 0) {
+            youtube.views += parseInt(data.items[0].statistics.viewCount);
+            youtube.likes += parseInt(data.items[0].statistics.likeCount);
+            youtube.comments += parseInt(data.items[0].statistics.commentCount);
+          }
+        });
+    }
+  }
+
+  return {
+    name: rows[0].name,
+    long_description: rows[0].long_description,
+    category: rows[0].category,
+    visits: rows[0].visits,
+    downloads: rows[0].downloads,
+    revenue: rows[0].revenue,
+    youtube: youtube,
+    github: github,
+    tech_stack: rows[0].tech_stack,
+    cover: rows[0].cover,
+    links: rows[0].links,
+    meta_images: rows[0].meta_images,
+    assets: rows[0].assets,
+    embeds: rows[0].embeds,
+  };
 });

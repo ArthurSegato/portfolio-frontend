@@ -34,7 +34,7 @@ export default defineEventHandler(async (event) => {
       FROM
           "Link"
       WHERE
-          "Project"."id" = ${projectId}
+          "Project"."id" = "Link"."projectId"
   ) AS "links",
   (
       SELECT
@@ -55,7 +55,7 @@ export default defineEventHandler(async (event) => {
       FROM
           "Asset"
       WHERE
-          "Project"."id" = ${projectId}
+          "Project"."id" = "Asset"."projectId"
   ) AS "assets"
 FROM
   "Project"
@@ -85,85 +85,97 @@ WHERE
     comments: null,
   };
 
-  for (let i = 0; i < rows[0].links.length; i++) {
-    if (githubUrlRegex.test(rows[0].links[i].url)) {
-      await fetch(
-        `https://api.github.com/repos/ArthurSegato/${
-          rows[0].links[i].url.match(/\/([^/]+)$/)[1]
-        }`,
-        {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${runtimeConfig.githubApiKey} `,
-          },
-        }
-      )
-        .then((response) => {
-          if (response.ok) return response.json();
-        })
-        .then((data) => {
-          github.stars += data.stargazers_count;
+  if (rows[0].links !== null) {
+    for (let i = 0; i < rows[0].links.length; i++) {
+      if (githubUrlRegex.test(rows[0].links[i].url)) {
+        await fetch(
+          `https://api.github.com/repos/ArthurSegato/${
+            rows[0].links[i].url.match(/\/([^/]+)$/)[1]
+          }`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${runtimeConfig.githubApiKey} `,
+            },
+          }
+        )
+          .then((response) => {
+            if (response.ok) return response.json();
+          })
+          .then((data) => {
+            github.stars += data.stargazers_count;
 
-          if (data.license !== null) {
-            if (github.licenses === null) {
-              github.licenses = [
-                {
+            if (data.license !== null) {
+              if (github.licenses === null) {
+                github.licenses = [
+                  {
+                    name: data.license.spdx_id,
+                    url: `https://choosealicense.com/licenses/${data.license.key}`,
+                  },
+                ];
+              } else {
+                github.licenses.push({
                   name: data.license.spdx_id,
                   url: `https://choosealicense.com/licenses/${data.license.key}`,
-                },
-              ];
-            } else {
-              github.licenses.push({
-                name: data.license.spdx_id,
-                url: `https://choosealicense.com/licenses/${data.license.key}`,
-              });
+                });
+              }
             }
+
+            if (
+              github.created_at === null ||
+              github.created_at < data.created_at
+            )
+              github.created_at = data.created_at.split("T")[0];
+
+            if (
+              github.updated_at === null ||
+              github.created_at > data.created_at
+            )
+              github.updated_at = data.updated_at.split("T")[0];
+          });
+      }
+
+      if (youtubeUrlRegex.test(rows[0].links[i].url)) {
+        await fetch(
+          `https://www.googleapis.com/youtube/v3/videos?key=${
+            runtimeConfig.youtubeApiKey
+          }&id=${
+            rows[0].links[i].url.match(youtubeUrlRegex)[1]
+          }&part=statistics`,
+          {
+            method: "GET",
           }
-
-          if (github.created_at === null || github.created_at < data.created_at)
-            github.created_at = data.created_at.split("T")[0];
-
-          if (github.updated_at === null || github.created_at > data.created_at)
-            github.updated_at = data.updated_at.split("T")[0];
-        });
-    }
-
-    if (youtubeUrlRegex.test(rows[0].links[i].url)) {
-      await fetch(
-        `https://www.googleapis.com/youtube/v3/videos?key=${
-          runtimeConfig.youtubeApiKey
-        }&id=${rows[0].links[i].url.match(youtubeUrlRegex)[1]}&part=statistics`,
-        {
-          method: "GET",
-        }
-      )
-        .then((response) => {
-          if (response.ok) return response.json();
-        })
-        .then((data) => {
-          if (data.items.length > 0) {
-            youtube.views += parseInt(data.items[0].statistics.viewCount);
-            youtube.likes += parseInt(data.items[0].statistics.likeCount);
-            youtube.comments += parseInt(data.items[0].statistics.commentCount);
-          }
-        });
+        )
+          .then((response) => {
+            if (response.ok) return response.json();
+          })
+          .then((data) => {
+            if (data.items.length > 0) {
+              youtube.views += parseInt(data.items[0].statistics.viewCount);
+              youtube.likes += parseInt(data.items[0].statistics.likeCount);
+              youtube.comments += parseInt(
+                data.items[0].statistics.commentCount
+              );
+            }
+          });
+      }
     }
   }
 
   return {
     name: rows[0].name,
     long_description: rows[0].long_description,
-    category: rows[0].category,
-    visits: rows[0].visits,
-    downloads: rows[0].downloads,
-    revenue: rows[0].revenue,
-    youtube: youtube,
-    github: github,
+    category: rows[0].category || null,
+    visits: rows[0].visits || null,
+    downloads: rows[0].downloads || null,
+    revenue: rows[0].revenue || null,
+    youtube: youtube || null,
+    github: github || null,
     tech_stack: rows[0].tech_stack,
-    cover: rows[0].cover,
-    links: rows[0].links,
-    meta_images: rows[0].meta_images,
-    assets: rows[0].assets,
-    embeds: rows[0].embeds,
+    cover: rows[0].cover || null,
+    links: rows[0].links || null,
+    meta_images: rows[0].meta_images || null,
+    assets: rows[0].assets || null,
+    embeds: rows[0].embeds || null,
   };
 });

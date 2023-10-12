@@ -1,7 +1,3 @@
-export const config = {
-  runtime: "edge",
-};
-
 export default defineEventHandler(async (event) => {
   try {
     const runtimeConfig = useRuntimeConfig();

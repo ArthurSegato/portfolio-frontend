@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const projectsList = await $fetch('/api/projects');
+const projectsList = await $fetch('https://www.arthursegato.dev/api/projects');
 </script>
 
 <template>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useColorMode, promiseTimeout } from '@vueuse/core'
-const theme = useColorMode()
+import { promiseTimeout } from '@vueuse/core'
 
 const smallTerminal = reactive({
     command: '',
@@ -16,12 +15,6 @@ watch(() => smallTerminal.command,
 
 const commandHandler = async () => {
     switch (smallTerminal.command) {
-        case 'nox':
-            theme.value = 'dark'
-            break;
-        case 'lumos':
-            theme.value = 'light'
-            break;
         case 'erecto':
             smallTerminal.command = 'heh ( ͡° ͜ʖ ͡°)'
             await promiseTimeout(1000)

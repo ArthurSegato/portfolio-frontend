@@ -62,9 +62,7 @@ FROM
   LEFT JOIN "Cover" ON "Project"."id" = "Cover"."projectId"
   LEFT JOIN "MetaImages" ON "Project"."id" = "MetaImages"."projectId"
 WHERE
-  "Project"."id" = ${projectId};
-
-;`;
+  "Project"."id" = ${projectId};`;
 
   const githubUrlRegex =
     /^https:\/\/github\.com\/[A-Za-z0-9_-]+\/[A-Za-z0-9_-]+$/;

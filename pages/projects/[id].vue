@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { useColorMode } from '@vueuse/core'
-
-const theme = useColorMode()
-
 const route = useRoute()
 
 const project = await $fetch(`/api/projects/${route.params.id}`)

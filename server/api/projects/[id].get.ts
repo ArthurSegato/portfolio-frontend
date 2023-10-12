@@ -66,6 +66,7 @@ WHERE
 
   const githubUrlRegex =
     /^https:\/\/github\.com\/[A-Za-z0-9_-]+\/[A-Za-z0-9_-]+$/;
+
   const youtubeUrlRegex =
     /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/|v\/|youtu\.be\/|user\/\S+\/|user\/\S+\/videos\?v=)([a-zA-Z0-9_-]{11})/;
 
@@ -74,9 +75,10 @@ WHERE
     created_at: null,
     updated_at: null,
     size: rows[0].size,
-    size_unit: rows[0].sizeUnit,
+    size_unit: rows[0].size_unit,
     licenses: null,
   };
+
   const youtube = {
     views: null,
     likes: null,

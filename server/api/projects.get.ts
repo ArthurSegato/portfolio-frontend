@@ -1,7 +1,15 @@
 import { sql } from "@vercel/postgres";
 
+export const config = {
+  runtime: "edge",
+};
+
 export default defineEventHandler(async (event) => {
-  const { rows } =
-    await sql`SELECT id, name, description, card FROM "Project" ORDER BY id DESC;`;
-  return rows;
+  try {
+    const { rows } =
+      await sql`SELECT id, name, description, card FROM "Project" ORDER BY id DESC;`;
+    return rows;
+  } catch (error) {
+    return error;
+  }
 });

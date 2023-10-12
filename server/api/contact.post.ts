@@ -1,3 +1,7 @@
+export const config = {
+  runtime: "edge",
+};
+
 export default defineEventHandler(async (event) => {
   try {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;

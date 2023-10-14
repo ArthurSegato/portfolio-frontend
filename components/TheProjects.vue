@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const projectsList = await $fetch('https://www.arthursegato.dev/api/projects');
+const { data: projectsList } = await useFetch('https://www.arthursegato.dev/api/projects', {
+    lazy: true
+});
 </script>
 
 <template>

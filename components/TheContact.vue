@@ -22,7 +22,7 @@ watch(() => [contactForm.name, contactForm.email, contactForm.message],
 
 const contactHandler = async () => {
     delete contactForm.isValid
-    await $fetch('https://www.arthursegato.dev/api/contact', {
+    await $fetch('server/api/contact', {
         method: 'POST',
         body: contactForm
     })

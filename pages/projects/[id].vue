@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const project = await $fetch(`server/projects/${route.params.id}`)
+const project = await $fetch(`/api/projects/${route.params.id}`)
 
 useHead({
     meta: [

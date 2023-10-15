@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: projectsList } = await useFetch('server/api/projects', {
+const { data: projectsList } = await useFetch('/api/projects', {
     lazy: true
 });
 </script>

@@ -23,7 +23,7 @@ const commandHandler = async () => {
             const prefix = 'expecto patronum'
             if (smallTerminal.command.startsWith(prefix)) {
                 const message = smallTerminal.command.substring(prefix.length)
-                if (message.length > 0) await $fetch('server/api/easteregg', {
+                if (message.length > 0) await $fetch('/api/easteregg', {
                     method: 'POST',
                     body: {
                         message,

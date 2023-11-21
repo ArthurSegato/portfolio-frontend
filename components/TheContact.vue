@@ -62,8 +62,8 @@ const contactHandler = async () => {
                 <div class="w-full">
                     <label for="phone" class="text-sm">Phone</label>
                     <div class="flex">
-                        <input type="tel" id="phone" name="phone" v-maska data-maska="+## (##) #####-####"
-                            placeholder="+12 (34) 56789-1234" v-model="contactForm.phone"
+                        <input type="tel" id="phone" name="phone" placeholder="+12 (34) 56789-1234"
+                            v-model="contactForm.phone"
                             class="h-8 w-full rounded-l-md border-y border-l border-[#181A1B] bg-transparent px-3 text-sm outline-none dark:border-stone-100" />
                         <span
                             class="flex items-center rounded-r-md border-y border-r border-[#181A1B] px-3 dark:border-stone-100">

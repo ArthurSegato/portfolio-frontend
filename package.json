@@ -29,7 +29,6 @@
     "@nuxtjs/google-fonts": "^3.0.2",
     "@vercel/analytics": "^1.1.0",
     "@vercel/postgres": "^0.5.0",
-    "@vueuse/motion": "^2.0.0",
-    "maska": "^2.1.10"
+    "@vueuse/motion": "^2.0.0"
   }
 }

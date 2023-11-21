@@ -96,7 +96,7 @@ export default defineEventHandler(async (event) => {
             {
               method: "GET",
               headers: {
-                Authorization: `Bearer ${runtimeConfig.githubApiKey} `,
+                Authorization: `Bearer ${runtimeConfig.githubKey} `,
               },
             }
           )
@@ -139,7 +139,7 @@ export default defineEventHandler(async (event) => {
         if (youtubeUrlRegex.test(rows[0].links[i].url)) {
           await fetch(
             `https://www.googleapis.com/youtube/v3/videos?key=${
-              runtimeConfig.youtubeApiKey
+              runtimeConfig.youtubeKey
             }&id=${
               rows[0].links[i].url.match(youtubeUrlRegex)[1]
             }&part=statistics`,

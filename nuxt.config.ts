@@ -1,5 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  nitro: {
+    preset: "vercel-edge",
+  },
+  routeRules: {
+    "/": {
+      headers: {
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+      },
+    },
+  },
   runtimeConfig: {
     eastereggWebhook: "",
     contactWebhook: "",
@@ -134,7 +145,7 @@ export default defineNuxtConfig({
     display: "fallback",
     download: true,
   },
-  site: { url: "https://example.com" },
+  site: { url: "https://www.arthursegato.dev" },
   pwa: {
     manifest: {
       name: "Arthur Segato | Developer",

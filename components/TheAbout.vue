@@ -77,7 +77,7 @@ const commandHandler = async () => {
             </div>
             <div v-motion-slide-visible-once-right class="flex flex-col gap-6">
                 <div class="flex items-center gap-4 md:flex-col">
-                    <NuxtPicture format="avif, webp" src="/images/arthursegato.jpg" :img-attrs="{
+                    <NuxtPicture format="avif, webp" src="/images/arthur-segato.jpg" :img-attrs="{
                         width: '94',
                         height: '94',
                         loading: 'lazy',

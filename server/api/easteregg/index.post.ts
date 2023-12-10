@@ -3,7 +3,8 @@ export default defineEventHandler(async (event) => {
     const runtimeConfig = useRuntimeConfig();
     const body = await readBody(event);
 
-    if (body.message.length === 0) throw new Error("Message cannot be empty");
+    if (body.message === undefined || body.message.length === 0)
+      throw new Error("Message cannot be empty");
 
     fetch(runtimeConfig.eastereggWebhook, {
       method: "POST",
@@ -19,9 +20,11 @@ export default defineEventHandler(async (event) => {
       message: "Your message has been received, Potter",
     };
   } catch (error) {
-    throw createError({
-      statusCode: 400,
-      statusMessage: error.message,
-    });
+    if (error instanceof Error) {
+      throw createError({
+        statusCode: 400,
+        statusMessage: error.message,
+      });
+    }
   }
 });

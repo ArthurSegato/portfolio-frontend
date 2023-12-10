@@ -66,9 +66,11 @@ export default defineEventHandler(async (event) => {
       message: "Your message has been received",
     };
   } catch (error) {
-    throw createError({
-      statusCode: 400,
-      statusMessage: error.message,
-    });
+    if (error instanceof Error) {
+      throw createError({
+        statusCode: 400,
+        statusMessage: error.message,
+      });
+    } else return error;
   }
 });

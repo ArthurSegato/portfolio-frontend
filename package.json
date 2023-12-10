@@ -25,7 +25,6 @@
     "@nuxt/image": "^1.1.0",
     "@vercel/analytics": "^1.1.1",
     "@vercel/postgres": "^0.5.1",
-    "@vueuse/motion": "^2.0.0",
-    "sharp": "^0.33.0"
+    "@vueuse/motion": "^2.0.0"
   }
 }

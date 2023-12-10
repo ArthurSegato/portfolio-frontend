@@ -2,7 +2,7 @@
 [![Uptime](https://img.shields.io/website?url=https%3A%2F%2Farthursegato.dev)](https://img.shields.io/website?url=https%3A%2F%2Farthursegato.dev)
 [![HSTS Status](https://img.shields.io/hsts/preload/arthursegato.dev)](https://img.shields.io/hsts/preload/arthursegato.dev)
 [![Mozilla HTTP Observatory](https://img.shields.io/mozilla-observatory/grade/arthursegato.dev?publish)](https://img.shields.io/mozilla-observatory/grade/arthursegato.dev?publish)
-[![bun-test](https://github.com/ArthurSegato/TheEndPoem/actions/workflows/workflow.yml/badge.svg)](https://github.com/ArthurSegato/TheEndPoem/actions/workflows/workflow.yml)
+[![bun-build](https://github.com/ArthurSegato/portfolio-frontend/actions/workflows/workflow.yml/badge.svg)](https://github.com/ArthurSegato/portfolio-frontend/actions/workflows/workflow.yml)
 
 [arthursegato.dev](https://www.arthursegato.dev/) serves as my portfolio, showcasing a extensive collection of my projects, including those that can't be uploaded to GitHub, such as videos and other multimedia content.
 

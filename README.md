@@ -18,7 +18,7 @@ The second instance happens when the user inputs any data into the contact form 
 
 ![My Discord private server](/discord-card.jpg "My Discord private server")
 
-**If the user wishes to delete their data, they can simply reach out to me through any available channel on my GitHub profile, [personal website](arthursegato.dev) _(The data removal request will also be deleted)_, or via email at github.reentry594@passinbox.com**
+**If the user wishes to delete their data, they can simply reach out to me through any available channel on my GitHub profile, [personal website](https://www.arthursegato.dev/) _(The data removal request will also be deleted)_, or via email at github.reentry594@passinbox.com**
 
 ## Requirements
 

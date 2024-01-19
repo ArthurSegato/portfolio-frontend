@@ -7,6 +7,8 @@ import {
 } from "@builder.io/qwik-city";
 import Image from "~/media/arthur-segato.jpg?jsx";
 
+declare const contact: any;
+
 export const useContactAction = routeAction$(async (data) => {
   return {
     success: true,

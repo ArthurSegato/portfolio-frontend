@@ -1,118 +1,119 @@
-[![Website](.github/assets/banner.svg)](https://arthursegato.dev)
-[![Uptime](https://img.shields.io/website?url=https%3A%2F%2Farthursegato.dev)](https://img.shields.io/website?url=https%3A%2F%2Farthursegato.dev)
-[![HSTS Status](https://img.shields.io/hsts/preload/arthursegato.dev)](https://img.shields.io/hsts/preload/arthursegato.dev)
-[![Mozilla HTTP Observatory](https://img.shields.io/mozilla-observatory/grade/arthursegato.dev?publish)](https://img.shields.io/mozilla-observatory/grade/arthursegato.dev?publish)
-[![bun-build](https://github.com/ArthurSegato/portfolio-frontend/actions/workflows/workflow.yml/badge.svg)](https://github.com/ArthurSegato/portfolio-frontend/actions/workflows/workflow.yml)
+# Qwik City App ⚡️
 
-[arthursegato.dev](https://www.arthursegato.dev/) serves as my portfolio, showcasing a extensive collection of my projects, including those that can't be uploaded to GitHub, such as videos and other multimedia content.
+- [Qwik Docs](https://qwik.builder.io/)
+- [Discord](https://qwik.builder.io/chat)
+- [Qwik GitHub](https://github.com/BuilderIO/qwik)
+- [@QwikDev](https://twitter.com/QwikDev)
+- [Vite](https://vitejs.dev/)
 
-It's build with Vue3/Nuxt3 and deployed across the Vercel Edge network.
+---
 
-## Data protection legislations (GDPR, LGPD and others)
+## Project Structure
 
-By acessing arthursegato.dev, there are two distinct occasions where user data is collected. In the first instance, technical data is gathered anonymously (as shown below) by [Vercel Web Analytics](https://vercel.com/docs/analytics) via a JS script, which can be easily blocked by any ad-blocking extension.
+This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
 
-![Vercel Web Analytics Dashboard](.github/assets/vercel.jpg "Vercel Web Analytics Dashboard")
+Inside your project, you'll see the following directory structure:
 
-The second instance happens when the user inputs any data into the contact form and submit it. In this case, the content entered into the form is directly sent to a text channel on my personal Discord server, **accessible only by me** (as illustrated below), via a webhook.
-
-![My Discord private server](.github/assets/discord.jpg "My Discord private server")
-
-**If the user wishes to delete their data, they can simply reach out to me through any available channel on my GitHub profile, [personal website](https://www.arthursegato.dev/) _(The data removal request will also be deleted)_, or via email at github.reentry594@passinbox.com**
-
-## Requirements
-
-- Bun v1.0.14 and above **OR** Node v21.2.0 and above
-
-## Environment variables
-
-.env variables for this project:
-
-```Properties
-NUXT_EASTEREGG_WEBHOOK=""
-NUXT_CONTACT_WEBHOOK=""
-NUXT_GITHUB_KEY=""
-NUXT_YOUTUBE_KEY=""
-POSTGRES_URL=""
+```
+├── public/
+│   └── ...
+└── src/
+    ├── components/
+    │   └── ...
+    └── routes/
+        └── ...
 ```
 
-## Setup
+- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
 
-Make sure to install the dependencies:
+- `src/components`: Recommended directory for components.
 
-```bash
-# npm
-npm install
+- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
 
-# pnpm
-pnpm install
+## Add Integrations and deployment
 
-# yarn
-yarn install
+Use the `bun qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
 
-# bun
-bun install
+```shell
+bun qwik add # or `bun qwik add`
 ```
 
 ## Development
 
-Start the development server on `http://localhost:3000`:
+Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
 
-```bash
-# npm
-npm run dev
+```shell
+npm start # or `bun start`
+```
 
-# pnpm
-pnpm run dev
+> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
 
-# yarn
-yarn dev
+## Preview
 
-# bun
-bun dev
+The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+
+```shell
+bun preview # or `bun preview`
 ```
 
 ## Production
 
-Build the application for production:
+The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+```shell
+bun build # or `bun build`
 ```
 
-Locally preview production build:
+## Bun Server
 
-```bash
-# npm
-npm run preview
+This app has a minimal [Bun server](https://bun.sh/docs/api/http) implementation. After running a full build, you can preview the build using the command:
 
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+```
+bun run serve
 ```
 
-## Disclaimer
+Then visit [http://localhost:3000/](http://localhost:3000/)
 
-Below is a list of all the external assets used in the development of this website with their respective licenses.
+## Vercel Edge
 
-- [BootStrapp Icons](https://icons.getbootstrap.com) ([MIT](https://github.com/twbs/icons/blob/main/LICENSE.md))
-- [Inter](https://fonts.google.com/specimen/Inter) ([Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL))
+This starter site is configured to deploy to [Vercel Edge Functions](https://vercel.com/docs/concepts/functions/edge-functions), which means it will be rendered at an edge location near to your users.
 
-## Contributors
+## Installation
 
-- [@ArthurSegato](https://github.com/ArthurSegato)
+The adaptor will add a new `vite.config.ts` within the `adapters/` directory, and a new entry file will be created, such as:
+
+```
+└── adapters/
+    └── vercel-edge/
+        └── vite.config.ts
+└── src/
+    └── entry.vercel-edge.tsx
+```
+
+Additionally, within the `package.json`, the `build.server` script will be updated with the Vercel Edge build.
+
+## Production build
+
+To build the application for production, use the `build` command, this command will automatically run `bun build.server` and `bun build.client`:
+
+```shell
+bun build
+```
+
+[Read the full guide here](https://github.com/BuilderIO/qwik/blob/main/starters/adapters/vercel-edge/README.md)
+
+## Dev deploy
+
+To deploy the application for development:
+
+```shell
+bun deploy
+```
+
+Notice that you might need a [Vercel account](https://docs.Vercel.com/get-started/) in order to complete this step!
+
+## Production deploy
+
+The project is ready to be deployed to Vercel. However, you will need to create a git repository and push the code to it.
+
+You can [deploy your site to Vercel](https://vercel.com/docs/concepts/deployments/overview) either via a Git provider integration or through the Vercel CLI.

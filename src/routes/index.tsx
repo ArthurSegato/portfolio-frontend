@@ -11,32 +11,34 @@ declare const contact: any;
 
 export const useContactAction = routeAction$(async (data, requestEvent) => {
   try {
-    fetch(requestEvent.env.get("WEBHOOK_DISCORD"), {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        embeds: [
-          {
-            fields: [
-              {
-                name: "Name",
-                value: `${data.name}`,
-              },
-              {
-                name: "Contact form",
-                value: `${data.email}`,
-              },
-              {
-                name: "Message",
-                value: `${data.message}`,
-              },
-            ],
-          },
-        ],
-      }),
-    });
+    const url = requestEvent.env.get("WEBHOOK_DISCORD");
+    if (url !== undefined)
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          embeds: [
+            {
+              fields: [
+                {
+                  name: "Name",
+                  value: `${data.name}`,
+                },
+                {
+                  name: "Contact form",
+                  value: `${data.email}`,
+                },
+                {
+                  name: "Message",
+                  value: `${data.message}`,
+                },
+              ],
+            },
+          ],
+        }),
+      });
 
     return {
       success: true,

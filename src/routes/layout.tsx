@@ -16,10 +16,33 @@ export const useServerTimeLoader = routeLoader$(() => {
 });
 
 export default component$(() => {
+  const themes = [
+    "light",
+    "dark",
+    "cupcake",
+    "synthwave",
+    "retro",
+    "valentine",
+    "garden",
+    "forest",
+    "pastel",
+    "fantasy",
+    "wireframe",
+    "dracula",
+    "cmyk",
+    "autumn",
+    "coffee",
+    "winter",
+    "dim",
+    "nord",
+    "sunset",
+  ];
   return (
     <>
-      <div class="fixed top-0 h-3 w-full bg-red-500 sm:bg-orange-500 md:bg-yellow-500 lg:bg-green-500 xl:bg-blue-500 2xl:bg-purple-500"></div>
-      <main class="flex min-h-screen w-full items-center justify-center bg-base-300 p-4 sm:p-6 lg:p-8">
+      <main
+        data-theme={themes[Math.floor(Math.random() * themes.length)]}
+        class="flex min-h-screen w-full items-center justify-center bg-base-300 p-4 sm:p-6 lg:p-8"
+      >
         <Slot />
       </main>
     </>

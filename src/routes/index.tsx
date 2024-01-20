@@ -9,11 +9,43 @@ import Image from "~/media/arthur-segato.jpg?jsx";
 
 declare const contact: any;
 
-export const useContactAction = routeAction$(async (data) => {
-  return {
-    success: true,
-    data,
-  };
+export const useContactAction = routeAction$(async (data, requestEvent) => {
+  try {
+    console.log(requestEvent.env.get("WEBHOOK_DISCORD"));
+    /*
+    fetch(key, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        embeds: [
+          {
+            fields: [
+              {
+                name: "Name",
+                value: `${data.name}`,
+              },
+              {
+                name: "Contact form",
+                value: `${data.email}`,
+              },
+              {
+                name: "Message",
+                value: `${data.message}`,
+              },
+            ],
+          },
+        ],
+      }),
+    });
+    */
+    return {
+      success: true,
+    };
+  } catch (error) {
+    return error;
+  }
 });
 
 export default component$(() => {
@@ -23,7 +55,7 @@ export default component$(() => {
       <section class="card w-full bg-base-100 shadow-xl md:card-side lg:w-10/12 2xl:w-8/12">
         <figure class="lg:w-8/12">
           <Image
-            class="h-full w-full rounded-t-xl object-cover object-left"
+            class="h-full w-full rounded-t-xl object-cover object-left md:rounded-none"
             title="Arthur Segato with long hair is depicted in a blurry image at night."
             alt="Arthur Segato with long hair is depicted in a blurry image at night."
           />
@@ -234,11 +266,129 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Arthur Segato | Developer",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content:
+        "Hey, I'm a computer scientist developing stuff for the web, and games in my spare time, but I create other things too, so if that interests you, why not take a look at my website?",
+    },
+    {
+      name: "keywords",
+      content:
+        "Web Developer Porto,Full-Stack Development Brazil,UI/UX Design,Game Development,Virtual Reality Enthusiast,Cybersecurity Advocate,Open-Source Initiatives Supporter,Computer Science Bachelor Brazil,Video Editing,Brazilian Tech Professional,Arthur Segato Web Development,Open Source Technology Advocate,Virtual Reality Developer Brazil,Vue 3 Freelance Developer,Nuxt 3,Vercel Deployment,PostgreSQL Database,Figma Design Integration,Qwik Framework Development,Freelance Web Developer,Vue.js Web Applications,Nuxt.js SEO Optimization,Arthur,Arthur Segato,Arthur Segatto,Segato,Segatto,Developer,Web Developer,Game Developer,VR,UX,UI,Porto",
+    },
+    {
+      name: "author",
+      content: "Arthur Segato",
+    },
+    {
+      name: "og:title",
+      content: "Arthur Segato | Developer",
+    },
+    {
+      name: "og:description",
+      content:
+        "Hey, I'm a computer scientist developing stuff for the web, and games in my spare time, but I create other things too, so if that interests you, why not take a look at my website?",
+    },
+    {
+      name: "og:url",
+      content: "https://www.arthursegato.dev",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      property: "og:site:name",
+      content: "Arthur Segato | Developer",
+    },
+    {
+      name: "og:image",
+      content: "https://www.arthursegato.dev/gifs/facebook-card.gif",
+    },
+    {
+      name: "og:image:secure_url",
+      content: "https://www.arthursegato.dev/gifs/facebook-card.gif",
+    },
+    {
+      name: "og:image:alt",
+      content:
+        "Arthur Segato Logo, composed of a letter A cut horizontally by a letter S, with a moving coloured background.",
+    },
+    {
+      property: "og:image:width",
+      content: "1240",
+    },
+    {
+      property: "og:image:height",
+      content: "650",
+    },
+    {
+      property: "og:image:type",
+      content: "image/jpg",
+    },
+    {
+      name: "twitter:title",
+      content: "Arthur Segato | Developer",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Hey, I'm a computer scientist developing stuff for the web, and games in my spare time, but I create other things too, so if that interests you, why not take a look at my website?",
+    },
+    {
+      name: "twitter:site",
+      content: "https://www.arthursegato.dev",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:image",
+      content: "https://www.arthursegato.dev/gifs/twitter-card.gif",
+    },
+    {
+      name: "twitter:image:alt",
+      content:
+        "Arthur Segato Logo, composed of a letter A cut horizontally by a letter S, with a moving coloured background.",
+    },
+    {
+      name: "twitter:site",
+      content: "https://www.arthursegato.dev",
+    },
+    {
+      name: "twitter:image:type",
+      content: "image/jpg",
+    },
+    {
+      name: "twitter:image:width",
+      content: "900",
+    },
+    {
+      name: "twitter:image:height",
+      content: "470",
+    },
+    {
+      name: "google",
+      content: "notranslate",
+    },
+    {
+      name: "robots",
+      content: "",
+    },
+    {
+      name: "revisit-after",
+      content: "1 day",
+    },
+    {
+      name: "theme-color",
+      content: "#e5e6e6",
+    },
+    {
+      name: "color-scheme",
+      content: "light dark",
     },
   ],
 };

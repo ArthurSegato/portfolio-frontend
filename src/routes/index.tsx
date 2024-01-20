@@ -11,9 +11,7 @@ declare const contact: any;
 
 export const useContactAction = routeAction$(async (data, requestEvent) => {
   try {
-    console.log(requestEvent.env.get("WEBHOOK_DISCORD"));
-    /*
-    fetch(key, {
+    fetch(requestEvent.env.get("WEBHOOK_DISCORD"), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +37,7 @@ export const useContactAction = routeAction$(async (data, requestEvent) => {
         ],
       }),
     });
-    */
+
     return {
       success: true,
     };

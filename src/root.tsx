@@ -25,12 +25,7 @@ export default component$(() => {
           sizes="32x32"
           href="https://www.theendpoem.com/favicon32.ico"
         />
-        <link
-          type="image/svg+xml"
-          rel="icon"
-          sizes="any"
-          href="https://www.theendpoem.com/icon.svg"
-        />
+
         <link
           rel="apple-touch-icon"
           href="https://www.theendpoem.com/apple-touch-icon.png"

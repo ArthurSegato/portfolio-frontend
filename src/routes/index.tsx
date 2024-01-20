@@ -259,6 +259,7 @@ export default component$(() => {
               </button>
             </Form>
           </div>
+          {sendContact.value?.success && <p>User added successfully</p>}
         </dialog>
       </section>
     </>

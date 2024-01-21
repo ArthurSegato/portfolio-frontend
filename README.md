@@ -1,119 +1,102 @@
-# Qwik City App ⚡️
+[![Website](.github/assets/banner.svg)](https://arthursegato.dev)
+[![Uptime](https://img.shields.io/website?url=https%3A%2F%2Farthursegato.dev)](https://img.shields.io/website?url=https%3A%2F%2Farthursegato.dev)
+[![HSTS Status](https://img.shields.io/hsts/preload/arthursegato.dev)](https://img.shields.io/hsts/preload/arthursegato.dev)
+[![Mozilla HTTP Observatory](https://img.shields.io/mozilla-observatory/grade/arthursegato.dev?publish)](https://img.shields.io/mozilla-observatory/grade/arthursegato.dev?publish)
+[![bun-build](https://github.com/ArthurSegato/portfolio-frontend/actions/workflows/workflow.yml/badge.svg)](https://github.com/ArthurSegato/portfolio-frontend/actions/workflows/workflow.yml)
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+[arthursegato.dev](https://www.arthursegato.dev/) serves as my portfolio, I usually rebuild it every time I learn a new web tech for testing purposes.
 
----
+It's (now) build with Qwik/Tailwind and deployed across the Vercel Edge network.
 
-## Project Structure
+## Requirements
 
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+- Node v21.6.0 or above _(bun has a breaking bug)_
 
-Inside your project, you'll see the following directory structure:
+## Environment variables
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
+.env variables for this project:
+
+```Properties
+WEBHOOK_DISCORD=""
 ```
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
+## Setup
 
-- `src/components`: Recommended directory for components.
+Make sure to install the dependencies:
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+```bash
+# npm
+npm install
 
-## Add Integrations and deployment
+# pnpm
+pnpm install
 
-Use the `bun qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
+# yarn
+yarn install
 
-```shell
-bun qwik add # or `bun qwik add`
+# bun
+bun install
 ```
 
 ## Development
 
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
+Start the development server on `http://localhost:5173`:
 
-```shell
-npm start # or `bun start`
-```
+```bash
+# npm
+npm run dev
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+# pnpm
+pnpm run dev
 
-## Preview
+# yarn
+yarn dev
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
-
-```shell
-bun preview # or `bun preview`
+# bun
+bun dev
 ```
 
 ## Production
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+Build the application for production:
 
-```shell
-bun build # or `bun build`
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
 ```
 
-## Bun Server
+Locally preview production build:
 
-This app has a minimal [Bun server](https://bun.sh/docs/api/http) implementation. After running a full build, you can preview the build using the command:
+```bash
+# npm
+npm run preview
 
-```
-bun run serve
-```
+# pnpm
+pnpm run preview
 
-Then visit [http://localhost:3000/](http://localhost:3000/)
+# yarn
+yarn preview
 
-## Vercel Edge
-
-This starter site is configured to deploy to [Vercel Edge Functions](https://vercel.com/docs/concepts/functions/edge-functions), which means it will be rendered at an edge location near to your users.
-
-## Installation
-
-The adaptor will add a new `vite.config.ts` within the `adapters/` directory, and a new entry file will be created, such as:
-
-```
-└── adapters/
-    └── vercel-edge/
-        └── vite.config.ts
-└── src/
-    └── entry.vercel-edge.tsx
+# bun
+bun run preview
 ```
 
-Additionally, within the `package.json`, the `build.server` script will be updated with the Vercel Edge build.
+## Disclaimer
 
-## Production build
+Below is a list of all the external assets used in the development of this website with their respective licenses.
 
-To build the application for production, use the `build` command, this command will automatically run `bun build.server` and `bun build.client`:
+- [Hero Icons](https://heroicons.com/) ([MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE))
+- [daisyUI](https://daisyui.com/) ([MIT](https://github.com/saadeghi/daisyui/blob/master/LICENSE))
 
-```shell
-bun build
-```
+## Contributors
 
-[Read the full guide here](https://github.com/BuilderIO/qwik/blob/main/starters/adapters/vercel-edge/README.md)
-
-## Dev deploy
-
-To deploy the application for development:
-
-```shell
-bun deploy
-```
-
-Notice that you might need a [Vercel account](https://docs.Vercel.com/get-started/) in order to complete this step!
-
-## Production deploy
-
-The project is ready to be deployed to Vercel. However, you will need to create a git repository and push the code to it.
-
-You can [deploy your site to Vercel](https://vercel.com/docs/concepts/deployments/overview) either via a Git provider integration or through the Vercel CLI.
+- [@ArthurSegato](https://github.com/ArthurSegato)

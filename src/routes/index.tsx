@@ -40,9 +40,7 @@ export const useContactAction = routeAction$(async (data, requestEvent) => {
         }),
       });
 
-    return {
-      success: true,
-    };
+    return { success: true };
   } catch (error) {
     return error;
   }
@@ -62,7 +60,7 @@ export default component$(() => {
         </figure>
         <div class="flex flex-col">
           <article class="card-body grow">
-            <h1 class="card-title text-4xl">Hello, I'm Arthur Segato!</h1>
+            <h1 class="card-title text-4xl">🤘 Hello, I'm Arthur Segato!</h1>
             <p>A 24yo Brazilian based in Porto.</p>
             <p>
               I hold a bachelor's degree in Computer Science and possess
@@ -135,23 +133,40 @@ export default component$(() => {
             </Link>
             <button
               class="btn btn-primary join-item"
-              onClick$={() => contact.showModal()}
+              onClick$={() => sendContact.status !== 200 && contact.showModal()}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                class="h-5 w-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.12 3 2.7 3.23 1.14.16 2.28.29 3.43.38.35.02.67.2.86.5L12 21l2.75-4.13a1.14 1.14 0 0 1 .87-.5 48.17 48.17 0 0 0 3.42-.38 3.22 3.22 0 0 0 2.71-3.23V6.74c0-1.6-1.12-3-2.7-3.23A48.4 48.4 0 0 0 12 3c-2.4 0-4.74.17-7.04.51a3.22 3.22 0 0 0-2.71 3.23v6.02Z"
-                />
-              </svg>
-              Contact
+              {sendContact.status !== 200 ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.12 3 2.7 3.23 1.14.16 2.28.29 3.43.38.35.02.67.2.86.5L12 21l2.75-4.13a1.14 1.14 0 0 1 .87-.5 48.17 48.17 0 0 0 3.42-.38 3.22 3.22 0 0 0 2.71-3.23V6.74c0-1.6-1.12-3-2.7-3.23A48.4 48.4 0 0 0 12 3c-2.4 0-4.74.17-7.04.51a3.22 3.22 0 0 0-2.71 3.23v6.02Z"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  class="h-5 w-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12c0 1.27-.63 2.39-1.6 3.07a3.75 3.75 0 0 1-1.04 3.3 3.75 3.75 0 0 1-3.3 1.04A3.75 3.75 0 0 1 12 21a3.75 3.75 0 0 1-3.07-1.6 3.75 3.75 0 0 1-3.3-1.04 3.75 3.75 0 0 1-1.04-3.3A3.75 3.75 0 0 1 3 12c0-1.27.63-2.39 1.6-3.07a3.75 3.75 0 0 1 1.04-3.3 3.75 3.75 0 0 1 3.3-1.04A3.75 3.75 0 0 1 12 3c1.27 0 2.39.63 3.07 1.6a3.75 3.75 0 0 1 3.3 1.04 3.75 3.75 0 0 1 1.04 3.3A3.75 3.75 0 0 1 21 12Z"
+                  />
+                </svg>
+              )}
+              {sendContact.status !== 200 ? "Contact" : "Got it"}
             </button>
           </div>
         </div>
@@ -163,7 +178,11 @@ export default component$(() => {
               </button>
             </form>
             <h3 class="text-lg font-bold">Send me a owl</h3>
-            <Form action={sendContact} class="flex flex-col gap-2">
+            <Form
+              action={sendContact}
+              autocomplete="off"
+              class="flex flex-col gap-2"
+            >
               <label class="form-control w-full">
                 <div class="label">
                   <span class="label-text">
@@ -258,7 +277,7 @@ export default component$(() => {
                 </svg>
               </button>
             </Form>
-            {sendContact.status && <p>Message send successfully</p>}
+            {sendContact.status === 200 && contact.close()}
           </div>
         </dialog>
       </section>

@@ -33,7 +33,6 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="canonical" href="https://www.arthursegato.dev" />
         <link
           rel="icon"
           sizes="16x16"

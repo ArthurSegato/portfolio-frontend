@@ -15,7 +15,7 @@ export const RouterHead = component$(() => {
         type="image/svg+xml"
         rel="icon"
         sizes="any"
-        href="https://www.theendpoem.com/icon.svg"
+        href="https://www.arthursegato.dev/icon.svg"
       />
 
       {head.meta.map((m) => (

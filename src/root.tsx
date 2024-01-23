@@ -37,17 +37,17 @@ export default component$(() => {
         <link
           rel="icon"
           sizes="16x16"
-          href="https://www.theendpoem.com/favicon.ico"
+          href="https://www.arthursegato.dev/favicon.ico"
         />
         <link
           rel="icon"
           sizes="32x32"
-          href="https://www.theendpoem.com/favicon32.ico"
+          href="https://www.arthursegato.dev/favicon32.ico"
         />
 
         <link
           rel="apple-touch-icon"
-          href="https://www.theendpoem.com/apple-touch-icon.png"
+          href="https://www.arthursegato.dev/apple-touch-icon.png"
         />
         <RouterHead />
       </head>

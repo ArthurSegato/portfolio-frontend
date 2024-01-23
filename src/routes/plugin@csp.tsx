@@ -1,6 +1,6 @@
 import type { RequestHandler } from "@builder.io/qwik-city";
 import { isDev } from "@builder.io/qwik/build";
-const crypto = require("crypto");
+import crypto from "crypto";
 
 export const onRequest: RequestHandler = (event) => {
   if (isDev) return; // Will not return CSP headers in dev mode

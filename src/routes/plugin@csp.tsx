@@ -18,4 +18,6 @@ export const onRequest: RequestHandler = (event) => {
 
   event.headers.set("Content-Security-Policy", csp.join("; "));
   event.headers.set("X-Content-Type-Options", "nosniff");
+  event.headers.set("X-XSS-Protection", "1; mode=block");
+  event.headers.set("X-Frame-Options", "DENY");
 };

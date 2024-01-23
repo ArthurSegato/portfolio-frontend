@@ -51,7 +51,10 @@ export default component$(() => {
         />
         <RouterHead />
       </head>
-      <body lang="en" data-theme="sunset">
+      <body
+        lang="en"
+        data-theme={themes[Math.floor(Math.random() * themes.length)]}
+      >
         <RouterOutlet />
         <ServiceWorkerRegister />
       </body>

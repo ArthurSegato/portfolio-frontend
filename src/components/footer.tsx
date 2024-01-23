@@ -8,7 +8,11 @@ export const Footer = component$(() => {
         <nav class="footer gap-4 rounded-box bg-base-100 bg-opacity-50 p-4 shadow-xl backdrop-blur-2xl backdrop-saturate-200">
           <ul class="flex w-full items-center justify-evenly md:justify-end">
             <li>
-              <Link href="https://github.com/ArthurSegato">
+              <Link
+                href="https://github.com/ArthurSegato"
+                title="Github"
+                aria-label="Arthur Segato Github page"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -21,7 +25,11 @@ export const Footer = component$(() => {
               </Link>
             </li>
             <li>
-              <Link href="https://arthursegato.itch.io/">
+              <Link
+                href="https://arthursegato.itch.io/"
+                title="Itch.io"
+                aria-label="Arthur Segato Itch.io page"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -35,7 +43,11 @@ export const Footer = component$(() => {
               </Link>
             </li>
             <li>
-              <Link href="https://github.com/arthursegato.gpg">
+              <Link
+                href="https://github.com/arthursegato.gpg"
+                title="PGP Key"
+                aria-label="Arthur Segato PGP Key"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -54,7 +66,11 @@ export const Footer = component$(() => {
               </Link>
             </li>
             <li>
-              <Link href="https://donate.stripe.com/7sI29F4lo7Pt80g28a">
+              <Link
+                href="https://donate.stripe.com/7sI29F4lo7Pt80g28a"
+                title="Donation"
+                aria-label="Arthur Segato donation page"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

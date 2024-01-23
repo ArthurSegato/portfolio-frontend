@@ -35,7 +35,7 @@ export const DislexiLess = component$(() => {
         <p>
           The full thesis can be found{" "}
           <Link href="https://github.com/ArthurSegato/DislexiLess/blob/main/.github/assets/DISLEXILESS_TCC-2_ARTHUR_EDUARDO.pdf">
-            here
+            on the DislexiLess github repo
           </Link>
           .
         </p>

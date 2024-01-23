@@ -114,10 +114,7 @@ export default component$(() => {
                 </span>
               </div>
               <div class="join w-full">
-                <button
-                  type="button"
-                  class="btn btn-ghost join-item btn-active no-animation cursor-default"
-                >
+                <div class="btn btn-ghost join-item btn-active">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -132,7 +129,7 @@ export default component$(() => {
                       d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.13a1.88 1.88 0 1 1-3.75 0 1.88 1.88 0 0 1 3.75 0Zm1.3 6.34a6.72 6.72 0 0 1-3.18.79 6.72 6.72 0 0 1-3.16-.79 3.38 3.38 0 0 1 6.33 0Z"
                     />
                   </svg>
-                </button>
+                </div>
                 <input
                   type="text"
                   placeholder="The name's Potter, Harry Potter."
@@ -149,10 +146,7 @@ export default component$(() => {
                 </span>
               </div>
               <div class="join w-full">
-                <button
-                  type="button"
-                  class="btn btn-ghost join-item btn-active no-animation cursor-default"
-                >
+                <div class="btn btn-ghost join-item btn-active">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -167,7 +161,7 @@ export default component$(() => {
                       d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.24a2.25 2.25 0 0 1-1.07 1.92l-7.5 4.61a2.25 2.25 0 0 1-2.36 0l-7.5-4.61a2.25 2.25 0 0 1-1.07-1.92v-.24"
                     />
                   </svg>
-                </button>
+                </div>
                 <input
                   type="text"
                   placeholder="I possess a small farmstead in @pelican_town, you see."

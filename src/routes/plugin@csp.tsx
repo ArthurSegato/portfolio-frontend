@@ -20,4 +20,8 @@ export const onRequest: RequestHandler = (event) => {
   event.headers.set("X-Content-Type-Options", "nosniff");
   event.headers.set("X-XSS-Protection", "1; mode=block");
   event.headers.set("X-Frame-Options", "DENY");
+  event.headers.set(
+    "Strict-Transport-Security",
+    "max-age=31536000; includeSubDomains; preload",
+  );
 };

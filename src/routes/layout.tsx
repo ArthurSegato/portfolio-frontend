@@ -1,5 +1,8 @@
 import { component$, Slot } from "@builder.io/qwik";
-import type { RequestHandler } from "@builder.io/qwik-city";
+import { type RequestHandler } from "@builder.io/qwik-city";
+
+import { Header } from "~/components/header";
+import { Footer } from "~/components/footer";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   cacheControl({
@@ -9,35 +12,13 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-  const themes = [
-    "light",
-    "dark",
-    "cupcake",
-    "synthwave",
-    "retro",
-    "valentine",
-    "garden",
-    "forest",
-    "pastel",
-    "fantasy",
-    "wireframe",
-    "dracula",
-    "cmyk",
-    "autumn",
-    "coffee",
-    "winter",
-    "dim",
-    "nord",
-    "sunset",
-  ];
   return (
     <>
-      <main
-        data-theme={themes[Math.floor(Math.random() * themes.length)]}
-        class="flex min-h-screen w-full items-center justify-center bg-base-300 p-4 sm:p-6 lg:p-8"
-      >
+      <Header />
+      <main class="flex min-h-screen w-full items-center justify-center bg-base-300 px-2 py-28">
         <Slot />
       </main>
+      <Footer />
     </>
   );
 });

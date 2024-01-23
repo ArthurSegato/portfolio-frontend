@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
     themes: [
       "light",
@@ -13,14 +13,11 @@ export default {
       "synthwave",
       "retro",
       "valentine",
-      "garden",
       "forest",
-      "pastel",
-      "fantasy",
-      "wireframe",
       "dracula",
       "cmyk",
       "autumn",
+      "night",
       "coffee",
       "winter",
       "dim",

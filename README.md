@@ -94,6 +94,7 @@ bun run preview
 
 Below is a list of all the external assets used in the development of this website with their respective licenses.
 
+- [Bootstrap Icons](https://icons.getbootstrap.com/) ([MIT](https://github.com/twbs/icons/blob/main/LICENSE))
 - [Hero Icons](https://heroicons.com/) ([MIT](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE))
 - [daisyUI](https://daisyui.com/) ([MIT](https://github.com/saadeghi/daisyui/blob/master/LICENSE))
 

@@ -9,6 +9,25 @@ import { RouterHead } from "./components/router-head/router-head";
 import "./global.css";
 
 export default component$(() => {
+  const themes = [
+    "light",
+    "dark",
+    "cupcake",
+    "synthwave",
+    "retro",
+    "valentine",
+    "forest",
+    "dracula",
+    "cmyk",
+    "autumn",
+    "night",
+    "coffee",
+    "winter",
+    "dim",
+    "nord",
+    "sunset",
+  ];
+
   return (
     <QwikCityProvider>
       <head>
@@ -31,10 +50,10 @@ export default component$(() => {
           href="https://www.theendpoem.com/apple-touch-icon.png"
         />
         <RouterHead />
-        <ServiceWorkerRegister />
       </head>
-      <body lang="en">
+      <body lang="en" data-theme="sunset">
         <RouterOutlet />
+        <ServiceWorkerRegister />
       </body>
     </QwikCityProvider>
   );

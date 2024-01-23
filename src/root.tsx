@@ -9,6 +9,7 @@ import { RouterHead } from "./components/router-head/router-head";
 import "./global.css";
 
 export default component$(() => {
+  const nonce = useServerData<string | undefined>("nonce");
   const themes = [
     "light",
     "dark",
@@ -55,7 +56,7 @@ export default component$(() => {
         data-theme={themes[Math.floor(Math.random() * themes.length)]}
       >
         <RouterOutlet />
-        <ServiceWorkerRegister />
+        <ServiceWorkerRegister nonce={nonce} />
       </body>
     </QwikCityProvider>
   );

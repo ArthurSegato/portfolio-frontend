@@ -7,7 +7,7 @@ export const onRequest: RequestHandler = (event) => {
   const nonce = crypto.randomBytes(16).toString("base64");
   event.sharedMap.set("@nonce", nonce);
   const csp = [
-    `default-src 'self' 'unsafe-inline'`,
+    `default-src 'none' 'unsafe-inline'`,
     `font-src 'self'`,
     `img-src 'self' 'unsafe-inline' data:`,
     `script-src 'self' 'unsafe-inline' https: 'nonce-${nonce}' 'strict-dynamic'`,

@@ -5,5 +5,11 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#e5e6e6",
+  "theme_color": "#1F2937",
+  "orientation": "portrait-primary",
   "description": "Hey, I'm a computer scientist developing stuff for the web, and games in my spare time, but I create other things too, so if that interests you, why not take a look at my website?"
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
 }

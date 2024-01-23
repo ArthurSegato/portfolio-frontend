@@ -41,13 +41,19 @@ export default component$(() => {
         />
         <link
           rel="icon"
-          sizes="32x32"
-          href="https://www.arthursegato.dev/favicon32.ico"
+          sizes="48x48"
+          href="https://www.arthursegato.dev/favicon48.ico"
         />
 
         <link
           rel="apple-touch-icon"
           href="https://www.arthursegato.dev/apple-touch-icon.png"
+        />
+        <link
+          type="image/svg+xml"
+          rel="icon"
+          sizes="any"
+          href="https://www.arthursegato.dev/icon.svg"
         />
         <RouterHead />
       </head>

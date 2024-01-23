@@ -61,6 +61,7 @@ export default component$(() => {
               class="w-full rounded-t-2xl"
               alt="Arthur Segato with long hair is depicted in a blurry image at night"
               title="Arthur Segato with long hair is depicted in a blurry image at night"
+              loading="eager"
             />
           </figure>
           <h1 class="px-4">🤘 Hello, I'm Arthur Segato!</h1>

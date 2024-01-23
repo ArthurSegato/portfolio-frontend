@@ -6,7 +6,7 @@ export const onRequest: RequestHandler = (event) => {
   const nonce = crypto.randomUUID();
   event.sharedMap.set("@nonce", nonce);
   const csp = [
-    `default-src 'none' 'unsafe-inline'`,
+    `default-src 'self' 'unsafe-inline'`,
     `font-src 'self'`,
     `img-src 'self' 'unsafe-inline' data:`,
     `script-src 'self' 'unsafe-inline' https: 'nonce-${nonce}' 'strict-dynamic'`,

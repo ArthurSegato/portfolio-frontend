@@ -14,6 +14,7 @@ export const GraphicDesign = component$(() => {
             src="https://www.youtube.com/embed/OYDhGj6FH5g?si=PASiV8BTfPzpPtfh"
             title="YouTube video player"
             class="aspect-video w-full"
+            loading="lazy"
           ></iframe>
           <figcaption>
             In my defense, I had no control over the quality of the footage or

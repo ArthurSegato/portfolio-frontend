@@ -1,10 +1,9 @@
 import type { RequestHandler } from "@builder.io/qwik-city";
 import { isDev } from "@builder.io/qwik/build";
-import crypto from "crypto";
 
 export const onRequest: RequestHandler = (event) => {
   if (isDev) return; // Will not return CSP headers in dev mode
-  const nonce = crypto.randomBytes(16).toString("base64");
+  const nonce = crypto.randomUUID();
   event.sharedMap.set("@nonce", nonce);
   const csp = [
     `default-src 'none' 'unsafe-inline'`,

@@ -11,7 +11,7 @@ export const onRequest: RequestHandler = (event) => {
     `img-src 'self' 'unsafe-inline' data:`,
     `script-src 'self' 'unsafe-inline' https: 'nonce-${nonce}' 'strict-dynamic'`,
     `style-src 'self' 'unsafe-inline'`,
-    `frame-src 'youtube.com' 'www.youtube.com'`,
+    `frame-src 'https://www.youtube.com/'`,
     `object-src 'none'`,
     `base-uri 'self'`,
   ];

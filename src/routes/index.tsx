@@ -249,11 +249,11 @@ export const head: DocumentHead = {
     },
     {
       name: "og:image",
-      content: "https://www.arthursegato.dev/gifs/facebook-card.gif",
+      content: "https://www.arthursegato.dev/facebook-card.jpg",
     },
     {
       name: "og:image:secure_url",
-      content: "https://www.arthursegato.dev/gifs/facebook-card.gif",
+      content: "https://www.arthursegato.dev/facebook-card.jpg",
     },
     {
       name: "og:image:alt",

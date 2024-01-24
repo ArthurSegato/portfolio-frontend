@@ -41,6 +41,10 @@
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
   },
+  "pre-commit": [
+    "fmt",
+    "lint"
+  ],
   "trustedDependencies": [
     "sharp"
   ],

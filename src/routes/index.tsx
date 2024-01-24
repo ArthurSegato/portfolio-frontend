@@ -291,7 +291,7 @@ export const head: DocumentHead = {
     },
     {
       name: "twitter:image",
-      content: "https://www.arthursegato.dev/gifs/twitter-card.gif",
+      content: "https://www.arthursegato.dev/twitter-card.jpg",
     },
     {
       name: "twitter:image:alt",

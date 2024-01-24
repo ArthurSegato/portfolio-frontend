@@ -3,9 +3,9 @@ import { isDev } from "@builder.io/qwik/build";
 
 export const onRequest: RequestHandler = (event) => {
   if (isDev) return; // Will not return CSP headers in dev mode
-  const nonce = crypto.randomUUID();
-  event.sharedMap.set("@nonce", nonce);
-  const csp = [
+  //const nonce = crypto.randomUUID();
+  //event.sharedMap.set("@nonce", nonce);
+  /*const csp = [
     `default-src 'self' 'unsafe-inline'`,
     `font-src 'self'`,
     `img-src 'self' 'unsafe-inline' data:`,
@@ -14,7 +14,7 @@ export const onRequest: RequestHandler = (event) => {
     `frame-src 'self' 'nonce-${nonce}' https://www.youtube.com/`,
     `object-src 'none'`,
     `base-uri 'self'`,
-  ];
+  ];*/
 
   event.headers.set("Content-Security-Policy", csp.join("; "));
   event.headers.set("X-Content-Type-Options", "nosniff");

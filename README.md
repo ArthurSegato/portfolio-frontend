@@ -2,7 +2,7 @@
 [![Uptime](https://img.shields.io/website?url=https%3A%2F%2Farthursegato.dev)](https://img.shields.io/website?url=https%3A%2F%2Farthursegato.dev)
 [![HSTS Status](https://img.shields.io/hsts/preload/arthursegato.dev)](https://img.shields.io/hsts/preload/arthursegato.dev)
 [![Mozilla HTTP Observatory](https://img.shields.io/mozilla-observatory/grade/arthursegato.dev?publish)](https://img.shields.io/mozilla-observatory/grade/arthursegato.dev?publish)
-[![bun-build](https://github.com/ArthurSegato/portfolio-frontend/actions/workflows/workflow.yml/badge.svg)](https://github.com/ArthurSegato/portfolio-frontend/actions/workflows/workflow.yml)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/ArthurSegato/Portfolio/main.svg)](https://results.pre-commit.ci/latest/github/ArthurSegato/Portfolio/main)
 
 [arthursegato.dev](https://www.arthursegato.dev/) serves as my portfolio, I usually rebuild it every time I learn a new web tech for testing purposes.
 

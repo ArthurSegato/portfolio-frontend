@@ -1,8 +1,14 @@
-name: bun-build
-on: [push]
+name: build
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
 jobs:
-  bun-build:
-    name: build-project
+  build:
+    name: build
     runs-on: ubuntu-latest
     steps:
       # Install bun

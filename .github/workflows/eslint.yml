@@ -11,12 +11,12 @@ name: ESLint
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ "main" ]
+    branches: ["main"]
   schedule:
-    - cron: '19 1 * * 3'
+    - cron: "19 1 * * 3"
 
 jobs:
   eslint:
@@ -30,13 +30,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v1
+
       - name: Install ESLint
         run: |
-          npm install eslint@8.10.0
-          npm install @microsoft/eslint-formatter-sarif@2.1.7
+          bun install eslint@8.10.0
+          bun install @microsoft/eslint-formatter-sarif@2.1.7
 
       - name: Run ESLint
-        run: npx eslint .
+        run: bunx eslint .
           --config .eslintrc.js
           --ext .js,.jsx,.ts,.tsx
           --format @microsoft/eslint-formatter-sarif

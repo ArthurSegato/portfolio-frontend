@@ -3,7 +3,7 @@
         <h2>DislexiLess</h2>
         <figure>
             <NuxtImg src="/img/dislexiless.jpg" class="w-full" alt="Screenshot of the Dyslexiless homepage"
-                title="Screenshot of the Dyslexiless homepage" placeholder />
+                title="Screenshot of the Dyslexiless homepage" placeholder width="555" height="312" />
             <figcaption>Looks familiar, uh?</figcaption>
         </figure>
         <p>

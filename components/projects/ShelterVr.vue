@@ -2,7 +2,7 @@
     <article class="prose rounded-2xl bg-base-100 p-4 shadow-lg" id="sheltervr">
         <h2>SHELTERVR.CLUB</h2>
         <figure>
-            <NuxtImg src="/img/sheltervr.jpg" class="w-full" placeholder
+            <NuxtImg src="/img/sheltervr.jpg" class="w-full" placeholder width="555" height="312"
                 alt="A concrete wall embellished with an underground rave poster adhered to its surface, complemented by graffiti providing instructions to join the ShelterVR Discord"
                 title="A concrete wall embellished with an underground rave poster adhered to its surface, complemented by graffiti providing instructions to join the ShelterVR Discord" />
             <figcaption>SEEK. SHELTER. NOW.</figcaption>

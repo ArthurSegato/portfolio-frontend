@@ -3,7 +3,7 @@
         <h2>Old Websites</h2>
         <figure>
             <NuxtImg src="/img/oldwebsites.png" class="w-full" alt="Collage of screenshots showcasing the old websites"
-                title="Collage of screenshots showcasing the old websites" placeholder />
+                title="Collage of screenshots showcasing the old websites" placeholder width="555" height="312" />
             <figcaption>
                 Collage of screenshots showcasing the old projects.
             </figcaption>

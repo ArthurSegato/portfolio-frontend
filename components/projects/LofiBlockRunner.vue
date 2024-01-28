@@ -2,7 +2,7 @@
     <article class="prose rounded-2xl bg-base-100 p-4 shadow-lg" id="lofiblockrunner">
         <h2>LofiBlockRunner</h2>
         <figure>
-            <NuxtImg src="/img/lofiblockrunner.jpg" class="w-full" placeholder
+            <NuxtImg src="/img/lofiblockrunner.jpg" class="w-full" placeholder width="555" height="238"
                 alt="Screenshot capturing the moment when a red block collides with a purple obstacle, shattering into pieces."
                 title="Screenshot capturing the moment when a red block collides with a purple obstacle, shattering into pieces." />
             <figcaption>

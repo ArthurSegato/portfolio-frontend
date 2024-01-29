@@ -11,8 +11,11 @@ export default defineNuxtConfig({
   security: {
     headers: {
       strictTransportSecurity: {
+        maxAge: 31536000,
+        includeSubdomains: true,
         preload: true,
       },
+      xXSSProtection: "1; mode=block",
     },
   },
   runtimeConfig: {

@@ -2,11 +2,8 @@
     <article class="prose rounded-2xl bg-base-100 p-4 shadow-lg" id="graphicdesign">
         <h2>Graphic design and video editing</h2>
         <figure>
-            <iframe src="https://www.youtube.com/embed/OYDhGj6FH5g?si=PASiV8BTfPzpPtfh" title="YouTube video player"
-                class="aspect-video w-full" loading="lazy"></iframe>
             <figcaption>
-                In my defense, I had no control over the quality of the footage or
-                the thumbnail of this video, only the editing.
+                It would have a video here, but youtube doesn't help.
             </figcaption>
         </figure>
         <p>
@@ -24,6 +21,10 @@
         <p>
             <NuxtLink href="https://www.youtube.com/watch?v=mjTTIlpIbg4">
                 <code>young bragi x slag - apenas eu</code>
+            </NuxtLink>
+            -
+            <NuxtLink href="https://www.youtube.com/watch?v=OYDhGj6FH5g">
+                <code>Best Part (Daniel Caesar ft. H.E.R.) - COVER Mariana Coelho</code>
             </NuxtLink>
             -
             <NuxtLink href="https://www.youtube.com/watch?v=iLubku1d93Y">

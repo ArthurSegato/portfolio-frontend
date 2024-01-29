@@ -3,7 +3,7 @@
         <h2>Smart Spot</h2>
         <figure>
             <figcaption>
-                Unfortunately, there are no images or NuxtLinks available for this
+                Unfortunately, there are no images or links available for this
                 project.
             </figcaption>
         </figure>

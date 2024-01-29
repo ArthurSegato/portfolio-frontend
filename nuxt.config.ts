@@ -1,7 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "nuxt-security"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image",
+    "nuxt-security",
+    "nuxt-simple-robots",
+    "@nuxtjs/sitemap",
+    "nuxt-link-checker",
+  ],
   nitro: {
     preset: "vercel-edge",
   },
@@ -15,11 +22,11 @@ export default defineNuxtConfig({
         includeSubdomains: true,
         preload: true,
       },
-      contentSecurityPolicy: {
-        "frame-src": "'self' 'nonce-{{nonce}}' https://www.youtube.com/",
-      },
       xXSSProtection: "1; mode=block",
     },
+  },
+  site: {
+    url: "https://www.arthursegato.dev",
   },
   runtimeConfig: {
     webhooks: {

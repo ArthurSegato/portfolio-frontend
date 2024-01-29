@@ -15,6 +15,9 @@ export default defineNuxtConfig({
         includeSubdomains: true,
         preload: true,
       },
+      contentSecurityPolicy: {
+        "frame-src": "'self' 'nonce-{{nonce}}' https://www.youtube.com/"
+      }
       xXSSProtection: "1; mode=block",
     },
   },

@@ -1,7 +1,4 @@
 <template>
-    <div
-        class="w-full h-3 fixed top-0 left-0 bg-red-600 sm:bg-orange-600 md:bg-yellow-600 lg:bg-green-600 xl:bg-blue-600 2xl:bg-purple-600">
-    </div>
     <div class="rounded-2xl bg-base-100 shadow-lg flex flex-col sm:w-10/12 md:w-7/12 lg:flex-row lg:w-10/12 xl:w-9/12">
         <figure class="flex">
             <NuxtImg src="/img/arthur-segato.jpg"

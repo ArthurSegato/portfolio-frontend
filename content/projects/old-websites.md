@@ -19,14 +19,14 @@ Links
 ::
 
 ::list
-    ::list-item{path="https://github.com/ArthurSegato/TemplateFiverr" text="TemplateFiverr"}
-    ::
-    ::list-item{path="https://github.com/ArthurSegato/NadiaSegato" text="NadiaSegato"}
-    ::
-    ::list-item{path="https://github.com/ArthurSegato/Kafhia" text="Kafhia"}
-    ::
-    ::list-item{path="https://github.com/ArthurSegato/OldPortfolios" text="Old portfolios"}
-    ::
+::list-item{path="https://github.com/ArthurSegato/TemplateFiverr" text="TemplateFiverr"}
+::
+::list-item{path="https://github.com/ArthurSegato/NadiaSegato" text="NadiaSegato"}
+::
+::list-item{path="https://github.com/ArthurSegato/Kafhia" text="Kafhia"}
+::
+::list-item{path="https://github.com/ArthurSegato/OldPortfolios" text="Old portfolios"}
+::
 ::
 
 ::title-secondary

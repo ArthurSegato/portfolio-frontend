@@ -19,12 +19,12 @@ Contributors
 ::
 
 ::list
-    ::list-item{path="https://github.com/ArthurSegato" text="@ArthurSegato"}
-    ::
-    ::list-item{path="https://github.com/dietermd" text="@dietermd"}
-    ::
-    ::list-item{path="https://github.com/GMCoelho" text="@GMCoelho"}
-    ::
+::list-item{path="https://github.com/ArthurSegato" text="@ArthurSegato"}
+::
+::list-item{path="https://github.com/dietermd" text="@dietermd"}
+::
+::list-item{path="https://github.com/GMCoelho" text="@GMCoelho"}
+::
 ::
 
 ::title-secondary

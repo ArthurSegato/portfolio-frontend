@@ -19,16 +19,16 @@ Links
 ::
 
 ::list
-    ::list-item{path="https://www.youtube.com/watch?v=mjTTIlpIbg4" text="young bragi x slag - apenas eu"}
-    ::
-    ::list-item{path="https://www.youtube.com/watch?v=OYDhGj6FH5g" text="Best Part (Daniel Caesar ft. H.E.R.) - COVER Mariana Coelho"}
-    ::
-    ::list-item{path="https://www.youtube.com/watch?v=iLubku1d93Y" text="MEU PRIMEIRO VLOG/ MARI RESPONDE"}
-    ::
-    ::list-item{path="https://www.youtube.com/watch?v=DfuMBxI2rQE" text="DANDO UMA DE CONSELHEIRA"}
-    ::
-    ::list-item{path="https://www.youtube.com/watch?v=latwjS0Vw0E" text="QUASE 50 FATOS SOBRE MIM!"}
-    ::
+::list-item{path="https://www.youtube.com/watch?v=mjTTIlpIbg4" text="young bragi x slag - apenas eu"}
+::
+::list-item{path="https://www.youtube.com/watch?v=OYDhGj6FH5g" text="Best Part (Daniel Caesar ft. H.E.R.) - COVER Mariana Coelho"}
+::
+::list-item{path="https://www.youtube.com/watch?v=iLubku1d93Y" text="MEU PRIMEIRO VLOG/ MARI RESPONDE"}
+::
+::list-item{path="https://www.youtube.com/watch?v=DfuMBxI2rQE" text="DANDO UMA DE CONSELHEIRA"}
+::
+::list-item{path="https://www.youtube.com/watch?v=latwjS0Vw0E" text="QUASE 50 FATOS SOBRE MIM!"}
+::
 ::
 
 ::title-secondary

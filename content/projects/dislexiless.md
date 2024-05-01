@@ -19,10 +19,10 @@ Contributors
 ::
 
 ::list
-    ::list-item{path="https://github.com/ArthurSegato" text="@ArthurSegato"}
-    ::
-    ::list-item{path="https://github.com/OmptOsu" text="@OmptOsu"}
-    ::
+::list-item{path="https://github.com/ArthurSegato" text="@ArthurSegato"}
+::
+::list-item{path="https://github.com/OmptOsu" text="@OmptOsu"}
+::
 ::
 
 ::title-secondary
@@ -30,12 +30,12 @@ Links
 ::
 
 ::list
-    ::list-item{path="https://github.com/ArthurSegato/DislexiLess/blob/main/.github/assets/DISLEXILESS_TCC-2_ARTHUR_EDUARDO.pdf" text="Thesis"}
-    ::
-    ::list-item{path="https://www.dislexiless.com/" text="dislexiless.com"}
-    ::
-    ::list-item{path="https://github.com/ArthurSegato/DislexiLess" text="Github Repo"}
-    ::
+::list-item{path="https://github.com/ArthurSegato/DislexiLess/blob/main/.github/assets/DISLEXILESS_TCC-2_ARTHUR_EDUARDO.pdf" text="Thesis"}
+::
+::list-item{path="https://www.dislexiless.com/" text="dislexiless.com"}
+::
+::list-item{path="https://github.com/ArthurSegato/DislexiLess" text="Github Repo"}
+::
 ::
 
 ::title-secondary

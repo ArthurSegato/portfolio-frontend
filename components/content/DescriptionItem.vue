@@ -1,17 +1,17 @@
 <script setup>
 defineProps({
-    topic: String,
-    text: String
-})
+  topic: String,
+  text: String,
+});
 </script>
 
 <template>
-    <dt>
-        <strong>
-            {{ topic }}
-        </strong>
-    </dt>
-    <dd class="ml-8">
-        {{ text }}
-    </dd>
+  <dt>
+    <strong>
+      {{ topic }}
+    </strong>
+  </dt>
+  <dd class="ml-8">
+    {{ text }}
+  </dd>
 </template>

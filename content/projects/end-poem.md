@@ -19,10 +19,10 @@ Links
 ::
 
 ::list
-    ::list-item{path="https://www.theendpoem.com/" text="theendpoem.com"}
-    ::
-    ::list-item{path="https://github.com/ArthurSegato/EndPoem/" text="Github Repo"}
-    ::
+::list-item{path="https://www.theendpoem.com/" text="theendpoem.com"}
+::
+::list-item{path="https://github.com/ArthurSegato/EndPoem/" text="Github Repo"}
+::
 ::
 
 ::title-secondary

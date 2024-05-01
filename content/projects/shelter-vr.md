@@ -19,10 +19,10 @@ Links
 ::
 
 ::list
-    ::list-item{path="https://sheltervr.club/" text="SHELTERVR.CLUB"}
-    ::
-    ::list-item{path="https://github.com/ArthurSegato/SHELTERVR" text="Github Repo"}
-    ::
+::list-item{path="https://sheltervr.club/" text="SHELTERVR.CLUB"}
+::
+::list-item{path="https://github.com/ArthurSegato/SHELTERVR" text="Github Repo"}
+::
 ::
 
 ::title-secondary

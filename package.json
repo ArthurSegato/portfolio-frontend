@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {
     "clear": "nuxt cleanup | nuxt generate",
+    "prettier": "prettier . --write",
     "build": "nuxt build",
     "dev": "nuxt dev --host",
     "generate": "nuxt generate",
@@ -13,5 +14,8 @@
     "@nuxt/image": "^1.6.0",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "nuxt": "^3.11.2"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5"
   }
 }

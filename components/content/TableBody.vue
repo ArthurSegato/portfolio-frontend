@@ -1,7 +1,7 @@
 <template>
-    <table>
-        <tbody>
-            <slot />
-        </tbody>
-    </table>
+  <table>
+    <tbody>
+      <slot />
+    </tbody>
+  </table>
 </template>

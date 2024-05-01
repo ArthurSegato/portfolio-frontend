@@ -19,18 +19,18 @@ Technical Information
 ::
 
 ::table-body
-    ::table-row{:items='["Status", "Prototype"]'}
-    ::
-    ::table-row{:items='["Platforms", "Windows"]'}
-    ::
-    ::table-row{:items='["License", "MIT"]'}
-    ::
-    ::table-row{:items='["Average session", "N/A"]'}
-    ::
-    ::table-row{:items='["Languages", "Portuguese"]'}
-    ::
-    ::table-row{:items='["Accessibility", "N/A"]'}
-    ::
+::table-row{:items='["Status", "Prototype"]'}
+::
+::table-row{:items='["Platforms", "Windows"]'}
+::
+::table-row{:items='["License", "MIT"]'}
+::
+::table-row{:items='["Average session", "N/A"]'}
+::
+::table-row{:items='["Languages", "Portuguese"]'}
+::
+::table-row{:items='["Accessibility", "N/A"]'}
+::
 ::
 
 ::title-secondary
@@ -38,10 +38,10 @@ Links
 ::
 
 ::list
-    ::list-item{path="https://arthursegato.itch.io/doge-maze" text="Itch.io Page"}
-    ::
-    ::list-item{path="https://github.com/ArthurSegato/DogeMaze" text="Github Repo"}
-    ::
+::list-item{path="https://arthursegato.itch.io/doge-maze" text="Itch.io Page"}
+::
+::list-item{path="https://github.com/ArthurSegato/DogeMaze" text="Github Repo"}
+::
 ::
 
 ::title-secondary

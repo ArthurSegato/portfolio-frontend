@@ -10,7 +10,7 @@ defineProps({
     <video class="w-full lg:max-w-2xl" autoplay muted loop :title="alt">
       <source :src="path" type="video/mp4" />
     </video>
-    <figcaption class="border-l-4 pl-4 my-4 border-current font-light">
+    <figcaption class="my-4 border-l-4 border-current pl-4 font-light">
       <i>
         <slot />
       </i>

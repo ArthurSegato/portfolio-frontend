@@ -2,7 +2,7 @@
   <NuxtLink
     hidden
     to="/"
-    class="w-full flex items-center gap-1 hover:gap-0 transition-all ease-in lg:w-fit border rounded-md px-2 my-2 select-none"
+    class="my-2 flex w-full select-none items-center gap-1 rounded-md border px-2 transition-all ease-in hover:gap-0 lg:w-fit"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

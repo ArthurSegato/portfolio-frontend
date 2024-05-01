@@ -8,7 +8,7 @@ defineProps({
 <template>
   <figure>
     <NuxtImg :src="path" :alt="alt" :title="alt" class="w-full lg:max-w-2xl" />
-    <figcaption class="border-l-4 pl-4 my-4 border-current font-light">
+    <figcaption class="my-4 border-l-4 border-current pl-4 font-light">
       <i>
         <slot />
       </i>

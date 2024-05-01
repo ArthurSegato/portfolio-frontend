@@ -9,28 +9,28 @@ defineProps({
 
 <template>
   <NuxtLink :to="path" class="group">
-    <div class="w-full flex items-end justify-between">
+    <div class="flex w-full items-end justify-between">
       <h2
-        class="break-words text-5xl font-black group-hover:tracking-wide transition-all ease-in"
+        class="break-words text-5xl font-black transition-all ease-in group-hover:tracking-wide"
       >
         # {{ title }}
       </h2>
-      <time :datetime="date" class="text-lg font-thin pr-2">
+      <time :datetime="date" class="pr-2 text-lg font-thin">
         <i>
           {{ date }}
         </i>
       </time>
     </div>
-    <hr class="h-1 m-1 bg-current" />
-    <div class="relative flex w-full h-full">
+    <hr class="m-1 h-1 bg-current" />
+    <div class="relative flex h-full w-full">
       <p>{{ description }}</p>
       <div
-        class="absolute bg-gradient-to-b from-transparent dark:to-[#070d01] to-[#eadac0] bottom-0 left-0 w-full h-full group-hover:h-2/4 transition-all ease-in"
+        class="absolute bottom-0 left-0 h-full w-full bg-gradient-to-b from-transparent to-[#eadac0] transition-all ease-in group-hover:h-2/4 dark:to-[#070d01]"
       ></div>
     </div>
-    <div class="flex justify-end w-full">
+    <div class="flex w-full justify-end">
       <div class="flex flex-col items-end">
-        <div class="flex gap-2 items-end">
+        <div class="flex items-end gap-2">
           <p>read more</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ defineProps({
           </svg>
         </div>
         <hr
-          class="h-1 m-1 bg-current w-0 group-hover:w-full transition-all ease-in duration-200"
+          class="m-1 h-1 w-0 bg-current transition-all duration-200 ease-in group-hover:w-full"
         />
       </div>
     </div>

@@ -1,18 +1,18 @@
 <template>
   <main
-    class="w-full flex flex-col lg:flex-row min-h-screen lg:h-screen bg-[#eadac0] dark:bg-[#070d01] dark:text-[#eadac0] text-[#070d01]"
+    class="flex min-h-screen w-full flex-col bg-[#eadac0] text-[#070d01] lg:h-screen lg:flex-row dark:bg-[#070d01] dark:text-[#eadac0]"
   >
     <section
       hidden
-      class="lg:w-1/4 flex items-center justify-center p-4 border border-current m-4 rounded-xl"
+      class="m-4 flex items-center justify-center rounded-xl border border-current p-4 lg:w-1/4"
     >
       <header class="flex flex-col items-center gap-2">
         <figure
-          class="w-full max-w-52 rounded-full border-2 border-current aspect-square justify-center flex items-center"
+          class="flex aspect-square w-full max-w-52 items-center justify-center rounded-full border-2 border-current"
         >
           <span>if(cat)</span>
         </figure>
-        <div class="w-full border-l-4 pl-8 my-4 border-current">
+        <div class="my-4 w-full border-l-4 border-current pl-8">
           <h1 class="text-xl font-black">Arthur Segato</h1>
           <p class="font-light"><i>near you</i></p>
         </div>
@@ -33,7 +33,7 @@
                 width="25"
                 height="25"
                 viewBox="0 0 24 24"
-                class="group-hover:-translate-y-1 group-focus:-translate-y-1 transition-transform ease-in"
+                class="transition-transform ease-in group-hover:-translate-y-1 group-focus:-translate-y-1"
               >
                 <g
                   fill="none"
@@ -86,7 +86,7 @@
                 width="25"
                 height="25"
                 viewBox="0 0 24 24"
-                class="group-hover:-translate-y-1 group-focus:-translate-y-1 transition-transform ease-in"
+                class="transition-transform ease-in group-hover:-translate-y-1 group-focus:-translate-y-1"
               >
                 <circle
                   cx="4"
@@ -163,7 +163,7 @@
                 width="25"
                 height="25"
                 viewBox="0 0 24 24"
-                class="group-hover:-translate-y-1 group-focus:-translate-y-1 transition-transform ease-in"
+                class="transition-transform ease-in group-hover:-translate-y-1 group-focus:-translate-y-1"
               >
                 <mask id="lineMdGithubLoop0" width="24" height="24" x="0" y="0">
                   <g fill="#fff">
@@ -237,7 +237,7 @@
                 width="25"
                 height="25"
                 viewBox="0 0 24 24"
-                class="group-hover:-translate-y-1 group-focus:-translate-y-1 transition-transform ease-in"
+                class="transition-transform ease-in group-hover:-translate-y-1 group-focus:-translate-y-1"
               >
                 <g
                   fill="none"
@@ -284,7 +284,7 @@
                 width="25"
                 height="25"
                 viewBox="0 0 24 24"
-                class="group-hover:-translate-y-1 group-focus:-translate-y-1 transition-transform ease-in"
+                class="transition-transform ease-in group-hover:-translate-y-1 group-focus:-translate-y-1"
               >
                 <g
                   fill="none"
@@ -325,7 +325,7 @@
         </ul>
       </header>
     </section>
-    <section class="p-4 m-4 overflow-y-auto">
+    <section class="m-4 overflow-y-auto p-4">
       <slot />
     </section>
   </main>

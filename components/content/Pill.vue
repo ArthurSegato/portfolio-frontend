@@ -5,10 +5,10 @@ defineProps({
 </script>
 
 <template>
-  <ul class="flex flex-row gap-2 flex-wrap">
+  <ul class="flex flex-row flex-wrap gap-2">
     <li
       v-for="item in items"
-      class="px-2 py-1 rounded-3xl w-fit text-sm border"
+      class="w-fit rounded-3xl border px-2 py-1 text-sm"
     >
       {{ item }}
     </li>

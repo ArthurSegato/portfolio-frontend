@@ -1,9 +1,9 @@
 <template>
   <figure>
     <div
-      class="flex justify-center items-center aspect-video p-0 group border-0 text-inherit texture w-full lg:w-2/4"
+      class="texture group flex aspect-video w-full items-center justify-center border-0 p-0 text-inherit lg:w-2/4"
     >
-      <div class="m-2 p-2 dark:bg-black text-current select-none">
+      <div class="m-2 select-none p-2 text-current dark:bg-black">
         <i class="flex gap-0">
           <div class="group-hover:-translate-y-1">¯\_</div>
           (ツ)
@@ -11,7 +11,7 @@
         </i>
       </div>
     </div>
-    <figcaption class="border-l-4 pl-4 my-4 border-current font-light">
+    <figcaption class="my-4 border-l-4 border-current pl-4 font-light">
       <i>
         <slot />
       </i>

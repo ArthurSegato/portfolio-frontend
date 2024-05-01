@@ -1,11 +1,11 @@
 <script setup>
 defineProps({
-    items: String,
+    items: Array,
 })
 </script>
 
 <template>
-    <p v-for="item in items" class="leading-relaxed my-1 text-balance">
+    <p v-for="item in items" class="my-3">
         {{ item }}
     </p>
 </template>

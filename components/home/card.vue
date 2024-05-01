@@ -3,14 +3,22 @@ defineProps({
     path: String,
     title: String,
     description: String,
+    date: String,
 })
 </script>
 
 <template>
     <NuxtLink :to="path" class="group">
-        <h2 class="break-words text-5xl font-black group-hover:tracking-wide transition-all ease-in">
-            # {{ title }}
-        </h2>
+        <div class="w-full flex items-end justify-between">
+            <h2 class="break-words text-5xl font-black group-hover:tracking-wide transition-all ease-in">
+                # {{ title }}
+            </h2>
+            <time :datetime="date" class="text-lg font-thin pr-2">
+                <i>
+                    {{ date }}
+                </i>
+            </time>
+        </div>
         <hr class="h-1 m-1 bg-current">
         <div class="relative flex w-full h-full">
             <p>{{ description }}</p>

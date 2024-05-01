@@ -4,18 +4,30 @@ description: "Just a small rewrite of the old SHELTERVR.CLUB website for a light
 date: "2022"
 ---
 
-# SHELTERVR.CLUB
+::title-primary{:date="date" :title="title"}
+::
 
-![my image](https://www.arthursegato.dev/_vercel/image?url=/img/sheltervr.jpg&w=640&q=100)
+::media-image{path="/img/sheltervr.jpg" alt="Screenshot of Sheltervr website showcasing a concrete wall with graffiti-style instructions on how to join their underground vr raves."}
+SEEK. SHELTER. NOW.
+::
 
->SEEK. SHELTER. NOW.
+::paragraph{:items='["Just a small rewrite of the old SHELTERVR.CLUB website for a lighter, faster, and more responsive experience. It`s now accessible and features a pixel-perfect clickable area."]'}
+::
 
-Just a small rewrite of the old SHELTERVR.CLUB website for a lighter, faster, and more responsive experience. It's now accessible and features a pixel-perfect clickable area. 
+::title-secondary
+Links
+::
 
-## Links
+::list
+    ::list-item{path="https://sheltervr.club/" text="SHELTERVR.CLUB"}
+    ::
+    ::list-item{path="https://github.com/ArthurSegato/SHELTERVR" text="Github Repo"}
+    ::
+::
 
-[SHELTERVR.CLUB](https://sheltervr.club/) - [Github Repo](https://github.com/ArthurSegato/SHELTERVR)
+::title-secondary
+Tools
+::
 
-## Tools
-- Adobe Illustrator
-- HTML, CSS, JS
+::pill{:items='["Adobe Illustrator", "HTML 5", "CSS 3", "JS"]'}
+::

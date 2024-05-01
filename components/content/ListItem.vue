@@ -6,7 +6,7 @@ defineProps({
 </script>
 
 <template>
-    <li class="my-1">
+    <li class="my-3">
         <NuxtLink :to="path" class="relative group flex w-fit">
             {{ text }}
             <div

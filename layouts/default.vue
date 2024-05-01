@@ -4,8 +4,8 @@
     </div>
     <main
         class="w-full flex flex-col lg:flex-row min-h-screen lg:h-screen bg-[#eadac0] dark:bg-[#070d01] dark:text-[#eadac0] text-[#070d01]">
-        <section class="lg:w-1/4 flex items-center justify-center p-4 border border-current m-4 rounded-xl">
-            <article class="flex flex-col items-center gap-2">
+        <section hidden class="lg:w-1/4 flex items-center justify-center p-4 border border-current m-4 rounded-xl">
+            <header class="flex flex-col items-center gap-2">
                 <figure
                     class="w-full max-w-52 rounded-full border-2 border-current aspect-square justify-center flex items-center">
                     <span>if(cat)</span>
@@ -132,7 +132,7 @@
                         </NuxtLink>
                     </li>
                 </ul>
-            </article>
+            </header>
         </section>
         <section class=" p-4 m-4 overflow-y-auto">
             <slot />

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 defineProps({
-    items: String,
+    items: Array,
 })
 
 </script>
 
 <template>
-    <div class="flex flex-row gap-2 flex-wrap">
-        <p v-for="item in items" class="px-2 py-1 rounded-3xl w-fit text-sm border">
+    <ul class="flex flex-row gap-2 flex-wrap">
+        <li v-for="item in items" class="px-2 py-1 rounded-3xl w-fit text-sm border">
             {{ item }}
-        </p>
-    </div>
+        </li>
+    </ul>
 </template>

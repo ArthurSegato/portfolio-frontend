@@ -1,33 +1,52 @@
 ---
 title: "Doge Maze"
-description: "DogeMaze is a procedural maze generator created in Unity for a Computer Graphics class. Despite its simplicity, the project incorporates particles, lighting, and a touch of animation."
+description: "DogeMaze is a procedural maze generator created in Unity for a computer graphics class. The project incorporates particles, lighting, and animation."
 date: "2022"
 ---
 
-# Doge Maze
+::title-primary{:date="date" :title="title"}
+::
 
-![my image](https://www.arthursegato.dev/_nuxt/dogemaze.7jtmgro9.mp4)
+::media-video{path="/vid/doge-maze.mp4" alt="Video showcasing a dog, adorned as a medieval warrior with sword and shield, navigating through a dungeon maze, dying upon contact with the walls"}
+Upon further reflection, I am considering revisiting and reworking this project.
+::
 
->Upon further reflection, I am considering revisiting and reworking this project. 
+::paragraph{:items='["DogeMaze is a procedural maze generator created in Unity for a computer graphics class. The project incorporates particles, lighting, and animation."]'}
+::
 
-DogeMaze is a procedural maze generator created in Unity for a Computer Graphics class. Despite its simplicity, the project incorporates particles, lighting, and a touch of animation.
+::title-secondary
+Technical Information
+::
 
-## Technical Information
+::table-body
+    ::table-row{:items='["Status", "Prototype"]'}
+    ::
+    ::table-row{:items='["Platforms", "Windows"]'}
+    ::
+    ::table-row{:items='["License", "MIT"]'}
+    ::
+    ::table-row{:items='["Average session", "N/A"]'}
+    ::
+    ::table-row{:items='["Languages", "Portuguese"]'}
+    ::
+    ::table-row{:items='["Accessibility", "N/A"]'}
+    ::
+::
 
-| Author          | Arthur Segato                                        |
-| --------------- | ---------------------------------------------------- |
-| Published       | 02/07/2022                                           |
-| Status          | Prototype                                            |
-| Platforms       | Windows                                |
-| Made with       | Unity            |
-| License         | MIT                                          |
-| Average session | N/A                                        |
-| Languages       | Portuguese (Brazil) |
-| Accessibility   | N/A                 |
+::title-secondary
+Links
+::
 
-## Links
+::list
+    ::list-item{path="https://arthursegato.itch.io/doge-maze" text="Itch.io Page"}
+    ::
+    ::list-item{path="https://github.com/ArthurSegato/DogeMaze" text="Github Repo"}
+    ::
+::
 
-[Itch.io Page](https://arthursegato.itch.io/doge-maze) - [Github Repo](https://github.com/ArthurSegato/DogeMaze)
+::title-secondary
+Tools
+::
 
-## Tools
-- Unity
+::pill{:items='["Unity"]'}
+::

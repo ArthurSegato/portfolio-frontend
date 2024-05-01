@@ -4,21 +4,17 @@ description: "In high school, I began studying graphic design and video editing,
 date: "2015"
 ---
 
-::project-title
-Graphic Design
+::title-primary{:date="date" :title="title"}
 ::
 
-::no-media
-::
-
-::media-quote
+::media-missing
 I would have included a video here, but youtube isn't cooperating.
 ::
 
 ::paragraph{:items='["In high school, I began studying graphic design and video editing, even taking on a few freelance projects where I created visual identities, logos, and artwork for YouTube channels and social media pages. This experience provided me with a solid grasp of design principles like color psychology, typography, balance, and so on, which I`ve been applying to all my projects since then.", "Below you can find some of my works that are still available in the wild..."]'}
 ::
 
-::sub-title
+::title-secondary
 Links
 ::
 
@@ -35,7 +31,7 @@ Links
     ::
 ::
 
-::sub-title
+::title-secondary
 Tools
 ::
 

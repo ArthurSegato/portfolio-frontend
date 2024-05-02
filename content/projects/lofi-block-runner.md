@@ -2,6 +2,11 @@
 title: "Lofi Block Runner"
 description: "LofiBlockRunner is an endless runner where a block has to avoid obstacles while lofi music plays in the background."
 date: "2021"
+sitemap:
+  loc: /projects/lofi-block-runner
+  lastmod: 2024-05-02
+  changefreq: monthly
+  priority: 0.4
 ---
 
 ::title-primary{:date="date" :title="title"}
@@ -11,12 +16,11 @@ date: "2021"
 I've rewritten this entire game at least twice but haven't published it yet due to an ongoing struggle with Unity several UI systems.
 ::
 
-::paragraph{:items='["LofiBlockRunner is an endless runner where a block has to avoid obstacles while lofi music plays in the background.", "It was initially developed based on a Brackeys tutorial on youtube, and was submitted as an application for an internship at UVV`s virtual reality lab. Although I didn`t get the position, I continued to develop the game and later published it on Itch.io (v1.0.0), but regurlarly I come back to this project and redo everything from scratch to compare my evolution in game development."]'}
-::
+LofiBlockRunner is an endless runner where a block has to avoid obstacles while lofi music plays in the background.
 
-::title-secondary
-Features
-::
+It was initially developed based on a Brackeys tutorial on youtube, and was submitted as an application for an internship at UVV's virtual reality lab. Although I didn't get the position, I continued to develop the game and later published it on Itch.io (v1.0.0), but regurlarly I come back to this project and redo everything from scratch to compare my evolution in game development.
+
+## Features
 
 ::description
 ::description-item{topic="Localization:" text="The game is currently available in English (default), Portuguese, and Spanish. It can easily be localized into additional languages upon request."}
@@ -27,41 +31,24 @@ Features
 ::
 ::
 
-::title-secondary
-Technical Information
-::
+## Technical Information
 
-::table-body
-::table-row{:items='["Status", "Prototype"]'}
-::
-::table-row{:items='["Platforms", "Windows, macOS, Linux"]'}
-::
-::table-row{:items='["License", "MIT"]'}
-::
-::table-row{:items='["Average session", "A few minutes"]'}
-::
-::table-row{:items='["Languages", "English, Spanish; Latin America, Portuguese"]'}
-::
-::table-row{:items='["Accessibility", "Color-blind friendly, High-contrast"]'}
-::
-::
+|                     |                                               |
+| ------------------- | --------------------------------------------- |
+| **Status**          | _Prototype_                                   |
+| **Platforms**       | _Windows, macOS, Linux_                       |
+| **License**         | _MIT_                                         |
+| **Average session** | _A few minutes_                               |
+| **Languages**       | _English, Spanish; Latin America, Portuguese_ |
+| **Accessibility**   | _Color-blind friendly, High-contrast_         |
 
-::title-secondary
-Links
-::
+## Links
 
-::list
-::list-item{path="https://www.youtube.com/watch?v=j48LtUkZRjU&list=PLPV2KyIb3jR5QFsefuO2RlAgWEz6EvVi6" text="Brackeys tutorial"}
-::
-::list-item{path="https://arthursegato.itch.io/lofiblockrunner" text="Itch.io Page"}
-::
-::list-item{path="https://github.com/ArthurSegato/LofiBlockRunner" text="Github Repo"}
-::
-::
+- [Brackeys tutorial](https://www.youtube.com/watch?v=j48LtUkZRjU&list=PLPV2KyIb3jR5QFsefuO2RlAgWEz6EvVi6)
+- [Itch.io Page](https://arthursegato.itch.io/lofiblockrunner)
+- [Github Repo](https://github.com/ArthurSegato/LofiBlockRunner)
 
-::title-secondary
-Tools
-::
+## Tools
 
 ::pill{:items='["Adobe Photoshop", "Unity"]'}
 ::

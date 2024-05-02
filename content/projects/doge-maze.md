@@ -2,6 +2,11 @@
 title: "Doge Maze"
 description: "DogeMaze is a procedural maze generator created in Unity for a computer graphics class. The project incorporates particles, lighting, and animation."
 date: "2022"
+sitemap:
+  loc: /projects/doge-maze
+  lastmod: 2024-05-02
+  changefreq: monthly
+  priority: 0.7
 ---
 
 ::title-primary{:date="date" :title="title"}
@@ -11,42 +16,25 @@ date: "2022"
 Upon further reflection, I am considering revisiting and reworking this project.
 ::
 
-::paragraph{:items='["DogeMaze is a procedural maze generator created in Unity for a computer graphics class. The project incorporates particles, lighting, and animation."]'}
-::
+DogeMaze is a procedural maze generator created in Unity for a computer graphics class. The project incorporates particles, lighting, and animation.
 
-::title-secondary
-Technical Information
-::
+## Technical Information
 
-::table-body
-::table-row{:items='["Status", "Prototype"]'}
-::
-::table-row{:items='["Platforms", "Windows"]'}
-::
-::table-row{:items='["License", "MIT"]'}
-::
-::table-row{:items='["Average session", "N/A"]'}
-::
-::table-row{:items='["Languages", "Portuguese"]'}
-::
-::table-row{:items='["Accessibility", "N/A"]'}
-::
-::
+|                     |              |
+| ------------------- | ------------ |
+| **Status**          | _Prototype_  |
+| **Platforms**       | _Windows_    |
+| **License**         | _MIT_        |
+| **Average session** | _N/A_        |
+| **Languages**       | _Portuguese_ |
+| **Accessibility**   | _N/A_        |
 
-::title-secondary
-Links
-::
+## Links
 
-::list
-::list-item{path="https://arthursegato.itch.io/doge-maze" text="Itch.io Page"}
-::
-::list-item{path="https://github.com/ArthurSegato/DogeMaze" text="Github Repo"}
-::
-::
+- [Itch.io Page](https://arthursegato.itch.io/doge-maze)
+- [Github Repo](https://github.com/ArthurSegato/DogeMaze)
 
-::title-secondary
-Tools
-::
+## Tools
 
 ::pill{:items='["Unity"]'}
 ::

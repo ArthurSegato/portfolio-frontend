@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
   title: String,
   date: String,
@@ -8,9 +8,7 @@ defineProps({
 <template>
   <div class="my-4">
     <div class="flex w-full items-end justify-between">
-      <h1
-        class="w-full break-words break-all text-5xl font-black transition-all ease-in"
-      >
+      <h1 class="w-full break-words break-all text-5xl font-black transition-all ease-in">
         {{ title }}
       </h1>
       <time :datetime="date" class="border-r-4 pr-2 text-lg font-thin">

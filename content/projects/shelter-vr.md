@@ -2,6 +2,11 @@
 title: "SHELTERVR.CLUB"
 description: "Just a small rewrite of the old SHELTERVR.CLUB website for a lighter, faster, and more responsive experience. It's now accessible and features a pixel-perfect clickable area."
 date: "2022"
+sitemap:
+  loc: /projects/shelter-vr
+  lastmod: 2024-05-02
+  changefreq: monthly
+  priority: 0.5
 ---
 
 ::title-primary{:date="date" :title="title"}
@@ -11,23 +16,14 @@ date: "2022"
 SEEK. SHELTER. NOW.
 ::
 
-::paragraph{:items='["Just a small rewrite of the old SHELTERVR.CLUB website for a lighter, faster, and more responsive experience. It`s now accessible and features a pixel-perfect clickable area."]'}
-::
+Just a small rewrite of the old SHELTERVR.CLUB website for a lighter, faster, and more responsive experience. It's now accessible and features a pixel-perfect clickable area.
 
-::title-secondary
-Links
-::
+## Links
 
-::list
-::list-item{path="https://sheltervr.club/" text="SHELTERVR.CLUB"}
-::
-::list-item{path="https://github.com/ArthurSegato/SHELTERVR" text="Github Repo"}
-::
-::
+- [SHELTERVR.CLUB](https://sheltervr.club)
+- [Github Repo](https://github.com/ArthurSegato/SHELTERVR)
 
-::title-secondary
-Tools
-::
+## Tools
 
 ::pill{:items='["Adobe Illustrator", "HTML 5", "CSS 3", "JS"]'}
 ::

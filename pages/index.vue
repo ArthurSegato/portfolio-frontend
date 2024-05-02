@@ -1,4 +1,7 @@
 <script setup lang="ts">
+useHead({
+  title: 'Developer',
+})
 const { data } = await useAsyncData("home", () =>
   queryContent("/")
     .only(["title", "description", "_path", "date"])
@@ -10,12 +13,7 @@ const { data } = await useAsyncData("home", () =>
 <template>
   <ul class="flex flex-col gap-4">
     <li v-for="(item, index) in data" :key="index">
-      <LazyHomeCard
-        :path="item._path"
-        :title="item.title"
-        :description="item.description"
-        :date="item.date"
-      />
+      <LazyHomeCard :path="item._path" :title="item.title" :description="item.description" :date="item.date" />
     </li>
   </ul>
 </template>

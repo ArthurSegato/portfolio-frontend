@@ -1,7 +1,7 @@
 <template>
   <figure>
     <div class="texture group flex aspect-video w-full items-center justify-center border-0 p-0 text-inherit lg:w-2/4">
-      <div class="m-2 select-none p-2 text-current dark:bg-black">
+      <div class="m-2 select-none p-2 text-current bg-[#eadac0] dark:bg-[#070d01]">
         <i class="flex gap-0">
           <div class="group-hover:-translate-y-1">¯\_</div>
           (ツ)

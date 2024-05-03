@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
     "@nuxtjs/seo",
+    "@nuxt/fonts",
   ],
   site: {
     url: "https://www.arthursegato.dev",
@@ -24,5 +25,15 @@ export default defineNuxtConfig({
   },
   schemaOrg: {
     identity: "Person",
+  },
+  ogImage: {
+    fonts: [
+      "Inter:100",
+      "Inter:300",
+      "Inter:400",
+      "Inter:500",
+      "Inter:700",
+      "Inter:900",
+    ],
   },
 });

@@ -11,7 +11,7 @@ defineProps({
       <h1 class="w-full break-words break-all text-5xl font-black transition-all ease-in">
         {{ title }}
       </h1>
-      <time :datetime="date" class="border-r-4 pr-2 text-lg font-thin">
+      <time :datetime="date" class="border-r-4 pr-2 text-lg font-thin border-current">
         <i>
           {{ date }}
         </i>

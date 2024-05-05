@@ -1,9 +1,10 @@
 ---
 title: "DislexiLess"
 description: "DislexiLess is a solution composed of a web platform and a mobile application that aims to facilitate the reading process for people with dyslexia and assist healthcare and education professionals in the treatment of individuals with dyslexia."
-date: "2023"
+date: 2023
+path: /projects/dislexiless
+image: "/img/dislexiless.jpg"
 sitemap:
-  loc: /projects/dislexiless
   lastmod: 2024-05-02
   changefreq: monthly
   priority: 0.8
@@ -12,7 +13,7 @@ sitemap:
 ::title-primary{:date="date" :title="title"}
 ::
 
-::media-image{path="/img/dislexiless.jpg" alt="Screenshot of dislexiless.com"}
+::media-image{:path="image" alt="Screenshot of dislexiless.com"}
 Looks familiar, uh?
 ::
 

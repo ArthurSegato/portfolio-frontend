@@ -1,9 +1,10 @@
 ---
 title: "Lofi Block Runner"
 description: "LofiBlockRunner is an endless runner where a block has to avoid obstacles while lofi music plays in the background."
-date: "2021"
+date: 2021
+path: /projects/lofi-block-runner
+image: /img/lofi-block-runner.jpg
 sitemap:
-  loc: /projects/lofi-block-runner
   lastmod: 2024-05-02
   changefreq: monthly
   priority: 0.4
@@ -12,7 +13,7 @@ sitemap:
 ::title-primary{:date="date" :title="title"}
 ::
 
-::media-image{path="/img/lofi-block-runner.jpg" alt="Screenshot of the game where the player, controlling a red block, collides with a purple obstacle, causing the block to shatter into pieces."}
+::media-image{:path="image" alt="Screenshot of the game where the player, controlling a red block, collides with a purple obstacle, causing the block to shatter into pieces."}
 I've rewritten this entire game at least twice but haven't published it yet due to an ongoing struggle with Unity several UI systems.
 ::
 

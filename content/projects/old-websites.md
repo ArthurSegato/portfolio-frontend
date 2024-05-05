@@ -1,9 +1,9 @@
 ---
 title: "Old Websites"
 description: "I`ve created a wide variety of websites, from a portfolio as a graduation gift for my sister to establishing a virtual storefront for Kafhia bikini store, additionally, I`ve developed landing pages, created templates for sale on Fiverr (with API integration to fetch data from minecraft servers), and built several personal websites over time."
-date: "2018"
+date: 2018
+path: /projects/old-websites
 sitemap:
-  loc: /projects/old-websites
   lastmod: 2024-05-02
   changefreq: monthly
   priority: 0.3

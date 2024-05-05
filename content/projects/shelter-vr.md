@@ -1,9 +1,10 @@
 ---
 title: "SHELTERVR.CLUB"
 description: "Just a small rewrite of the old SHELTERVR.CLUB website for a lighter, faster, and more responsive experience. It's now accessible and features a pixel-perfect clickable area."
-date: "2022"
+date: 2022
+path: /projects/shelter-vr
+image: /img/sheltervr.jpg
 sitemap:
-  loc: /projects/shelter-vr
   lastmod: 2024-05-02
   changefreq: monthly
   priority: 0.5
@@ -12,7 +13,7 @@ sitemap:
 ::title-primary{:date="date" :title="title"}
 ::
 
-::media-image{path="/img/sheltervr.jpg" alt="Screenshot of Sheltervr website showcasing a concrete wall with graffiti-style instructions on how to join their underground vr raves."}
+::media-image{:path="image" alt="Screenshot of Sheltervr website showcasing a concrete wall with graffiti-style instructions on how to join their underground vr raves."}
 SEEK. SHELTER. NOW.
 ::
 

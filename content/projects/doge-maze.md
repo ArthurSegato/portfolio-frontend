@@ -1,9 +1,9 @@
 ---
 title: "Doge Maze"
 description: "DogeMaze is a procedural maze generator created in Unity for a computer graphics class. The project incorporates particles, lighting, and animation."
-date: "2022"
+date: 2022
+path: /projects/doge-maze
 sitemap:
-  loc: /projects/doge-maze
   lastmod: 2024-05-02
   changefreq: monthly
   priority: 0.7

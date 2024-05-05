@@ -1,9 +1,9 @@
 ---
 title: "Smart Spot"
 description: "Smart Spot was an Android application developed for the Inovaweek 2018 event hosted by Vila Velha University. The application was specifically designed for internal use by students, teachers, and staff. Its features included real-time location tracking of teachers on campus, the ability to request support materials like erasers, pens, remote controls, etc., and a function to summon staff for minor repairs or adjustments to the equipment used in classes."
-date: "2018"
+date: 2018
+path: /projects/smart-spot
 sitemap:
-  loc: /projects/smart-spot
   lastmod: 2024-05-02
   changefreq: monthly
   priority: 0.2

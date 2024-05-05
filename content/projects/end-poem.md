@@ -1,9 +1,10 @@
 ---
 title: "End Poem"
 description: "Just a small rewrite of the old SHELTERVR.CLUB website for a lighter, faster, and more responsive experience. It's now accessible and features a pixel-perfect clickable area."
-date: "2022"
+date: 2022
+path: /projects/end-poem
+image: /img/end-poem.jpg
 sitemap:
-  loc: /projects/end-poem
   lastmod: 2024-05-02
   changefreq: monthly
   priority: 0.6
@@ -12,7 +13,7 @@ sitemap:
 ::title-primary{:date="date" :title="title"}
 ::
 
-::media-image{path="/img/end-poem.jpg" alt="Screenshot of theendpoem.com, featuring a dark grey website with 'End Poem by Julian Gough' handwritten."}
+::media-image{:path="image" alt="Screenshot of theendpoem.com, featuring a dark grey website with 'End Poem by Julian Gough' handwritten."}
 Every time I touch it it breaks, so I'm not gonna change it anymore.
 ::
 

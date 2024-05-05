@@ -1,6 +1,6 @@
 ---
 title: "End Poem"
-description: "Just a small rewrite of the old SHELTERVR.CLUB website for a lighter, faster, and more responsive experience. It's now accessible and features a pixel-perfect clickable area."
+description: "The End Poem is a freehand poem written by musician Julian Gough that appears when the player finishes minecraft, before the credits. It has been in the public domain, under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication, since 2022."
 date: 2022
 path: /projects/end-poem
 image: /img/end-poem.jpg

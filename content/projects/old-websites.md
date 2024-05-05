@@ -3,6 +3,7 @@ title: "Old Websites"
 description: "I`ve created a wide variety of websites, from a portfolio as a graduation gift for my sister to establishing a virtual storefront for Kafhia bikini store, additionally, I`ve developed landing pages, created templates for sale on Fiverr (with API integration to fetch data from minecraft servers), and built several personal websites over time."
 date: 2018
 path: /projects/old-websites
+image: /img/old-websites.png
 sitemap:
   lastmod: 2024-05-02
   changefreq: monthly
@@ -12,7 +13,7 @@ sitemap:
 ::title-primary{:date="date" :title="title"}
 ::
 
-::media-image{path="/img/old-websites.png" alt="Screenshot of my first website on the left. In the top right, a Fiverr template. Below it, the portfolio website for my sister."}
+::media-image{:path="image" alt="Screenshot of my first website on the left. In the top right, a Fiverr template. Below it, the portfolio website for my sister."}
 Collage of screenshots showcasing my old websites.
 ::
 

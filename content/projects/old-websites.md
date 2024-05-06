@@ -4,6 +4,7 @@ description: "I`ve created a wide variety of websites, from a portfolio as a gra
 date: 2018
 path: /projects/old-websites
 image: /img/old-websites.png
+category: "web dev"
 sitemap:
   lastmod: 2024-05-02
   changefreq: monthly

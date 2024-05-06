@@ -4,6 +4,7 @@ description: "Just a small rewrite of the old SHELTERVR.CLUB website for a light
 date: 2022
 path: /projects/shelter-vr
 image: /img/sheltervr.jpg
+category: "web dev"
 sitemap:
   lastmod: 2024-05-02
   changefreq: monthly

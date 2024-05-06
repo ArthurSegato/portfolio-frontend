@@ -1,11 +1,7 @@
 <template>
   <figure>
-    <div
-      class="texture group flex aspect-video w-full items-center justify-center border-0 p-0 text-inherit lg:w-2/4"
-    >
-      <div
-        class="m-2 select-none bg-[#eadac0] p-2 text-current dark:bg-[#070d01]"
-      >
+    <div class="texture group flex aspect-video w-full items-center justify-center border-0 p-0 text-inherit lg:w-2/4">
+      <div class="m-2 select-none bg-[#eadac0] p-2 text-current dark:bg-[#070d01]">
         <i class="flex gap-0">
           <div class="group-hover:-translate-y-1">¯\_</div>
           (ツ)
@@ -23,12 +19,10 @@
 
 <style>
 .texture {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 8px,
-    currentcolor 8px,
-    currentcolor 10px
-  );
+  background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 8px,
+      currentcolor 8px,
+      currentcolor 10px);
 }
 </style>

@@ -4,6 +4,7 @@ description: "DislexiLess is a solution composed of a web platform and a mobile 
 date: 2023
 path: /projects/dislexiless
 image: "/img/dislexiless.jpg"
+category: "web dev / mobile"
 sitemap:
   lastmod: 2024-05-02
   changefreq: monthly

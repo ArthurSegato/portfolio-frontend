@@ -3,6 +3,7 @@ title: "Graphic Design"
 description: "In high school, I began studying graphic design and video editing, even taking on a few freelance projects where I created visual identities, logos, and artwork for YouTube channels and social media pages."
 date: 2015
 path: /projects/graphic-design
+category: "design"
 sitemap:
   lastmod: 2024-05-02
   changefreq: monthly

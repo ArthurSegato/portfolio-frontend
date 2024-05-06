@@ -4,6 +4,7 @@ description: "LofiBlockRunner is an endless runner where a block has to avoid ob
 date: 2021
 path: /projects/lofi-block-runner
 image: /img/lofi-block-runner.jpg
+category: "game dev"
 sitemap:
   lastmod: 2024-05-02
   changefreq: monthly

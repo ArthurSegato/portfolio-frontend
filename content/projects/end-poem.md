@@ -4,6 +4,7 @@ description: "The End Poem is a freehand poem written by musician Julian Gough t
 date: 2022
 path: /projects/end-poem
 image: /img/end-poem.jpg
+category: "web dev"
 sitemap:
   lastmod: 2024-05-02
   changefreq: monthly

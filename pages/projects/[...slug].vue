@@ -5,7 +5,7 @@ const { data } = await useAsyncData("home", queryContent(`/projects/${route}`).f
 
 defineOgImageComponent("Projects", {
   image: data.value?.image,
-  date: data.value?.date
+  date: data.value?.date,
 }, { renderer: "chromium" });
 </script>
 
@@ -21,6 +21,18 @@ defineOgImageComponent("Projects", {
     <p>back</p>
   </NuxtLink>
   <article class="w-full leading-relaxed">
-    <ContentDoc />
+    <ContentDoc>
+      <template #not-found>
+        <h1 class="text-5xl font-black">Awkward...</h1>
+        <h2 class="text-4xl font-extrabold">Hmmmmm, well...</h2>
+        <h3 class="text-3xl font-bold">that's called a error handling</h3>
+        <h4 class="text-2xl font-semibold">anyway, here goes a cat</h4>
+        <video class="w-full lg:max-w-2xl" autoplay muted loop title="cat, what did you expect?">
+          <source src="/vid/neko.mp4" type="video/mp4" />
+        </video>
+        <h5 class="text-xl font-medium">ok, go back now</h5>
+        <h6 class="text-xs">please</h6>
+      </template>
+    </ContentDoc>
   </article>
 </template>

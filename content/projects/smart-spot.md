@@ -13,7 +13,7 @@ sitemap:
 ::title-primary{:date="date" :title="title"}
 ::
 
-::media-missing
+::media-image{:path="" alt=""}
 Unfortunately, there are no images or links available for this project.
 ::
 

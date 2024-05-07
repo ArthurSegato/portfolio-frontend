@@ -13,7 +13,7 @@ sitemap:
 ::title-primary{:date="date" :title="title"}
 ::
 
-::media-missing
+::media-image{:path="" alt=""}
 I would have included a video here, but youtube isn't cooperating.
 ::
 

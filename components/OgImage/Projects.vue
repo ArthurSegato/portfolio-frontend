@@ -21,7 +21,7 @@ withDefaults(
             class="fixed inset-0 z-20 flex h-full w-full flex-row gap-10 bg-gradient-to-b from-transparent to-[#070d01] to-70% p-10">
             <div class="relative w-full rounded-xl shadow">
                 <img :src="image" class="h-full w-full rounded-xl object-cover" v-if="image" />
-                <div v-else class="texture flex w-full h-full items-center justify-center border-0 p-0 text-inherit">
+                <div v-else class="texture flex w-full h-full items-center justify-center border-0 p-0">
                     <div class="m-2 p-2 text-current bg-[#070d01]">
                         <i>¯\_(ツ)_/¯</i>
                     </div>
@@ -54,11 +54,5 @@ withDefaults(
 
 
 <style>
-.texture {
-    background-image: repeating-linear-gradient(-45deg,
-            transparent,
-            transparent 8px,
-            currentcolor 8px,
-            currentcolor 10px);
-}
+.texture {}
 </style>

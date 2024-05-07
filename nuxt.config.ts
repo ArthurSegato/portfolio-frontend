@@ -35,4 +35,7 @@ export default defineNuxtConfig({
       "Inter:900",
     ],
   },
+  nitro: {
+    preset: "cloudflare-pages",
+  },
 });

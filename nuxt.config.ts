@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
     "@nuxtjs/seo",
+    "nuxt-security"
   ],
   site: {
     url: "https://www.arthursegato.dev",

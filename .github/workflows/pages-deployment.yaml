@@ -23,7 +23,7 @@ jobs:
         run: bun prettier
 
       - name: Build
-        run: bun run build
+        run: bun run generate
 
       - name: Publish
         uses: cloudflare/pages-action@1

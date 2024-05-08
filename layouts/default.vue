@@ -16,7 +16,7 @@
           </svg>
         </figure>
         <div class="my-4 w-full border-l-4 border-current pl-8">
-          <h1 class="text-xl font-black">Arthur Segato</h1>
+          <p class="text-xl font-black">Arthur Segato</p>
           <p class="font-light"><i>near you</i></p>
         </div>
         <p>

@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
     "@nuxtjs/seo",
-    "nuxt-security"
+    "nuxt-security",
   ],
   site: {
     url: "https://www.arthursegato.dev",
@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     identity: "Person",
   },
   ogImage: {
+    enabled: false,
     fonts: [
       "Inter:100",
       "Inter:300",

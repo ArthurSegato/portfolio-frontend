@@ -2,9 +2,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "clear": "nuxt cleanup | nuxt generate",
+    "clear": "nuxt cleanup && nuxt generate",
     "prettier": "prettier . --write",
-    "build": "nuxt build",
+    "build": "bun prettier && nuxt build",
     "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview"

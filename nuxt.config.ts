@@ -40,4 +40,14 @@ export default defineNuxtConfig({
   nitro: {
     preset: "vercel-edge",
   },
+  security: {
+    headers: {
+      strictTransportSecurity: {
+        maxAge: 31536000,
+        includeSubdomains: true,
+        preload: true,
+      },
+      xXSSProtection: "1; mode=block",
+    },
+  },
 });

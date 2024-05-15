@@ -26,8 +26,13 @@ const { data } = await useAsyncData("home", () =>
 <template>
   <ul class="flex flex-col gap-4">
     <li v-for="(item, index) in data" :key="index">
-      <LazyHomeCard :path="item._path" :title="item.title" :description="item.description" :date="item.date"
-        :category="item.category" />
+      <LazyHomeCard
+        :path="item._path"
+        :title="item.title"
+        :description="item.description"
+        :date="item.date"
+        :category="item.category"
+      />
     </li>
   </ul>
 </template>

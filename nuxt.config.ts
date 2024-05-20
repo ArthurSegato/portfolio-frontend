@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     identity: "Person",
   },
   ogImage: {
+    enabled: false,
     fonts: [
       "Inter:100",
       "Inter:300",

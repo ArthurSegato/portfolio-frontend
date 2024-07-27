@@ -33,7 +33,7 @@ DogeMaze is a procedural maze generator created in Unity for a computer graphics
 ## Links
 
 - [Itch.io Page](https://arthursegato.itch.io/doge-maze)
-- [Github Repo](https://github.com/ArthurSegato/DogeMaze)
+- [Github Repo](https://github.com/seh-GAH-toh/DogeMaze)
 
 ## Tools
 

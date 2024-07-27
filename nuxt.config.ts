@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   modules: [
     "@nuxt/content",
     "@nuxtjs/tailwindcss",
@@ -8,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "nuxt-security",
   ],
+
   site: {
     url: "https://www.arthursegato.dev",
     name: "Arthur Segato",
@@ -15,6 +17,7 @@ export default defineNuxtConfig({
       "Sup? I have to write a fancy text here, probably using keywords like 'Arthur Segato' or 'Developer' so I can get a nice SEO score from daddy google",
     defaultLocale: "en",
   },
+
   app: {
     head: {
       titleTemplate: "%siteName %separator %s",
@@ -23,9 +26,11 @@ export default defineNuxtConfig({
       },
     },
   },
+
   schemaOrg: {
     identity: "Person",
   },
+
   ogImage: {
     enabled: false,
     fonts: [
@@ -37,9 +42,11 @@ export default defineNuxtConfig({
       "Inter:900",
     ],
   },
+
   nitro: {
     preset: "vercel-edge",
   },
+
   security: {
     headers: {
       crossOriginEmbedderPolicy:
@@ -52,4 +59,6 @@ export default defineNuxtConfig({
       xXSSProtection: "1; mode=block",
     },
   },
+
+  compatibilityDate: "2024-07-28",
 });

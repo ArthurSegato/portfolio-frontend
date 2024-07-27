@@ -23,7 +23,7 @@ The application was developed by a team of 8 students, using Android Studio for 
 
 ## Contributors
 
-- [@ArthurSegato](https://github.com/ArthurSegato)
+- [@ArthurSegato](https://github.com/seh-GAH-toh)
 - [@dietermd](https://github.com/dietermd)
 - [@GMCoelho](https://github.com/GMCoelho)
 

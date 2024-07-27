@@ -15,7 +15,7 @@ These instructions will give you a copy of the project up and running on your lo
 
 Requirements for the software and other tools to build, test and push.
 
-- [Bun v1.1.17](https://bun.sh/) or above.
+- [Bun v1.1.21](https://bun.sh/) or above.
 
 ### Setup
 
@@ -89,12 +89,12 @@ bun run preview
 
 ## Deployment
 
-This project is automatically deployed on the Cloudflare Pages network. However, if it is necessary to deploy it in another environment, adjust or completely remove, the Nitro preset configuration on `nuxt.config.ts`, based on the deployment environment you intend to use.
+This project is automatically deployed on the Vercel Edge network. However, if it is necessary to deploy it in another environment, adjust or completely remove, the Nitro preset configuration on `nuxt.config.ts`, based on the deployment environment you intend to use.
 
 ```Javascript
 nitro: {
-  /* Preset for cloudflare */
-  preset: "cloudflare-pages",
+  /* Preset for vercel */
+  preset: "vercel-edge",
 },
 ```
 
@@ -106,9 +106,9 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Authors
 
-- **Arthur Segato** - Developed the website - [ArthurSegato](https://github.com/ArthurSegato)
+- **Arthur Segato** - Developed the website - [segato](https://github.com/seh-GAH-toh)
 
-See also the list of [contributors](https://github.com/ArthurSegato/TheEndPoem/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/seh-GAH-toh/TheEndPoem/graphs/contributors) who participated in this project.
 
 ## License
 

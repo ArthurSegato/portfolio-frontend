@@ -27,7 +27,7 @@ At first, I developed the website using plain html, css, and vanilla javascript.
 ## Links
 
 - [theendpoem.com](https://www.theendpoem.com)
-- [Github Repo](https://github.com/ArthurSegato/EndPoem)
+- [Github Repo](https://github.com/seh-GAH-toh/EndPoem)
 
 ## Tools
 

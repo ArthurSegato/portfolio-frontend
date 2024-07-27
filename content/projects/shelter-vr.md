@@ -23,7 +23,7 @@ Just a small rewrite of the old SHELTERVR.CLUB website for a lighter, faster, an
 ## Links
 
 - [SHELTERVR.CLUB](https://sheltervr.club)
-- [Github Repo](https://github.com/ArthurSegato/SHELTERVR)
+- [Github Repo](https://github.com/seh-GAH-toh/SHELTERVR)
 
 ## Tools
 

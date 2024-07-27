@@ -26,14 +26,13 @@ The full thesis can be found on the DislexiLess github repo.
 
 ## Contributors
 
-- [@ArthurSegato](https://github.com/ArthurSegato)
+- [@ArthurSegato](https://github.com/seh-GAH-toh)
 - [@OmptOsu](https://github.com/OmptOsu)
 
 ## Links
 
-- [Thesis](https://github.com/ArthurSegato/DislexiLess/blob/main/.github/assets/DISLEXILESS_TCC-2_ARTHUR_EDUARDO.pdf)
-- [dislexiless.com](https://www.dislexiless.com)
-- [Github Repo](https://github.com/ArthurSegato/DislexiLess)
+- [Thesis](https://github.com/seh-GAH-toh/DislexiLess/blob/main/.github/assets/DISLEXILESS_TCC-2_ARTHUR_EDUARDO.pdf)
+- [Github Repo](https://github.com/seh-GAH-toh/DislexiLess)
 
 ## Tools
 

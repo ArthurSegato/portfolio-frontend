@@ -17,7 +17,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "daisyui": "latest",
     "nuxt": "^3.9.3",
-    "nuxt-link-checker": "^3.0.0-rc.6",
+    "nuxt-link-checker": "^4.0.0",
     "nuxt-simple-robots": "^4.0.0-rc.13",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5"

@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4
   },
 
-  modules: ['@nuxt/eslint'],
+  modules: ['@nuxt/eslint', '@nuxtjs/seo'],
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [
